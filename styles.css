@@ -910,11 +910,22 @@ footer {
 /* Forzamos el grid con !important para que ninguna otra regla lo rompa en PC */
 .footer-grid { 
   display: grid !important; 
-  grid-template-columns: 2fr 1fr 1fr !important; 
-  gap: 4rem; 
-  margin-bottom: 3rem; 
+  /* Ajustamos las proporciones: 1.5fr para el logo (menos ancho) y 1fr para el resto */
+  grid-template-columns: 1.5fr 1fr 1fr !important; 
+  gap: 2rem; 
+  margin-bottom: 3rem;
+  /* Esto distribuye las columnas para que ocupen todo el ancho disponible */
+  justify-content: space-between; 
 }
 
+/* Centramos el contenido de las columnas de Navegación y Contacto para cerrar el hueco */
+.footer-grid > div:nth-child(2),
+.footer-grid > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* O usa 'center' si prefieres que los links estén centrados */
+  padding-left: 20%; /* Empuja un poco el contenido hacia el centro */
+}
 .footer-logo { font-family: var(--font); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.25rem; }
 .footer-brand-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
 .footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 300px; font-weight: 300; margin-bottom: 1rem; }
@@ -983,9 +994,11 @@ CSS
 
 /* Tablets y Laptops pequeñas (Debajo de 1024px) */
 @media (max-width: 1024px) {
-   .nav-phones { 
-    display: none !important; 
+  .footer-grid > div:nth-child(2),
+  .footer-grid > div:nth-child(3) {
+    padding-left: 0; /* Quitamos el empuje en pantallas medianas */
   }
+}
 
   section { padding: 48px 6vw; }
   .nav-phones { display: none; }
