@@ -166,7 +166,7 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,134,196,0.10); }
 .nav-mobile-menu {
   display: none;
   position: fixed;
-  top: 70px; left: 0; right: 0; bottom: 0;
+  top: 80px; left: 0; right: 0; bottom: 0;
   background: rgba(255,255,255,0.98);
   backdrop-filter: blur(16px);
   z-index: 99;
