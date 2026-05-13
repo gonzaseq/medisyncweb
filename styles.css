@@ -67,7 +67,7 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,134,196,0.10); }
 }
 
 .nav-logo-img img {
-  height: 40px;
+  height: 320px;
   width: auto;
   object-fit: contain;
   display: block;
