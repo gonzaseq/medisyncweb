@@ -92,20 +92,14 @@
       </ul>
     </div>
     <div>
-      <div class="footer-heading">Contacto</div>
-      <ul class="footer-links">
-        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">376-4374545 (WhatsApp)</a></li>
-        <li><a href="https://wa.me/5493764639426" target="_blank" rel="noopener">376-4639426 (WhatsApp)</a></li>
-        <li><a href="mailto:medisync.ar@gmail.com">medisync.ar@gmail.com</a></li>
-        <li><a href="nosotros.html#cobertura">Posadas, Misiones</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 MediSync Ingeniería Clínica. Todos los derechos reservados.</span>
+    <span>© 2026 MediSync Ingeniería Clínica. Todos los derechos reservados.</span>
     <span style="display:flex;align-items:center;gap:6px;">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity:.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Posadas, Misiones · Representación Sonocare-Mindray
+      Posadas, Misiones
     </span>
   </div>
 </footer>`;
