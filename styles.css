@@ -253,7 +253,7 @@ section { padding: 60px 5vw; }
 /* ─── PAGE HERO (inner pages) ─── */
 .page-hero {
   background: linear-gradient(135deg, #F0F9FF 0%, #FFFFFF 55%, #E6F4FA 100%);
-  padding: 120px 5vw 72px;
+  padding: 100px 5vw 60px;
   position: relative;
   overflow: hidden;
 }
