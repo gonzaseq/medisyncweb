@@ -575,7 +575,7 @@ section { padding: 80px 5vw; }
   display: flex;
   flex-direction: column; /* Esto los pone uno abajo del otro */
   gap: 3rem;
-  align-items: center; /* Centra el bloque azul */
+  
 }
 .why-points { display: flex; flex-direction: column; gap: 1.25rem; }
 .why-point {
