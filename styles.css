@@ -571,7 +571,17 @@ section { padding: 80px 5vw; }
 
 /* ─── WHY US ─── */
 #why { background: var(--gray-light); }
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.why-grid {
+  display: flex;
+  flex-direction: column; /* Esto los pone uno abajo del otro */
+  gap: 3rem;
+  align-items: center; /* Centra el bloque azul */
+}
+
+.why-visual {
+  width: 100%;
+  max-width: 900px; /* Para que no sea infinito a los costados en PC */
+}
 .why-points { display: flex; flex-direction: column; gap: 1.25rem; }
 .why-point {
   display: flex;
