@@ -901,7 +901,20 @@ section { padding: 80px 5vw; }
 
 /* ─── FOOTER ─── */
 footer { background: #111827; color: rgba(255,255,255,0.6); padding: 60px 5vw 32px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+footer { 
+  background: #111827; 
+  color: rgba(255,255,255,0.6); 
+  padding: 80px 5vw 32px; 
+}
+
+.footer-grid { 
+  display: grid; 
+  /* Crea 3 columnas en PC: la primera más ancha (2fr) y las otras normales (1fr) */
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 4rem; 
+  margin-bottom: 3rem; 
+}
+
 .footer-logo { font-family: var(--font); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.25rem; }
 .footer-brand-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
 .footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 300px; font-weight: 300; margin-bottom: 1rem; }
