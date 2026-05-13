@@ -571,12 +571,6 @@ section { padding: 80px 5vw; }
 
 /* ─── WHY US ─── */
 #why { background: var(--gray-light); }
-.why-grid {
-  display: flex;
-  flex-direction: column; /* Esto los pone uno abajo del otro */
-  gap: 3rem;
-  
-}
 .why-points { display: flex; flex-direction: column; gap: 1.25rem; }
 .why-point {
   display: flex;
