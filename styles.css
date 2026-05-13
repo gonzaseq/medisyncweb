@@ -900,17 +900,17 @@ section { padding: 80px 5vw; }
 .contact-info-item:last-child { margin-bottom: 0; }
 
 /* ─── FOOTER ─── */
-footer { background: #111827; color: rgba(255,255,255,0.6); padding: 60px 5vw 32px; }
+/* ─── FOOTER (Versión Final Limpia) ─── */
 footer { 
   background: #111827; 
   color: rgba(255,255,255,0.6); 
   padding: 80px 5vw 32px; 
 }
 
+/* Forzamos el grid con !important para que ninguna otra regla lo rompa en PC */
 .footer-grid { 
-  display: grid; 
-  /* Crea 3 columnas en PC: la primera más ancha (2fr) y las otras normales (1fr) */
-  grid-template-columns: 2fr 1fr 1fr; 
+  display: grid !important; 
+  grid-template-columns: 2fr 1fr 1fr !important; 
   gap: 4rem; 
   margin-bottom: 3rem; 
 }
@@ -918,42 +918,38 @@ footer {
 .footer-logo { font-family: var(--font); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.25rem; }
 .footer-brand-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
 .footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 300px; font-weight: 300; margin-bottom: 1rem; }
+
 .footer-logo-img {
-  width: 52px; height: 52px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.08);
-  border: 1.5px dashed rgba(255,255,255,0.2);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  margin-bottom: 0.75rem;
-  overflow: hidden;
-}
-.footer-logo-img {
-  width: 220px;
-  height: 70px;
-  background: transparent;
-  border: none;
+  width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: visible;
 }
-.footer-logo-img .footer-logo-placeholder { font-size: 0.5rem; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.3; padding: 2px; }
-.footer-phones { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+
+.footer-logo-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-heading { font-family: var(--font); font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 1rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color .2s; font-weight: 300; }
+.footer-links a:hover { color: var(--blue); }
+
+.footer-phones { display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-phone-link {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.6);
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   transition: color .2s;
-  font-weight: 400;
 }
 .footer-phone-link:hover { color: var(--blue); }
-.footer-heading { font-family: var(--font); font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 1rem; letter-spacing: 0.06em; text-transform: uppercase; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color .2s; font-weight: 300; }
-.footer-links a:hover { color: var(--blue); }
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 1.5rem;
