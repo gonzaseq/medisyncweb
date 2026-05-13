@@ -221,7 +221,7 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,134,196,0.10); }
 }
 
 /* ─── SECTIONS SHARED ─── */
-section { padding: 96px 5vw; }
+section { padding: 60px 5vw; }
 .section-label {
   font-size: 0.72rem;
   font-weight: 700;
