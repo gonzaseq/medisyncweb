@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipos | MediSync Ingeniería Clínica – Posadas, Misiones</title>
+<meta name="description" content="Equipamiento médico crítico que atendemos: ecógrafos Mindray, monitores, desfibriladores, ventiladores, bombas de infusión y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Marcas partners */
+  #partners { background: var(--white); }
+  .partners-intro {
+    background: var(--blue-light);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--blue-mid);
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .partners-intro-text .section-label { margin-bottom: 0.5rem; }
+  .partners-intro-text h3 { font-size: 1.3rem; font-weight: 800; color: var(--gray-dark); margin-bottom: 0.75rem; }
+  .partners-intro-text p { font-size: 0.9rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; max-width: 600px; }
+  .partners-intro-badge {
+    flex-shrink: 0;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 130px;
+  }
+  .partners-intro-badge .badge-icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+  .partners-intro-badge .badge-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  /* Equipo detalle */
+  .equip-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .equip-detail-card {
+    border: 1.5px solid var(--gray-border);
+    border-radius: 18px;
+    padding: 2rem;
+    background: var(--white);
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .equip-detail-card:hover { border-color: var(--blue-mid); box-shadow: 0 6px 24px rgba(0,134,196,0.1); }
+  .equip-detail-card.highlight { border-color: var(--blue); background: var(--blue-light); }
+  .equip-detail-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .equip-detail-icon-wrap {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .equip-detail-card.highlight .equip-detail-icon-wrap { background: rgba(0,134,196,0.15); }
+  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); }
+  .equip-detail-badge {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--blue);
+    color: var(--white);
+    padding: 3px 10px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.65; font-weight: 300; }
+
+  @media (max-width: 700px) {
+    .partners-intro { flex-direction: column; }
+    .partners-intro-badge { min-width: auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar y footer se inyectan via componentes.js -->
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="page-hero-breadcrumb">
+    <a href="index.html">Inicio</a>
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Equipos y marcas</span>
+  </div>
+  <div class="page-hero-label">Equipamiento médico</div>
+  <h1 class="page-hero-title">Los equipos con los que<br><span>trabajamos</span></h1>
+  <p class="page-hero-desc">Experiencia técnica en los equipos que no pueden fallar. Cada tipo de dispositivo tiene sus propios protocolos de servicio y diagnóstico.</p>
+</div>
+
+<!-- ═══ PARTNERS / MARCAS ═══ -->
+<section id="partners">
+  <div class="partners-intro fade-up">
+    <div class="partners-intro-text">
+      <div class="section-label">Representación oficial</div>
+      <h3>Sonocare · Mindray en el NEA</h3>
+      <p>MediSync opera dentro de la red técnica de <strong>Sonocare</strong>, distribuidor oficial de <strong>Mindray</strong> en Argentina. Esto nos habilita para brindar soporte con acceso a repuestos originales, procedimientos validados por el fabricante y actualizaciones de software para toda la línea de equipos Mindray.</p>
+    </div>
+    <div class="partners-intro-badge">
+      <span class="badge-icon">🔬</span>
+      <div class="badge-label">Rep. Oficial<br>Mindray</div>
+    </div>
+  </div>
+
+  <div class="logo-strip-label" style="text-align:left; margin-bottom:1.5rem; font-size:0.7rem;">Marcas y alianzas</div>
+  <div class="logo-strip-row" style="justify-content:flex-start;">
+    <div class="logo-slot mindray">
+       <img src="img/mindray.png" alt="Mindray"> 
+    </div>
+    <div class="logo-slot">
+      <!-- <img src="img/logo-sonocare.png" alt="Sonocare"> -->
+      <span class="logo-slot-icon">🏥</span>
+      <span class="logo-slot-text">Logo Sonocare</span>
+    </div>
+    <div class="logo-slot">
+      <!-- <img src="img/tu-logo.png" alt="MediSync"> -->
+      <span class="logo-slot-icon">⚕️</span>
+      <span class="logo-slot-text">Tu Logo</span>
+    </div>
+    <div class="logo-slot">
+      <!-- <img src="img/logo-partner.png" alt="Partner"> -->
+      <span class="logo-slot-icon">🔧</span>
+      <span class="logo-slot-text">Partner / Cert.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EQUIPMENT ═══ -->
+<section id="equipment">
+  <div class="section-header">
+    <div class="section-label">Equipamiento</div>
+    <h2 class="section-title">Trabajamos con equipamiento crítico</h2>
+    <p class="section-desc">Desde ecógrafos de alta complejidad hasta equipos de diagnóstico básico: cada tipo de dispositivo recibe un protocolo de servicio específico.</p>
+  </div>
+
+  <div class="equip-detail-grid">
+    <div class="equip-detail-card highlight fade-up">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">🔬</div>
+        <div>
+          <div class="equip-detail-name">Ecógrafos Mindray</div>
+          <span class="equip-detail-badge">Especialización principal</span>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Soporte técnico oficial para toda la gama de ecógrafos Mindray: portátiles, de sala y de alta gama. Diagnóstico, reparación, calibración y actualización de software con acceso a piezas originales a través de Sonocare.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-1">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">💓</div>
+        <div>
+          <div class="equip-detail-name">Monitores de paciente</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Mantenimiento y reparación de monitores multiparamétricos. Verificación de sensores, alarmas, módulos de medición y pantallas. Equipos de UCI, quirófano y sala general.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-2">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">⚡</div>
+        <div>
+          <div class="equip-detail-name">Desfibriladores</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Servicio técnico de desfibriladores manuales y automáticos. Verificación de descarga, reemplazo de electrodos, mantenimiento de baterías y calibración según normas de seguridad eléctrica.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-3">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">🫁</div>
+        <div>
+          <div class="equip-detail-name">Ventiladores mecánicos</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Diagnóstico y reparación de ventiladores para UCI y sala. Verificación de válvulas, sensores de flujo y presión, sistemas de alarma y software de control de ciclos ventilatorios.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-1">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">💉</div>
+        <div>
+          <div class="equip-detail-name">Bombas de infusión</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Mantenimiento preventivo y correctivo de bombas de jeringa e infusión. Verificación de precisión de caudal, alarmas de oclusión y baterías.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-2">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">🩻</div>
+        <div>
+          <div class="equip-detail-name">Equipos de Rx portátil</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Servicio técnico de equipos de radiología portátil. Revisión de generadores, sistemas de alimentación y mecanismos de posicionamiento.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up stagger-3">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">🧪</div>
+        <div>
+          <div class="equip-detail-name">Electrobisturís</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Mantenimiento y calibración de unidades de electrocirugía. Verificación de potencia de salida, modos de corte y coagulación, y sistemas de seguridad.</p>
+    </div>
+
+    <div class="equip-detail-card fade-up">
+      <div class="equip-detail-header">
+        <div class="equip-detail-icon-wrap">🩺</div>
+        <div>
+          <div class="equip-detail-name">Equipos de diagnóstico</div>
+        </div>
+      </div>
+      <p class="equip-detail-desc">Diagnóstico y reparación de equipos varios: electrocardiógrafos, oxímetros, tensiómetros digitales y equipos de laboratorio básico.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:2rem; font-size:.85rem; color:var(--gray-mid); font-weight:300;">¿No ve su equipo? <a href="contacto.html" style="color:var(--blue); font-weight:600;">Contáctenos</a>. Evaluamos cada caso individualmente.</p>
+</section>
+
+<!-- ═══ GALERÍA ═══ -->
+<section id="gallery">
+  <div class="section-header centered">
+    <div class="section-label">Galería</div>
+    <h2 class="section-title">Nuestros equipos en acción</h2>
+    <p class="section-desc">Conocé el equipamiento con el que trabajamos y los trabajos que realizamos en instituciones de Misiones y el NEA.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item large fade-up">
+      <!-- <img src="img/foto-trabajo-campo.jpg" alt="Servicio técnico en institución"> -->
+      <span class="gallery-placeholder-icon">🏥</span>
+      <span class="gallery-placeholder-text">Foto grande — trabajo en institución<br>o equipo en servicio (16:9)</span>
+      <span class="gallery-placeholder-sub">Reemplazá con tu imagen real</span>
+      <span class="gallery-item-label">Servicio en campo</span>
+    </div>
+    <div class="gallery-item fade-up stagger-1">
+      <!-- <img src="img/foto-ecografo.jpg" alt="Ecógrafo Mindray"> -->
+      <span class="gallery-placeholder-icon">🔬</span>
+      <span class="gallery-placeholder-text">Ecógrafo Mindray</span>
+      <span class="gallery-placeholder-sub">Tu foto real</span>
+      <span class="gallery-item-label">Ecógrafo Mindray</span>
+    </div>
+    <div class="gallery-item fade-up stagger-2">
+      <!-- <img src="img/foto-monitor.jpg" alt="Monitor de paciente"> -->
+      <span class="gallery-placeholder-icon">💓</span>
+      <span class="gallery-placeholder-text">Monitor de paciente</span>
+      <span class="gallery-placeholder-sub">Tu foto real</span>
+      <span class="gallery-item-label">Monitor de paciente</span>
+    </div>
+    <div class="gallery-item fade-up">
+      <!-- <img src="img/foto-desfibrilador.jpg" alt="Desfibrilador"> -->
+      <span class="gallery-placeholder-icon">⚡</span>
+      <span class="gallery-placeholder-text">Desfibrilador</span>
+      <span class="gallery-placeholder-sub">Tu foto real</span>
+      <span class="gallery-item-label">Desfibrilador</span>
+    </div>
+    <div class="gallery-item fade-up stagger-1">
+      <!-- <img src="img/foto-tecnico.jpg" alt="Técnico en trabajo"> -->
+      <span class="gallery-placeholder-icon">🔧</span>
+      <span class="gallery-placeholder-text">Técnico en trabajo</span>
+      <span class="gallery-placeholder-sub">Tu foto real</span>
+      <span class="gallery-item-label">Equipo técnico</span>
+    </div>
+    <div class="gallery-item fade-up stagger-2">
+      <!-- <img src="img/foto-ventilador.jpg" alt="Ventilador mecánico"> -->
+      <span class="gallery-placeholder-icon">🫁</span>
+      <span class="gallery-placeholder-text">Ventilador mecánico</span>
+      <span class="gallery-placeholder-sub">Tu foto real</span>
+      <span class="gallery-item-label">Ventilador mecánico</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="section-label">¿Tiene alguno de estos equipos?</div>
+    <h2 class="section-title">Podemos ayudarle</h2>
+    <p class="cta-sub">Contáctenos con el modelo y la falla o necesidad de mantenimiento. Le respondemos a la brevedad.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20servicio%20para%20un%20equipo" class="btn-white" target="_blank" rel="noopener">
+        Consultar por WhatsApp
+      </a>
+      <a href="servicios.html" class="btn-outline-white">Ver todos los servicios</a>
+    </div>
+  </div>
+</section>
+
+<script src="componentes.js"></script>
+</body>
+</html>

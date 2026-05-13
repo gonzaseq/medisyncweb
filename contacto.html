@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | MediSync Ingeniería Clínica – Posadas, Misiones</title>
+<meta name="description" content="Contacte a MediSync para solicitar servicio técnico de equipamiento médico en Misiones. Teléfono, WhatsApp y email disponibles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  #contacto-main { background: var(--white); }
+
+  /* Canales rápidos */
+  .quick-channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  .channel-card {
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1.5px solid var(--gray-border);
+    background: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: border-color .2s, box-shadow .2s, transform .2s;
+  }
+  .channel-card:hover { border-color: var(--blue-mid); box-shadow: 0 6px 24px rgba(0,134,196,0.1); transform: translateY(-2px); }
+  .channel-card.whatsapp { border-color: #25D366; background: #f0fdf4; }
+  .channel-card.whatsapp:hover { border-color: #1abe5a; }
+  .channel-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .channel-card.whatsapp .channel-icon { background: #dcfce7; }
+  .channel-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-mid); display: block; margin-bottom: 3px; }
+  .channel-value { font-size: 0.95rem; font-weight: 600; color: var(--gray-dark); }
+
+  /* Form + info */
+  .form-success {
+    display: none;
+    background: var(--blue-light);
+    border: 1.5px solid var(--blue-mid);
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .form-success.show { display: block; }
+  .form-success-icon { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+  .form-success h3 { font-size: 1.1rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.5rem; }
+  .form-success p { font-size: 0.875rem; color: var(--gray-mid); }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--gray-mid); opacity: 0.55; }
+
+  /* Mapa placeholder */
+  .map-placeholder {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--blue-light), #daeef8);
+    border: 2px dashed var(--blue-mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .map-placeholder-icon { font-size: 2rem; opacity: 0.4; }
+  .map-placeholder-text { font-size: 0.78rem; font-weight: 600; color: var(--blue-dark); opacity: 0.7; }
+  .map-placeholder-sub { font-size: 0.68rem; color: var(--gray-mid); }
+</style>
+</head>
+<body>
+
+<!-- Navbar y footer se inyectan via componentes.js -->
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="page-hero-breadcrumb">
+    <a href="index.html">Inicio</a>
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Contacto</span>
+  </div>
+  <div class="page-hero-label">Estamos disponibles</div>
+  <h1 class="page-hero-title">Hablemos sobre<br><span>su equipamiento</span></h1>
+  <p class="page-hero-desc">Cuéntenos qué equipo tiene y qué necesita. Le respondemos rápido y sin compromiso.</p>
+</div>
+
+<!-- ═══ CONTACTO ═══ -->
+<section id="contacto-main">
+
+  <!-- Canales de contacto rápido -->
+  <div class="quick-channels">
+    <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20servicios%20de%20MediSync" class="channel-card whatsapp" target="_blank" rel="noopener">
+      <div class="channel-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.28 7.046L.784 23.251l4.338-1.452A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.384l-.36-.214-3.733 1.249 1.265-3.622-.235-.373A9.79 9.79 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
+      </div>
+      <div>
+        <span class="channel-label">WhatsApp</span>
+        <div class="channel-value">376 437-4545</div>
+      </div>
+    </a>
+    <a href="https://wa.me/5493764639426?text=Hola%2C%20quiero%20consultar%20sobre%20servicios%20de%20MediSync" class="channel-card whatsapp" target="_blank" rel="noopener">
+      <div class="channel-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.28 7.046L.784 23.251l4.338-1.452A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.384l-.36-.214-3.733 1.249 1.265-3.622-.235-.373A9.79 9.79 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
+      </div>
+      <div>
+        <span class="channel-label">WhatsApp</span>
+        <div class="channel-value">376 463-9426</div>
+      </div>
+    </a>
+    
+    <a href="tel:+543764374545" class="channel-card">
+      <div class="channel-icon">📞</div>
+      <div>
+        <span class="channel-label">Llamada directa</span>
+        <div class="channel-value">+54 9 376 437-4545</div>
+      </div>
+    </a>
+    <a href="mailto:medisync.ar@gmail.com" class="channel-card">
+      <div class="channel-icon">✉️</div>
+      <div>
+        <span class="channel-label">Email</span>
+        <div class="channel-value">medisync.ar@gmail.com</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Formulario + info -->
+  <div class="contact-grid">
+    <div>
+      <div class="section-header">
+        <div class="section-label">Formulario de contacto</div>
+        <h2 class="section-title">Envíenos su consulta</h2>
+        <p class="section-desc">Complete el formulario y le responderemos a la brevedad. Puede también contactarnos directamente por los canales de arriba.</p>
+      </div>
+
+      <!-- Mensaje de éxito (oculto hasta envío) -->
+      <div class="form-success" id="formSuccess">
+        <span class="form-success-icon">✅</span>
+        <h3>¡Consulta enviada correctamente!</h3>
+        <p>Nos pondremos en contacto con usted a la brevedad. También puede escribirnos directamente por WhatsApp si necesita respuesta inmediata.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Su nombre o razón social" required>
+        </div>
+        <div class="form-group">
+          <label for="institucion">Institución / Empresa</label>
+          <input type="text" id="institucion" name="institucion" placeholder="Hospital, clínica, sanatorio...">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono de contacto *</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 376-4123456" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="su@email.com">
+        </div>
+        <div class="form-group">
+          <label for="equipo">Equipo / tipo de servicio</label>
+          <select id="equipo" name="equipo">
+            <option value="">Seleccionar...</option>
+            <option>Ecógrafo Mindray</option>
+            <option>Monitor de paciente</option>
+            <option>Desfibrilador</option>
+            <option>Ventilador mecánico</option>
+            <option>Bomba de infusión</option>
+            <option>Otro equipo</option>
+            <option>Contrato de mantenimiento</option>
+            <option>Consulta general</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Descripción de la necesidad *</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa el equipo, la falla o el tipo de servicio que necesita..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self:flex-start; width:100%; justify-content:center;">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Enviar consulta
+        </button>
+      </form>
+    </div>
+
+    <!-- Info de contacto lateral -->
+    <div class="contact-info-block">
+      <div class="contact-info-card">
+        <div class="contact-info-card-title">📞 Teléfonos</div>
+        <a href="tel:+543764374545" class="contact-info-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          +54 9 376 437-4545
+        </a>
+        <a href="tel:+543764639426" class="contact-info-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          +54 9 376 463-9426
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="contact-info-card-title">✉️ Email</div>
+        <a href="mailto:medisync.ar@gmail.com" class="contact-info-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          medisync.ar@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="contact-info-card-title">📍 Ubicación</div>
+        <div class="contact-info-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Posadas, Misiones, Argentina
+        </div>
+        <p style="font-size:0.82rem; color:var(--gray-mid); line-height:1.65; font-weight:300; margin-top:0.75rem;">Nuestra base operativa en Posadas nos permite responder rápidamente a cualquier institución de la provincia de Misiones.</p>
+        <!-- Mapa placeholder: reemplazá con iframe de Google Maps -->
+        <div class="map-placeholder">
+          <!-- <iframe src="https://www.google.com/maps/embed?..." ...></iframe> -->
+          <span class="map-placeholder-icon">🗺️</span>
+          <span class="map-placeholder-text">Mapa interactivo</span>
+          <span class="map-placeholder-sub">Insertar iframe de Google Maps</span>
+        </div>
+      </div>
+
+      <div class="contact-info-card" style="background:var(--blue-light); border-color:var(--blue-mid);">
+        <div class="contact-info-card-title" style="color:var(--blue);">⚡ Urgencias</div>
+        <p style="font-size:0.85rem; color:var(--gray-mid); line-height:1.65; font-weight:300;">Para fallas críticas que necesitan atención inmediata, comuníquese directamente por WhatsApp o llamada. <strong style="color:var(--blue)">Respuesta en menos de 24 horas</strong> para instituciones de Misiones.</p>
+        <a href="https://wa.me/5493764374545?text=URGENCIA%3A%20necesito%20servicio%20t%C3%A9cnico%20inmediato" class="btn-primary" style="margin-top:1rem; font-size:0.85rem; padding:10px 18px;" target="_blank" rel="noopener">
+          Reportar urgencia por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+
+  // Construir mensaje para WhatsApp con los datos del form
+  const nombre = document.getElementById('nombre').value;
+  const institucion = document.getElementById('institucion').value;
+  const telefono = document.getElementById('telefono').value;
+  const equipo = document.getElementById('equipo').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  const texto = `Consulta desde el sitio web:\n\nNombre: ${nombre}\nInstitución: ${institucion || 'No indicada'}\nTeléfono: ${telefono}\nEquipo/Servicio: ${equipo || 'No especificado'}\n\nMensaje:\n${mensaje}`;
+  const waUrl = `https://wa.me/5493764374545?text=${encodeURIComponent(texto)}`;
+
+  // Abrir WhatsApp con los datos pre-cargados
+  window.open(waUrl, '_blank');
+
+  // Mostrar mensaje de éxito
+  form.style.display = 'none';
+  success.classList.add('show');
+}
+</script>
+
+<script src="componentes.js"></script>
+</body>
+</html>

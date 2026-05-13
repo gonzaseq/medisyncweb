@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | MediSync Ingeniería Clínica – Posadas, Misiones</title>
+<meta name="description" content="Quiénes somos, nuestra misión y visión. Ingeniería clínica con foco en el sector salud del NEA, con base en Posadas, Misiones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Misión / Visión */
+  .mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .mv-card {
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1.5px solid var(--gray-border);
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .mv-card.mission { background: var(--blue); border-color: var(--blue); color: var(--white); }
+  .mv-card.mission .mv-label { color: rgba(255,255,255,0.65); }
+  .mv-card.mission .mv-title { color: var(--white); }
+  .mv-card.mission .mv-text { color: rgba(255,255,255,0.82); }
+  .mv-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+  .mv-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+  .mv-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  .mv-title { font-size: 1.4rem; font-weight: 800; color: var(--gray-dark); margin-bottom: 1rem; }
+  .mv-text { font-size: 0.9rem; color: var(--gray-mid); line-height: 1.75; font-weight: 300; }
+
+  /* Valores */
+  #valores { background: var(--gray-light); }
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .valor-item {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--gray-border);
+    text-align: center;
+    transition: border-color .2s, transform .2s;
+  }
+  .valor-item:hover { border-color: var(--blue-mid); transform: translateY(-3px); }
+  .valor-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  .valor-title { font-size: 0.95rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.5rem; }
+  .valor-desc { font-size: 0.82rem; color: var(--gray-mid); line-height: 1.65; font-weight: 300; }
+
+  /* Equipo / historia */
+  #historia { background: var(--white); }
+  .historia-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .historia-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stat-card {
+    background: var(--gray-light);
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid var(--gray-border);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .stat-card-num { font-size: 2rem; font-weight: 800; color: var(--blue); flex-shrink: 0; min-width: 60px; }
+  .stat-card-label { font-size: 0.875rem; font-weight: 600; color: var(--gray-dark); }
+  .stat-card-sub { font-size: 0.78rem; color: var(--gray-mid); font-weight: 300; margin-top: 2px; }
+
+  @media (max-width: 800px) {
+    .mv-grid { grid-template-columns: 1fr; }
+    .historia-layout { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar y footer se inyectan via componentes.js -->
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="page-hero-breadcrumb">
+    <a href="index.html">Inicio</a>
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Nosotros</span>
+  </div>
+  <div class="page-hero-label">Quiénes somos</div>
+  <h1 class="page-hero-title">Ingeniería clínica<br><span>con foco en salud</span></h1>
+  <p class="page-hero-desc">No somos un taller genérico. Somos un equipo especializado en ingeniería clínica, con base en Posadas y presencia en toda la provincia de Misiones.</p>
+</div>
+
+<!-- ═══ MISIÓN / VISIÓN ═══ -->
+<section id="mision">
+  <div class="section-header">
+    <div class="section-label">Identidad</div>
+    <h2 class="section-title">Nuestra misión y visión</h2>
+    <p class="section-desc">Lo que nos mueve y hacia dónde vamos como empresa de ingeniería clínica en el NEA.</p>
+  </div>
+  <div class="mv-grid">
+    <div class="mv-card mission fade-up">
+      <span class="mv-icon">🎯</span>
+      <div class="mv-label">Misión</div>
+      <div class="mv-title">Mantener operativo el equipamiento de la salud</div>
+      <p class="mv-text">Brindar servicios técnicos especializados de ingeniería clínica que garanticen la disponibilidad, seguridad y rendimiento del equipamiento médico en las instituciones de salud del NEA. Cada intervención es documentada, precisa y orientada a la continuidad asistencial.</p>
+    </div>
+    <div class="mv-card fade-up stagger-1">
+      <span class="mv-icon">🔭</span>
+      <div class="mv-label">Visión</div>
+      <div class="mv-title">Ser el referente de ingeniería clínica del NEA</div>
+      <p class="mv-text">Posicionarnos como el socio técnico de largo plazo para las instituciones de salud de Misiones y el NEA. Crecer junto a nuestros clientes, conociendo en profundidad su equipamiento y acompañando sus decisiones de inversión tecnológica con criterio técnico y ética profesional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HISTORIA ═══ -->
+<section id="historia">
+  <div class="historia-layout">
+    <div>
+      <div class="section-header">
+        <div class="section-label">Nuestra trayectoria</div>
+        <h2 class="section-title">Más de 5 años en ingeniería clínica</h2>
+        <p class="section-desc">Nacimos con un propósito claro: que las instituciones de salud del NEA tuvieran acceso a soporte técnico especializado sin depender de técnicos de Buenos Aires.</p>
+      </div>
+      <div class="why-points">
+        <div class="why-point fade-up">
+          <div class="why-num">01</div>
+          <div>
+            <div class="why-title">Raíces en Misiones</div>
+            <div class="why-text">Somos una empresa de Posadas, con conocimiento del territorio y de las necesidades específicas del sistema de salud provincial y regional.</div>
+          </div>
+        </div>
+        <div class="why-point fade-up stagger-1">
+          <div class="why-num">02</div>
+          <div>
+            <div class="why-title">Red técnica oficial</div>
+            <div class="why-text">Nuestra integración a la red de Sonocare-Mindray nos permite operar con el respaldo técnico de uno de los fabricantes de equipamiento médico más importantes del mundo.</div>
+          </div>
+        </div>
+        <div class="why-point fade-up stagger-2">
+          <div class="why-num">03</div>
+          <div>
+            <div class="why-title">Foco exclusivo en salud</div>
+            <div class="why-text">Toda nuestra formación, experiencia y estructura está orientada al equipamiento médico. No diversificamos para no perder profundidad técnica en lo que más importa.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="historia-visual fade-up">
+      <div class="stat-card">
+        <div class="stat-card-num">+5</div>
+        <div>
+          <div class="stat-card-label">Años de experiencia</div>
+          <div class="stat-card-sub">En ingeniería clínica en Misiones y el NEA</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">24h</div>
+        <div>
+          <div class="stat-card-label">Respuesta de urgencia</div>
+          <div class="stat-card-sub">Para fallas críticas en instituciones de Misiones</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">100%</div>
+        <div>
+          <div class="stat-card-label">Foco en salud</div>
+          <div class="stat-card-sub">No somos un taller genérico, solo equipamiento médico</div>
+        </div>
+      </div>
+      <div class="trust-card" style="background:var(--blue-light); border-color:var(--blue-mid);">
+        <div class="trust-card-title" style="color:var(--blue);">
+          🤝 Representación técnica
+          <span class="mindray-badge">Mindray</span>
+        </div>
+        <p class="trust-text">A través de <strong>Sonocare</strong>, distribuidor oficial de Mindray en Argentina, tenemos acceso a repuestos originales, documentación técnica y soporte de fábrica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALORES ═══ -->
+<section id="valores">
+  <div class="section-header centered">
+    <div class="section-label">Cómo trabajamos</div>
+    <h2 class="section-title">Nuestros valores</h2>
+    <p class="section-desc">Los principios que guían cada decisión técnica y comercial que tomamos.</p>
+  </div>
+  <div class="valores-grid">
+    <div class="valor-item fade-up">
+      <span class="valor-icon">🎯</span>
+      <div class="valor-title">Especialización</div>
+      <p class="valor-desc">Solo trabajamos con equipamiento médico. Eso nos permite profundizar en lo que hacemos y ofrecer un nivel técnico que los generalistas no pueden igualar.</p>
+    </div>
+    <div class="valor-item fade-up stagger-1">
+      <span class="valor-icon">📄</span>
+      <div class="valor-title">Trazabilidad</div>
+      <p class="valor-desc">Cada intervención queda documentada. Su institución sabe exactamente qué se hizo, cuándo y con qué materiales.</p>
+    </div>
+    <div class="valor-item fade-up stagger-2">
+      <span class="valor-icon">⚡</span>
+      <div class="valor-title">Respuesta rápida</div>
+      <p class="valor-desc">Estamos en Posadas. Cuando su equipo falla, no espera que llegue un técnico de otra provincia. Respondemos en horas.</p>
+    </div>
+    <div class="valor-item fade-up stagger-3">
+      <span class="valor-icon">🤝</span>
+      <div class="valor-title">Relaciones de largo plazo</div>
+      <p class="valor-desc">Buscamos ser el socio técnico de su institución, no un proveedor transaccional. Conocer su equipamiento en profundidad nos hace más útiles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COVERAGE ═══ -->
+<section id="cobertura">
+  <div class="section-header">
+    <div class="section-label">Cobertura geográfica</div>
+    <h2 class="section-title">Dónde trabajamos</h2>
+    <p class="section-desc">Brindamos cobertura completa en toda la provincia de Misiones, con base operativa en Posadas para una respuesta rápida.</p>
+  </div>
+  <div class="coverage-single fade-up">
+    <div class="coverage-card">
+      <span class="coverage-badge">✓ Cobertura completa</span>
+      <div class="coverage-province">Misiones</div>
+      <div class="coverage-city">📍 Base operativa: Posadas</div>
+      <p class="coverage-desc">Todos nuestros servicios disponibles en la provincia. Mantenimiento preventivo, reparación, diagnóstico, servicio de urgencia y asesoramiento.</p>
+      <ul class="coverage-list">
+        <li>Servicio técnico general de equipamiento médico</li>
+        <li>Ecógrafos Mindray (soporte especializado)</li>
+        <li>Monitores, desfibriladores, ventiladores</li>
+        <li>Urgencias con respuesta en menos de 24 horas</li>
+        <li>Planes de mantenimiento programado</li>
+      </ul>
+    </div>
+  </div>
+  <div class="coverage-note fade-up stagger-1" style="max-width:640px; margin-top:1.5rem;">
+    <strong>¿Necesita servicio en otra provincia?</strong> Contáctenos y evaluamos la viabilidad según el equipo y la ubicación. Podemos orientarle sobre el proveedor más adecuado para su caso.
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="section-label">¿Querés trabajar con nosotros?</div>
+    <h2 class="section-title">Seamos socios técnicos de su institución</h2>
+    <p class="cta-sub">Cuéntenos sobre su equipamiento y sus necesidades. Diseñamos juntos un plan de servicio que se adapte a su institución.</p>
+    <div class="cta-actions">
+      <a href="contacto.html" class="btn-white">Contactarnos</a>
+      <a href="servicios.html" class="btn-outline-white">Ver nuestros servicios</a>
+    </div>
+  </div>
+</section>
+
+<script src="componentes.js"></script>
+</body>
+</html>
