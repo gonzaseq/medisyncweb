@@ -577,11 +577,6 @@ section { padding: 80px 5vw; }
   gap: 3rem;
   align-items: center; /* Centra el bloque azul */
 }
-
-.why-visual {
-  width: 100%;
-  max-width: 900px; /* Para que no sea infinito a los costados en PC */
-}
 .why-points { display: flex; flex-direction: column; gap: 1.25rem; }
 .why-point {
   display: flex;
