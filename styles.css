@@ -305,10 +305,14 @@ section { padding: 60px 5vw; }
   font-weight: 500;
 }
 .page-hero-breadcrumb a:hover { text-decoration: underline; }
-.hero-container {
+.page-hero-container {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
+}
+.page-hero-container p {
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 
 /* ─── STRIP ─── */
