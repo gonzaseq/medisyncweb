@@ -24,7 +24,7 @@
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-img">
-      <img src="img/logo.png" alt="Logo">
+      <img src="img/logo1.png" alt="Logo">
     </div>
   </a>
 
