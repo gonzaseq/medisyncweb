@@ -62,7 +62,16 @@
 
 /* ─── RESET & BASE ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+/* FIX: contiene desbordamientos laterales en todos los dispositivos */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--font);
@@ -70,6 +79,9 @@ body {
   background: var(--white);
   line-height: 1.65;
   overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   font-weight: 400;
 }
 
@@ -309,7 +321,8 @@ nav.scrolled {
 }
 
 /* ─── SECTIONS ─── */
-section { padding: var(--sp-9) 5vw; }
+/* FIX: padding unificado para evitar baches visuales entre secciones */
+section { padding: 60px 5vw; }
 
 .section-label {
   display: inline-flex;
@@ -1538,6 +1551,8 @@ footer {
 }
 
 @media (max-width: 900px) {
+  /* FIX: evita bloque gigante vacío en el hero en móviles */
+  #hero { min-height: auto !important; }
   .why-grid { grid-template-columns: 1fr; }
   .trust-cols { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1547,7 +1562,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-  section { padding: var(--sp-8) 5vw; }
+  /* FIX: padding reducido y uniforme para secciones en móvil */
+  section { padding: 48px 5vw; }
   .trust-cols { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   #strip { flex-direction: column; align-items: flex-start; gap: var(--sp-4); }
