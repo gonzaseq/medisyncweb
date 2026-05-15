@@ -371,7 +371,7 @@ section { padding: 60px 5vw; }
 /* ─── PAGE HERO ─── */
 .page-hero {
   background: linear-gradient(150deg, #EEF8FF 0%, var(--white) 50%, #EBF6FD 100%);
-  padding: 104px 5vw 64px;
+  padding: 140px 5vw 64px;
   position: relative;
   overflow: hidden;
 }
@@ -418,6 +418,7 @@ section { padding: 60px 5vw; }
 }
 
 .page-hero-title {
+   margin-top: 0;
   font-size: clamp(2rem, 4vw, 3.1rem);
   font-weight: 800;
   color: var(--gray-dark);
