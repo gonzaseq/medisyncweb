@@ -10,10 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
+  /* ─── BASE ─── */
+  html, body { overflow-x: hidden; }
+
+  /* ─── SECCIONES: espaciado uniforme ─── */
+  #problems,
+  #servicios-resumen,
+  #why,
+  #cta { padding: 80px 5vw; }
+
   /* ─── HERO (solo index) ─── */
   #hero {
     min-height: 100vh;
-    padding: 100px 5vw 0;
+    padding: 100px 5vw 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -128,8 +137,18 @@
   #servicios-resumen { background: var(--white); }
 
   @media (max-width: 900px) {
-    #hero { grid-template-columns: 1fr; padding-top: 88px; padding-bottom: 3rem; }
+    #hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding: 88px 5vw 56px;
+    }
     .hero-visual { display: none; }
+    .hero-actions { margin-bottom: 0; }
+
+    #problems,
+    #servicios-resumen,
+    #why,
+    #cta { padding: 56px 5vw; }
   }
 </style>
 </head>
