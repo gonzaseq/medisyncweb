@@ -63,7 +63,6 @@
 /* ─── RESET & BASE ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* FIX: contiene desbordamientos laterales en todos los dispositivos */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -94,11 +93,12 @@ nav {
   backdrop-filter: blur(20px) saturate(1.6);
   -webkit-backdrop-filter: blur(20px) saturate(1.6);
   border-bottom: 1px solid var(--gray-border);
-  padding: 0 5vw;
-  height: 76px;
+  padding: 0 3vw;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   transition: box-shadow var(--t-base) var(--ease),
               border-color var(--t-base) var(--ease);
 }
@@ -113,10 +113,11 @@ nav.scrolled {
   align-items: center;
   gap: var(--sp-3);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-logo-img {
-  height: 52px;
+  height: 68px;
   width: auto;
   display: flex;
   align-items: center;
@@ -160,17 +161,16 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: var(--sp-3);
-  margin-right: var(--sp-2);
 }
 
 .nav-phone-link {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--blue-dark);
   text-decoration: none;
   background: var(--blue-light);
   border: 1px solid var(--blue-mid);
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: var(--r-pill);
   display: flex;
   align-items: center;
@@ -190,18 +190,19 @@ nav.scrolled {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 0.4rem;
   list-style: none;
 }
 
 .nav-links a {
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--gray-mid);
   text-decoration: none;
   transition: color var(--t-fast) var(--ease);
   letter-spacing: 0.01em;
   position: relative;
+  padding: 4px 2px;
 }
 
 .nav-links a::after {
@@ -226,9 +227,10 @@ nav.scrolled {
 .nav-cta {
   background: var(--blue) !important;
   color: var(--white) !important;
-  padding: 8px 20px !important;
+  padding: 9px 22px !important;
   border-radius: var(--r-sm) !important;
   font-weight: 600 !important;
+  font-size: 0.92rem !important;
   box-shadow: var(--shadow-blue-sm);
   transition: background var(--t-fast) var(--ease),
               transform var(--t-fast) var(--ease),
@@ -268,7 +270,7 @@ nav.scrolled {
 .nav-mobile-menu {
   display: none;
   position: fixed;
-  top: 76px; left: 0; right: 0; bottom: 0;
+  top: 80px; left: 0; right: 0; bottom: 0;
   background: rgba(255, 255, 255, 0.99);
   backdrop-filter: blur(20px);
   z-index: 99;
@@ -321,7 +323,6 @@ nav.scrolled {
 }
 
 /* ─── SECTIONS ─── */
-/* FIX: padding unificado para evitar baches visuales entre secciones */
 section { padding: 60px 5vw; }
 
 .section-label {
@@ -1552,7 +1553,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* FIX: evita bloque gigante vacío en el hero en móviles */
   #hero { min-height: auto !important; }
   .why-grid { grid-template-columns: 1fr; }
   .trust-cols { grid-template-columns: 1fr 1fr; }
@@ -1563,7 +1563,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  /* FIX: padding reducido y uniforme para secciones en móvil */
   section { padding: 48px 5vw; }
   .trust-cols { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
