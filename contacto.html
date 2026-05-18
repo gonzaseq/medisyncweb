@@ -12,39 +12,6 @@
 <style>
   #contacto-main { background: var(--white); }
 
-  /* Canales rápidos */
-  .quick-channels {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-bottom: 4rem;
-  }
-  .channel-card {
-    border-radius: 16px;
-    padding: 1.75rem;
-    border: 1.5px solid var(--gray-border);
-    background: var(--white);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: border-color .2s, box-shadow .2s, transform .2s;
-  }
-  .channel-card:hover { border-color: var(--blue-mid); box-shadow: 0 6px 24px rgba(0,134,196,0.1); transform: translateY(-2px); }
-  .channel-card.whatsapp { border-color: #25D366; background: #f0fdf4; }
-  .channel-card.whatsapp:hover { border-color: #1abe5a; }
-  .channel-icon {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    background: var(--blue-light);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-  }
-  .channel-card.whatsapp .channel-icon { background: #dcfce7; }
-  .channel-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-mid); display: block; margin-bottom: 3px; }
-  .channel-value { font-size: 0.95rem; font-weight: 600; color: var(--gray-dark); }
-
   /* Form + info */
   .form-success {
     display: none;
@@ -62,30 +29,24 @@
   .form-group input::placeholder,
   .form-group textarea::placeholder { color: var(--gray-mid); opacity: 0.55; }
 
-  /* Mapa placeholder */
-  .map-placeholder {
+  /* Mapa Contenedor */
+  .map-container {
     width: 100%;
     height: 220px;
     border-radius: 14px;
-    background: linear-gradient(135deg, var(--blue-light), #daeef8);
-    border: 2px dashed var(--blue-mid);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    overflow: hidden;
+    border: 1.5px solid var(--gray-border);
     margin-top: 1.5rem;
   }
-  .map-placeholder-icon { font-size: 2rem; opacity: 0.4; }
-  .map-placeholder-text { font-size: 0.78rem; font-weight: 600; color: var(--blue-dark); opacity: 0.7; }
-  .map-placeholder-sub { font-size: 0.68rem; color: var(--gray-mid); }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 </style>
 </head>
 <body>
 
-<!-- Navbar y footer se inyectan via componentes.js -->
-
-<!-- ═══ PAGE HERO ═══ -->
 <div class="page-hero">
   <div class="page-hero-breadcrumb">
     <a href="index.html">Inicio</a>
@@ -96,55 +57,17 @@
   <h1 class="page-hero-title">Hablemos sobre<br><span>su equipamiento</span></h1>
   <p class="page-hero-desc">Cuéntenos qué equipo tiene y qué necesita. Le respondemos rápido y sin compromiso.</p>
 </div>
-<!-- ═══ CONTACTO ═══ -->
+
 <section id="contacto-main">
 
-  <!-- Canales de contacto rápido -->
-  <div class="quick-channels">
-    <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20servicios%20de%20MediSync" class="channel-card whatsapp" target="_blank" rel="noopener">
-      <div class="channel-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.28 7.046L.784 23.251l4.338-1.452A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.384l-.36-.214-3.733 1.249 1.265-3.622-.235-.373A9.79 9.79 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
-      </div>
-      <div>
-        <span class="channel-label">WhatsApp</span>
-        <div class="channel-value">376 437-4545</div>
-      </div>
-    </a>
-    <a href="https://wa.me/5493764639426?text=Hola%2C%20quiero%20consultar%20sobre%20servicios%20de%20MediSync" class="channel-card whatsapp" target="_blank" rel="noopener">
-      <div class="channel-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.28 7.046L.784 23.251l4.338-1.452A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.032-1.384l-.36-.214-3.733 1.249 1.265-3.622-.235-.373A9.79 9.79 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
-      </div>
-      <div>
-        <span class="channel-label">WhatsApp</span>
-        <div class="channel-value">376 463-9426</div>
-      </div>
-    </a>
-    
-    <a href="tel:+543764374545" class="channel-card">
-      <div class="channel-icon">📞</div>
-      <div>
-        <span class="channel-label">Llamada directa</span>
-        <div class="channel-value">+54 9 376 437-4545</div>
-      </div>
-    </a>
-    <a href="mailto:medisync.ar@gmail.com" class="channel-card">
-      <div class="channel-icon">✉️</div>
-      <div>
-        <span class="channel-label">Email</span>
-        <div class="channel-value">medisync.ar@gmail.com</div>
-      </div>
-    </a>
-  </div>
-  <!-- Formulario + info -->
   <div class="contact-grid">
     <div>
       <div class="section-header">
         <div class="section-label">Formulario de contacto</div>
         <h2 class="section-title">Envíenos su consulta</h2>
-        <p class="section-desc">Complete el formulario y le responderemos a la brevedad. Puede también contactarnos directamente por los canales de arriba.</p>
+        <p class="section-desc">Complete el formulario y le responderemos a la brevedad utilizando las vías de contacto integradas.</p>
       </div>
 
-      <!-- Mensaje de éxito (oculto hasta envío) -->
       <div class="form-success" id="formSuccess">
         <span class="form-success-icon">✅</span>
         <h3>¡Consulta enviada correctamente!</h3>
@@ -193,7 +116,6 @@
       </form>
     </div>
 
-    <!-- Info de contacto lateral -->
     <div class="contact-info-block">
       <div class="contact-info-card">
         <div class="contact-info-card-title">📞 Teléfonos</div>
@@ -222,21 +144,10 @@
           Posadas, Misiones, Argentina
         </div>
         <p style="font-size:0.82rem; color:var(--gray-mid); line-height:1.65; font-weight:300; margin-top:0.75rem;">Nuestra base operativa en Posadas nos permite responder rápidamente a cualquier institución de la provincia de Misiones.</p>
-        <!-- Mapa placeholder: reemplazá con iframe de Google Maps -->
-        <div class="map-placeholder">
-          <!-- <iframe src="https://www.google.com/maps/embed?..." ...></iframe> -->
-          <span class="map-placeholder-icon">🗺️</span>
-          <span class="map-placeholder-text">Mapa interactivo</span>
-          <span class="map-placeholder-sub">Insertar iframe de Google Maps</span>
+        
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m10!1m3!1d113271.74235882885!2d-55.9781395!3d-27.39126375!2m3!1f0!2f0!3f0!3m2!1i1024!2i1026!4m5!3s0x9457be0bab9bb29d%3A0x6331a196e819b5d!2sPosadas%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1715970000000!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </div>
-
-      <div class="contact-info-card" style="background:var(--blue-light); border-color:var(--blue-mid);">
-        <div class="contact-info-card-title" style="color:var(--blue);">⚡ Urgencias</div>
-        <p style="font-size:0.85rem; color:var(--gray-mid); line-height:1.65; font-weight:300;">Para fallas críticas que necesitan atención inmediata, comuníquese directamente por WhatsApp o llamada. <strong style="color:var(--blue)">Respuesta en menos de 24 horas</strong> para instituciones de Misiones.</p>
-        <a href="https://wa.me/5493764374545?text=URGENCIA%3A%20necesito%20servicio%20t%C3%A9cnico%20inmediato" class="btn-primary" style="margin-top:1rem; font-size:0.85rem; padding:10px 18px;" target="_blank" rel="noopener">
-          Reportar urgencia por WhatsApp
-        </a>
       </div>
     </div>
   </div>
