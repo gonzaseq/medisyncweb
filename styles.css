@@ -771,7 +771,25 @@ section { padding: 60px 5vw; }
 }
 
 .service-card:hover::before { transform: scaleX(1); }
+.service-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-md);
+  background: var(--blue-light);
+  border: 1px solid var(--blue-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-4);
+  flex-shrink: 0;
+}
 
+.service-icon-wrap svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue);
+  stroke-width: 1.5;
+}
 .service-card.featured {
   background: linear-gradient(145deg, var(--blue) 0%, var(--blue-dark) 100%);
   border-color: var(--blue);
