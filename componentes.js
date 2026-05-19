@@ -38,7 +38,7 @@
     <a href="https://www.instagram.com/medi.sync" class="nav-social-link" target="_blank" rel="noopener" aria-label="Instagram">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
     </a>
-    <a href="https://www.https://www.linkedin.com/company/medi-sync-arg" class="nav-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/company/medi-sync-arg" class="nav-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
       <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
     </a>
   </div>
