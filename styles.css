@@ -994,8 +994,12 @@ section { padding: 60px 5vw; }
 /* ─── GALLERY ─── */
 /* ═══ GALERÍA GRID ═══ */
 .gallery-grid {
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
 }
+
 
 /* ═══ ITEM BASE ═══ */
 .gallery-item {
