@@ -1681,10 +1681,10 @@ footer {
 
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 320px);
+  justify-content: center;
+  gap: 2rem;
 }
-
 .team-card {
   background: var(--white);
   border-radius: 16px;
