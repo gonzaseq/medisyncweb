@@ -66,7 +66,40 @@
   .valor-desc { font-size: 0.82rem; color: var(--gray-mid); line-height: 1.65; font-weight: 300; }
 
   /* Equipo / historia */
-  <!-- INICIO: Sección Nuestro Equipo -->
+ 
+  #historia { background: var(--white); }
+  .historia-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .historia-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stat-card {
+    background: var(--gray-light);
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid var(--gray-border);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .stat-card-num { font-size: 2rem; font-weight: 800; color: var(--blue); flex-shrink: 0; min-width: 60px; }
+  .stat-card-label { font-size: 0.875rem; font-weight: 600; color: var(--gray-dark); }
+  .stat-card-sub { font-size: 0.78rem; color: var(--gray-mid); font-weight: 300; margin-top: 2px; }
+
+  @media (max-width: 800px) {
+    .mv-grid { grid-template-columns: 1fr; }
+    .historia-layout { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+ <!-- INICIO: Sección Nuestro Equipo -->
 <div class="team-wrapper fade-up stagger-1">
   <div class="team-wrapper-label">Nuestro equipo</div>
   <div class="team-grid">
@@ -112,39 +145,6 @@
   </div>
 </div>
 <!-- FIN: Sección Nuestro Equipo -->
-  #historia { background: var(--white); }
-  .historia-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .historia-visual {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .stat-card {
-    background: var(--gray-light);
-    border-radius: 16px;
-    padding: 1.75rem;
-    border: 1px solid var(--gray-border);
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-  }
-  .stat-card-num { font-size: 2rem; font-weight: 800; color: var(--blue); flex-shrink: 0; min-width: 60px; }
-  .stat-card-label { font-size: 0.875rem; font-weight: 600; color: var(--gray-dark); }
-  .stat-card-sub { font-size: 0.78rem; color: var(--gray-mid); font-weight: 300; margin-top: 2px; }
-
-  @media (max-width: 800px) {
-    .mv-grid { grid-template-columns: 1fr; }
-    .historia-layout { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-
 <div class="page-hero">
   <div class="page-hero-breadcrumb">
     <a href="index.html">Inicio</a>
