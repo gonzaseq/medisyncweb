@@ -1819,3 +1819,27 @@ footer {
   .team-grid { grid-template-columns: 1fr; }
   .team-photo-wrap { height: 240px; }
 }
+/* Social links en navbar */
+.nav-social-link {
+  display: flex;
+  align-items: center;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+  padding: 2px;
+}
+.nav-social-link:hover { color: var(--blue); }
+
+/* Socials en menú mobile */
+.nav-mobile-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.nav-mobile-socials a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--gray-mid);
+}
+.nav-mobile-socials a:hover { color: var(--blue); }
