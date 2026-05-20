@@ -130,7 +130,7 @@
   });
 /* ── Botón flotante WhatsApp ── */
 const waBtn = document.createElement('a');
-waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync.%20%C3%A9';
+waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync.';
 waBtn.target = '_blank';
 waBtn.rel = 'noopener noreferrer';
 waBtn.setAttribute('aria-label', 'Contactar por WhatsApp');
