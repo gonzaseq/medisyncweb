@@ -97,6 +97,38 @@ nav.scrolled {
   border-bottom-color: transparent;
   box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.07);
 }
+.nav-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+/* Logo principal */
+.logo-main {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Logo circular */
+.logo-circle {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1.5px solid var(--gray-border);
+  background: var(--white);
+
+  transition: transform var(--t-fast) var(--ease),
+              box-shadow var(--t-fast) var(--ease);
+}
+
+/* Hover sutil */
+.nav-logo:hover .logo-circle {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+}
 
 .nav-logo {
   display: flex;
