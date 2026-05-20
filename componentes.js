@@ -19,10 +19,10 @@
   const navHTML = `
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-  <div class="nav-logo-wrapper">
-  <img src="img/logo1.png" alt="MediSync Ingeniería Clínica" class="logo-main">
-</div>
-</a>
+    <div class="nav-logo-img">
+      <img src="img/logo1.png" alt="MediSync Ingeniería Clínica">
+    </div>
+  </a>
 
   <div class="nav-phones">
     <a href="tel:+543764374545" class="nav-phone-link">
