@@ -4,15 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Equipos | MediSync Ingeniería Clínica – Posadas, Misiones</title>
-<meta name="description" content="Equipamiento médico crítico que atendemos: ecógrafos, monitores, , electrocardiógrafos, desfibriladores, ventiladores, bombas de infusión y más.">
+<meta name="description" content="Equipamiento médico crítico que atendemos: ecógrafos, monitores, electrocardiógrafos, desfibriladores, ventiladores, bombas de infusión y más.">
 <link rel="icon" type="image/png" href="img/logos.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-
-  /* Equipo detalle */
+  /* ─── Equipment detail cards ─── */
   .equip-detail-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -24,34 +23,37 @@
     border-radius: 18px;
     padding: 2rem;
     background: var(--white);
-    transition: border-color .2s, box-shadow .2s;
+    transition: border-color var(--t-base) var(--ease),
+                box-shadow var(--t-base) var(--ease),
+                transform var(--t-base) var(--ease-bounce);
   }
-  .equip-detail-card:hover { border-color: var(--blue-mid); box-shadow: 0 6px 24px rgba(0,134,196,0.1); }
+  .equip-detail-card:hover {
+    border-color: var(--blue-mid);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
   .equip-detail-card.highlight { border-color: var(--blue); background: var(--blue-light); }
+  .equip-detail-card.highlight:hover { border-color: var(--blue-dark); }
+
   .equip-detail-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
   .equip-detail-icon-wrap {
     width: 52px; height: 52px;
     border-radius: 14px;
     background: var(--blue-light);
+    border: 1px solid var(--blue-mid);
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem;
     flex-shrink: 0;
   }
-  .equip-detail-card.highlight .equip-detail-icon-wrap { background: rgba(0,134,196,0.15); }
-  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); }
-  .equip-detail-badge {
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--blue);
-    color: var(--white);
-    padding: 3px 10px;
-    border-radius: 100px;
-    display: inline-block;
-    margin-top: 4px;
+  .equip-detail-card.highlight .equip-detail-icon-wrap {
+    background: rgba(0,134,196,0.12);
+    border-color: var(--blue);
   }
-  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.65; font-weight: 300; }
+  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); }
+  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; }
+
+  /* ─── Galería con fondo alternado para más contraste ─── */
+  #gallery { background: var(--gray-light); }
 
   @media (max-width: 700px) {
     .partners-intro { flex-direction: column; }
@@ -60,8 +62,6 @@
 </style>
 </head>
 <body>
-
-<!-- Navbar y footer se inyectan via componentes.js -->
 
 <!-- ═══ PAGE HERO ═══ -->
 <div class="page-hero">
@@ -72,7 +72,7 @@
   </div>
   <div class="page-hero-label">Equipamiento médico</div>
   <h1 class="page-hero-title">Cobertura técnica integral por <br><span>Áreas Críticas</span></h1>
-  <p class="page-hero-desc">Entendemos que cada equipo médico exige protocolos de servicio y diagnóstico específicos. Por eso, brindamos soporte técnico bajo estándares de fábrica para asegurar la máxima disponibilidad de todo su parque tecnológico. </p>
+  <p class="page-hero-desc">Entendemos que cada equipo médico exige protocolos de servicio y diagnóstico específicos. Por eso, brindamos soporte técnico bajo estándares de fábrica para asegurar la máxima disponibilidad de todo su parque tecnológico.</p>
 </div>
 
 <!-- ═══ EQUIPMENT ═══ -->
@@ -177,28 +177,22 @@
   </div>
   <div class="gallery-grid">
     <div class="gallery-item large fade-up">
-   <img src="img/5.jpeg" alt="Servicio técnico en institución">
-
+      <img src="img/5.jpeg" alt="Servicio técnico en institución">
     </div>
     <div class="gallery-item fade-up stagger-1">
       <img src="img/img3.jpeg" alt="Ecógrafo Mindray">
-
     </div>
     <div class="gallery-item fade-up stagger-2">
-      <img src="img/mesa.jpeg" alt="Monitor de paciente">
-  
-    
+      <img src="img/mesa.jpeg" alt="Mesa de trabajo técnico">
     </div>
     <div class="gallery-item fade-up">
-      <img src="img/11.jpeg" alt="Desfibrilador">
+      <img src="img/11.jpeg" alt="Desfibrilador en servicio">
     </div>
     <div class="gallery-item fade-up stagger-1">
       <img src="img/img1.jpeg" alt="Técnico en trabajo">
     </div>
     <div class="gallery-item fade-up stagger-2">
       <img src="img/img2.jpeg" alt="Ventilador mecánico">
-    </div>
-    </div>
     </div>
   </div>
 </section>
