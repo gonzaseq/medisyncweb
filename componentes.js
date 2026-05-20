@@ -20,8 +20,8 @@
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
   <div class="nav-logo-wrapper">
-  <img src="img/logos.png" alt="Logo MediSync" class="logo-circle">
-  <img src="img/logo1.png" alt="MediSync Ingeniería Clínica" class="logo-main">
+  <img src="img/logos1.png" alt="Logo MediSync" class="logo-circle">
+  <img src="img/logo11.png" alt="MediSync Ingeniería Clínica" class="logo-main">
 </div>
 </a>
 
