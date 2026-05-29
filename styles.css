@@ -1456,7 +1456,7 @@ footer {
 }
 
 .footer-logo-img img {
-  width: 160px;
+  width: 320px;
   max-width: 100%;
   height: auto;
 }
@@ -1464,7 +1464,7 @@ footer {
 /* Móvil */
 @media (max-width: 768px) {
   .footer-logo-img img {
-    width: 140px;
+    width: 280px;
   }
 }
 .footer-phones { display: flex; flex-direction: column; gap: var(--sp-2); margin-top: var(--sp-3); }
