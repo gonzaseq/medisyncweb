@@ -1413,7 +1413,7 @@ footer {
 /* FIX: Columna vacía eliminada — grid de 2 columnas */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 4rem;
   margin-bottom: var(--sp-7);
 }
