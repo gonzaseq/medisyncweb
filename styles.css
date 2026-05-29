@@ -1424,6 +1424,7 @@ footer {
   color: var(--white);
   margin-bottom: var(--sp-1);
   letter-spacing: -0.4px;
+   
 }
 
 .footer-brand-sub {
@@ -1454,6 +1455,18 @@ footer {
   margin-bottom: var(--sp-3);
 }
 
+.footer-logo-img img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .footer-logo-img img {
+    width: 140px;
+  }
+}
 .footer-phones { display: flex; flex-direction: column; gap: var(--sp-2); margin-top: var(--sp-3); }
 
 .footer-phone-link {
