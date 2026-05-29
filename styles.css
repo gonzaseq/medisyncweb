@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MediSync — Design System v2.1
+   MediSync — Design System v2.2
    Ingeniería Biomédica · Premium · Confianza · Precisión
 ═══════════════════════════════════════════════════════ */
 
@@ -352,7 +352,6 @@ section { padding: 80px 5vw; }
   pointer-events: none;
 }
 
-/* Línea decorativa inferior del page-hero */
 .page-hero::after {
   content: '';
   position: absolute;
@@ -960,7 +959,6 @@ section { padding: 80px 5vw; }
 .equip-name { font-size: 0.78rem; font-weight: 600; color: var(--gray-dark); }
 
 /* ─── GALLERY ─── */
-/* ─── GALLERY ─── */
 #gallery { background: var(--gray-light); }
 
 .gallery-grid {
@@ -1410,7 +1408,6 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* FIX: Columna vacía eliminada — grid de 2 columnas */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1424,7 +1421,6 @@ footer {
   color: var(--white);
   margin-bottom: var(--sp-1);
   letter-spacing: -0.4px;
-   
 }
 
 .footer-brand-sub {
@@ -1445,7 +1441,7 @@ footer {
 }
 
 .footer-logo-img {
-  width: 220px;
+  width: 320px;
   height: auto;
   background: transparent;
   border: none;
@@ -1456,22 +1452,10 @@ footer {
 }
 
 .footer-logo-img img {
-  width: 720px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
-/* Móvil */
-@media (max-width: 768px) {
-   padding: 48px 16px 32px;
-  .footer-logo-img img {
-    width: 280px;
-   .footer-brand {
-    justify-content: flex-start;
-  }
-}
-  }
-}
 .footer-phones { display: flex; flex-direction: column; gap: var(--sp-2); margin-top: var(--sp-3); }
 
 .footer-phone-link {
@@ -1552,6 +1536,23 @@ footer {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   nav { grid-template-columns: auto auto; }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 48px 16px 32px;
+  }
+  .footer-logo-img {
+    width: 220px;
+  }
+  .footer-brand {
+    justify-content: flex-start;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1744,7 +1745,7 @@ footer {
   border: 1px solid var(--blue-mid);
 }
 
-/* ─── STAT CARDS (en Nosotros) ─── */
+/* ─── STAT CARDS ─── */
 .stat-card {
   background: var(--white);
   border-radius: var(--r-lg);
