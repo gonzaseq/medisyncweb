@@ -1463,6 +1463,7 @@ footer {
 
 /* Móvil */
 @media (max-width: 768px) {
+   padding: 48px 16px 32px;
   .footer-logo-img img {
     width: 280px;
    .footer-brand {
