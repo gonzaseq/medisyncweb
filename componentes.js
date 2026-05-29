@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MediSync — componentes.js v2.1
+   MediSync — componentes.js v2.2
    Inyecta navbar y footer en todas las páginas
 ═══════════════════════════════════════════════════════ */
 
@@ -58,15 +58,21 @@
   </div>
 </div>`;
 
-  /* ── FOOTER — columna vacía eliminada, RRSS integradas ── */
+  /* ── FOOTER ── */
   const footerHTML = `
 <footer>
   <div class="footer-grid">
+
+    <!-- Col 1: Logo -->
     <div class="footer-brand">
       <div class="footer-logo-img">
         <img src="img/logo.white.png" alt="MediSync Ingeniería Clínica">
       </div>
-      <p class="footer-desc">Servicio técnico especializado de equipamiento médico en Misiones. Mantenimiento preventivo, reparación y soporte con respaldo técnico oficial.</p>
+    </div>
+
+    <!-- Col 2: Contacto y ubicación -->
+    <div>
+      <div class="footer-heading">Contacto</div>
       <div class="footer-phones">
         <a href="tel:+543764374545" class="footer-phone-link">
           ${phoneSVG(13)} +54 9 376 437-4545
@@ -75,7 +81,16 @@
           ${phoneSVG(13)} +54 9 376 463-9426
         </a>
       </div>
-      <div style="display:flex;gap:12px;margin-top:20px;">
+      <p style="margin-top:10px;font-size:0.85rem;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:6px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5;flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Posadas, Misiones
+      </p>
+    </div>
+
+    <!-- Col 3: Redes sociales -->
+    <div>
+      <div class="footer-heading">Seguinos</div>
+      <div style="display:flex;gap:12px;margin-top:8px;">
         <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener noreferrer"
            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5);text-decoration:none;transition:background 0.2s,color 0.2s,border-color 0.2s;"
            onmouseover="this.style.background='rgba(225,48,108,0.2)';this.style.color='#E1306C';this.style.borderColor='rgba(225,48,108,0.4)'"
@@ -92,16 +107,7 @@
         </a>
       </div>
     </div>
-    <div>
-      <div class="footer-heading">Navegación</div>
-      <ul class="footer-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="equipos.html">Equipos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
+
   </div>
   <div class="footer-bottom">
     <span>© 2026 MediSync Ingeniería Clínica. Todos los derechos reservados.</span>
@@ -137,7 +143,7 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   });
 
-  /* ── Botón flotante WhatsApp (solo uno, más limpio) ── */
+  /* ── Botón flotante WhatsApp ── */
   const waBtn = document.createElement('a');
   waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync.';
   waBtn.target = '_blank';
