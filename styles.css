@@ -1815,3 +1815,45 @@ footer {
   .team-photo-wrap { height: 240px; }
   .team-wrapper { margin: 0 5vw; }
 }
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo-img img {
+    width: 180px;        /* ajustá este valor a tu gusto */
+    height: auto;
+  }
+
+  .footer-phones {
+    align-items: center;
+  }
+
+  .footer-phone-link {
+    justify-content: center;
+  }
+
+  .footer-grid p {
+    justify-content: center;
+  }
+
+  /* Iconos de redes centrados */
+  .footer-grid > div:last-child > div {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+}
