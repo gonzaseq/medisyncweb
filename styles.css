@@ -1465,6 +1465,10 @@ footer {
 @media (max-width: 768px) {
   .footer-logo-img img {
     width: 280px;
+   .footer-brand {
+    justify-content: flex-start;
+  }
+}
   }
 }
 .footer-phones { display: flex; flex-direction: column; gap: var(--sp-2); margin-top: var(--sp-3); }
