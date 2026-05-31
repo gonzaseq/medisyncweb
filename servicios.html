@@ -136,8 +136,11 @@
   #contratos { background: var(--gray-light); }
 
   @media (max-width: 700px) {
-    .service-detail-grid { grid-template-columns: 1fr; }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .service-detail > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
   }
+}
 </style>
 </head>
 <body>
