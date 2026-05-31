@@ -21,7 +21,7 @@
   .equip-detail-card {
     border: 1.5px solid var(--gray-border);
     border-radius: 18px;
-    padding: 2rem;
+    overflow: hidden;
     background: var(--white);
     transition: border-color var(--t-base) var(--ease),
                 box-shadow var(--t-base) var(--ease),
@@ -35,22 +35,17 @@
   .equip-detail-card.highlight { border-color: var(--blue); background: var(--blue-light); }
   .equip-detail-card.highlight:hover { border-color: var(--blue-dark); }
 
-  .equip-detail-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-  .equip-detail-icon-wrap {
-    width: 52px; height: 52px;
-    border-radius: 14px;
-    background: var(--blue-light);
-    border: 1px solid var(--blue-mid);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem;
-    flex-shrink: 0;
+  .equip-detail-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
   }
-  .equip-detail-card.highlight .equip-detail-icon-wrap {
-    background: rgba(0,134,196,0.12);
-    border-color: var(--blue);
+  .equip-detail-card-body {
+    padding: 1.5rem;
   }
-  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); }
-  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; }
+  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.5rem; }
+  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; margin: 0; }
 
   /* ─── Galería con fondo alternado para más contraste ─── */
   #gallery { background: var(--gray-light); }
@@ -84,85 +79,71 @@
   </div>
 
   <div class="equip-detail-grid">
+
     <div class="equip-detail-card highlight fade-up">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">🔬</div>
-        <div>
-          <div class="equip-detail-name">Ecógrafos</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&q=80&auto=format&fit=crop" alt="Ecógrafo">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Ecógrafos</div>
+        <p class="equip-detail-desc">Soporte técnico para toda la gama de ecógrafos: portátiles, de sala y de alta gama. Diagnóstico, reparación, calibración y actualización de software con acceso a piezas originales a través de Sonocare.</p>
       </div>
-      <p class="equip-detail-desc">Soporte técnico para toda la gama de ecógrafos: portátiles, de sala y de alta gama. Diagnóstico, reparación, calibración y actualización de software con acceso a piezas originales a través de Sonocare.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-1">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">💓</div>
-        <div>
-          <div class="equip-detail-name">Monitores de paciente</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=600&q=80&auto=format&fit=crop" alt="Monitor de paciente">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Monitores de paciente</div>
+        <p class="equip-detail-desc">Mantenimiento y reparación de monitores multiparamétricos. Verificación de sensores, alarmas, módulos de medición y pantallas. Equipos de UCI, quirófano y sala general.</p>
       </div>
-      <p class="equip-detail-desc">Mantenimiento y reparación de monitores multiparamétricos. Verificación de sensores, alarmas, módulos de medición y pantallas. Equipos de UCI, quirófano y sala general.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-2">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">⚡</div>
-        <div>
-          <div class="equip-detail-name">Desfibriladores</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&q=80&auto=format&fit=crop" alt="Desfibrilador">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Desfibriladores</div>
+        <p class="equip-detail-desc">Servicio técnico de desfibriladores manuales y automáticos. Verificación de descarga, reemplazo de electrodos, mantenimiento de baterías y calibración según normas de seguridad eléctrica.</p>
       </div>
-      <p class="equip-detail-desc">Servicio técnico de desfibriladores manuales y automáticos. Verificación de descarga, reemplazo de electrodos, mantenimiento de baterías y calibración según normas de seguridad eléctrica.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-3">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">🫁</div>
-        <div>
-          <div class="equip-detail-name">Ventiladores mecánicos</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80&auto=format&fit=crop" alt="Ventilador mecánico">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Ventiladores mecánicos</div>
+        <p class="equip-detail-desc">Diagnóstico y reparación de ventiladores para UCI y sala. Verificación de válvulas, sensores de flujo y presión, sistemas de alarma y software de control de ciclos ventilatorios.</p>
       </div>
-      <p class="equip-detail-desc">Diagnóstico y reparación de ventiladores para UCI y sala. Verificación de válvulas, sensores de flujo y presión, sistemas de alarma y software de control de ciclos ventilatorios.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-1">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">💉</div>
-        <div>
-          <div class="equip-detail-name">Bombas de infusión</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=600&q=80&auto=format&fit=crop" alt="Bomba de infusión">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Bombas de infusión</div>
+        <p class="equip-detail-desc">Mantenimiento preventivo y correctivo de bombas de jeringa e infusión. Verificación de precisión de caudal, alarmas de oclusión y baterías.</p>
       </div>
-      <p class="equip-detail-desc">Mantenimiento preventivo y correctivo de bombas de jeringa e infusión. Verificación de precisión de caudal, alarmas de oclusión y baterías.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-2">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">🩻</div>
-        <div>
-          <div class="equip-detail-name">Equipos de Rx portátil</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?w=600&q=80&auto=format&fit=crop" alt="Equipo de Rx portátil">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Equipos de Rx portátil</div>
+        <p class="equip-detail-desc">Servicio técnico de equipos de radiología portátil. Revisión de generadores, sistemas de alimentación y mecanismos de posicionamiento.</p>
       </div>
-      <p class="equip-detail-desc">Servicio técnico de equipos de radiología portátil. Revisión de generadores, sistemas de alimentación y mecanismos de posicionamiento.</p>
     </div>
 
     <div class="equip-detail-card fade-up stagger-3">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">🧪</div>
-        <div>
-          <div class="equip-detail-name">Electrobisturís</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&q=80&auto=format&fit=crop" alt="Electrobisturí">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Electrobisturís</div>
+        <p class="equip-detail-desc">Mantenimiento y calibración de unidades de electrocirugía. Verificación de potencia de salida, modos de corte y coagulación, y sistemas de seguridad.</p>
       </div>
-      <p class="equip-detail-desc">Mantenimiento y calibración de unidades de electrocirugía. Verificación de potencia de salida, modos de corte y coagulación, y sistemas de seguridad.</p>
     </div>
 
     <div class="equip-detail-card fade-up">
-      <div class="equip-detail-header">
-        <div class="equip-detail-icon-wrap">🩺</div>
-        <div>
-          <div class="equip-detail-name">Equipos de diagnóstico</div>
-        </div>
+      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1550831107-1553da8c8464?w=600&q=80&auto=format&fit=crop" alt="Equipos de diagnóstico">
+      <div class="equip-detail-card-body">
+        <div class="equip-detail-name">Equipos de diagnóstico</div>
+        <p class="equip-detail-desc">Diagnóstico y reparación de equipos varios: electrocardiógrafos, oxímetros, tensiómetros digitales y equipos de laboratorio básico.</p>
       </div>
-      <p class="equip-detail-desc">Diagnóstico y reparación de equipos varios: electrocardiógrafos, oxímetros, tensiómetros digitales y equipos de laboratorio básico.</p>
     </div>
+
   </div>
 
   <p style="margin-top:2rem; font-size:.85rem; color:var(--gray-mid); font-weight:300;">¿No ve su equipo? <a href="contacto.html" style="color:var(--blue); font-weight:600;">Contáctenos</a>. Evaluamos cada caso individualmente.</p>
