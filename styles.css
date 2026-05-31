@@ -1560,7 +1560,7 @@ footer {
   .nav-hamburger { display: flex; }
   nav { grid-template-columns: auto auto; }
   .page-hero-inner { grid-template-columns: 1fr; }
-  .page-hero-img { height: 240px; }
+  .page-hero-img { display: none; }
 }
 
 @media (max-width: 768px) {
