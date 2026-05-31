@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicios | MediSync Ingeniería Clínica – Posadas, Misiones</title>
 <meta name="description" content="Mantenimiento preventivo, reparación, urgencias técnicas y contratos de servicio para equipamiento médico en Misiones y el NEA.">
-<link rel="icon" type="image/x-icon" hronta
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
   /* ─── Detalle de servicio expandido ─── */
   .service-detail {
     background: var(--gray-light);
@@ -69,6 +74,14 @@
   .service-detail-title { font-size: 0.9rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.3rem; }
   .service-detail-text { font-size: 0.82rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; }
 
+  .mindray-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
   /* ─── Contratos ─── */
   .plans-grid {
     display: grid;
@@ -131,11 +144,9 @@
   #contratos { background: var(--gray-light); }
 
   @media (max-width: 700px) {
-  .service-detail-grid { grid-template-columns: 1fr; }
-  .service-detail > div[style*="grid-template-columns:1fr 1fr"] {
-    grid-template-columns: 1fr !important;
+    .service-detail-grid { grid-template-columns: 1fr; }
+    .mindray-header { grid-template-columns: 1fr; }
   }
-}
 </style>
 </head>
 <body>
@@ -199,11 +210,10 @@
 
   </div>
 
-   <!-- Detalle Mindray -->
+  <!-- Detalle Mindray -->
   <div class="service-detail fade-up">
 
-    <!-- Cabecera con logo + imagen -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; margin-bottom:2rem;">
+    <div class="mindray-header">
       <div>
         <div class="section-label">Especialización Mindray</div>
         <h3 class="section-title" style="font-size:1.5rem;">Soporte técnico oficial de ecógrafos Mindray</h3>
@@ -211,7 +221,7 @@
         <img src="img/mindray.png" alt="Mindray" style="height:36px; width:auto; margin-top:1.25rem; object-fit:contain;">
       </div>
       <img
-        src="https://www.mindray.com/content/xpace/es_ar/solutions/medical-imaging/women-health.thumb.1280.1280.png"
+        src="https://www.mindray.com/content/dam/xpace/en/products-solutions/solutions/medical-imaging/women-care/womencare-insight-3@pc.jpg"
         alt="Ecógrafo Mindray"
         style="width:100%; height:100%; min-height:220px; object-fit:cover; border-radius:14px; border:1px solid var(--gray-border);">
     </div>
