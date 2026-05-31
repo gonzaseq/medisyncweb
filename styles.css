@@ -438,6 +438,7 @@ section { padding: 80px 5vw; }
   .service-detail-grid { grid-template-columns: 1fr; }
   .mindray-header { grid-template-columns: 1fr; }
   .page-hero-img { display: none; }
+  .page-hero-inner { grid-template-columns: 1fr; }  /* ← agregás esta */
 }
 
 /* ─── STRIP ─── */
