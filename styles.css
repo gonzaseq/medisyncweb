@@ -435,7 +435,8 @@ section { padding: 80px 5vw; }
 }
 
 @media (max-width: 900px) {
-  .page-hero-inner { grid-template-columns: 1fr; }
+  .service-detail-grid { grid-template-columns: 1fr; }
+  .mindray-header { grid-template-columns: 1fr; }
   .page-hero-img { display: none; }
 }
 
