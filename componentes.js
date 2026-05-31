@@ -36,7 +36,7 @@
   <ul class="nav-links">
     <li><a href="index.html"     class="${isActive('index.html')}">Inicio</a></li>
     <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
-    <li><a href="equipos.html"   class="${isActive('equipos.html')}">Equipos</a></li>
+    <li><a href="equipos.html"   class="${isActive('equipos.html')}">Equipamiento</a></li>
     <li><a href="nosotros.html"  class="${isActive('nosotros.html')}">Nosotros</a></li>
     <li><a href="contacto.html"  class="nav-cta ${isActive('contacto.html')}">Solicitar servicio</a></li>
   </ul>
