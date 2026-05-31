@@ -405,7 +405,7 @@ section { padding: 80px 5vw; }
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--gray-soft);
   margin-bottom: var(--sp-6);
 }
