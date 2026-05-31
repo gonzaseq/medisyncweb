@@ -48,7 +48,10 @@
   .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; margin: 0; }
 
   #gallery { background: var(--gray-light); }
-
+  @media (max-width: 900px) {
+    .page-hero-img { display: none; }
+    .page-hero-inner { grid-template-columns: 1fr; }
+  }
   @media (max-width: 700px) {
     .partners-intro { flex-direction: column; }
     .partners-intro-badge { min-width: auto; width: 100%; }
