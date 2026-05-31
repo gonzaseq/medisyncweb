@@ -49,7 +49,7 @@
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="index.html"     onclick="closeMobile()">Inicio</a>
   <a href="servicios.html" onclick="closeMobile()">Servicios</a>
-  <a href="equipos.html"   onclick="closeMobile()">Equipos</a>
+  <a href="equipos.html"   onclick="closeMobile()">Equipamiento</a>
   <a href="nosotros.html"  onclick="closeMobile()">Nosotros</a>
   <a href="contacto.html"  class="nav-cta" onclick="closeMobile()">Solicitar servicio</a>
   <div class="nav-mobile-phones">
