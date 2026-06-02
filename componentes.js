@@ -24,15 +24,6 @@
     </div>
   </a>
 
-  <div class="nav-phones">
-    <a href="tel:+543764374545" class="nav-phone-link">
-      ${phoneSVG(12)} 376 437-4545
-    </a>
-    <a href="tel:+543764639426" class="nav-phone-link">
-      ${phoneSVG(12)} 376 463-9426
-    </a>
-  </div>
-
   <ul class="nav-links">
     <li><a href="index.html"     class="${isActive('index.html')}">Inicio</a></li>
     <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
