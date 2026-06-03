@@ -84,7 +84,7 @@ nav {
   -webkit-backdrop-filter: blur(20px) saturate(1.6);
   border-bottom: 1px solid var(--gray-border);
   padding: 0 2.5vw;
-  height: 72px;
+  height: 80px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -152,7 +152,7 @@ nav.scrolled {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 1.5rem;
   list-style: none;
   justify-content: flex-end;
 }
@@ -194,7 +194,7 @@ nav.scrolled {
   padding: 9px 20px !important;
   border-radius: var(--r-sm) !important;
   font-weight: 600 !important;
-  font-size: 0.88rem !important;
+  font-size: 0.94rem !important;
   box-shadow: var(--shadow-blue-sm);
   transition: background var(--t-fast) var(--ease),
               transform var(--t-fast) var(--ease),
