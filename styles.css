@@ -1773,3 +1773,103 @@ footer {
   .team-photo-wrap { height: 240px; }
   .team-wrapper { margin: 0 5vw; }
 }
+/* ═══ SITE FOOTER (v2) ═══ */
+.site-footer {
+  background: #0B1219;
+  color: rgba(255,255,255,0.55);
+  padding: 56px 5vw 32px;
+  border-top: 3px solid var(--blue);
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: var(--sp-7);
+}
+
+.site-footer__logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+.site-footer__tagline {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin-top: var(--sp-2);
+}
+
+.site-footer__heading {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: var(--sp-4);
+}
+
+.site-footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.site-footer__link {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color var(--t-fast) var(--ease);
+}
+
+.site-footer__link:hover { color: rgba(255,255,255,0.85); }
+
+.site-footer__social-icons {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.site-footer__social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: background var(--t-base) var(--ease),
+              color var(--t-fast) var(--ease),
+              border-color var(--t-fast) var(--ease);
+}
+
+.site-footer__social-link:hover {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+}
+
+.site-footer__social-link--instagram:hover { background: rgba(225,48,108,0.2); border-color: rgba(225,48,108,0.5); color: #e1306c; }
+.site-footer__social-link--linkedin:hover  { background: rgba(0,119,181,0.2);  border-color: rgba(0,119,181,0.5);  color: #0077b5; }
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: var(--sp-5);
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.28);
+}
+
+@media (max-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .site-footer__logo img { width: 160px; }
+}
