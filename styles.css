@@ -1343,7 +1343,6 @@ section { padding: 88px 5vw; }
 .contact-info-item:hover { color: var(--blue); }
 .contact-info-item:last-child { margin-bottom: 0; }
 
-Reemplazá ese bloque entero por este:
 css/* ═══ FOOTER ═══ */
 footer {
   background: #0B1219;
