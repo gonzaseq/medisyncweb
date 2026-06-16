@@ -11,23 +11,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
-<!-- ═══ ESTILOS EXCLUSIVOS PARA OPTIMIZAR LA TIENDA ═══ -->
 <style>
   /* Reducimos el tamaño de las columnas en la grilla para que las tarjetas sean más chicas */
   #productos .services-grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--sp-4);
-    padding-top: var(--sp-4);
-    padding-bottom: var(--sp-5);
+    padding: var(--sp-5) var(--sp-4);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   /* Compactamos el padding de la tarjeta y la estructuramos en formato vertical flexible */
   #productos .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--r-lg);
     padding: var(--sp-4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  }
+
+  #productos .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
   }
 
   /* Contenedor de imagen 1:1 (Cuadrado Perfecto Proporcional) */
@@ -59,23 +70,45 @@
 
   /* Ajustes tipográficos menores para la escala compacta */
   #productos .service-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gray-dark);
     margin-bottom: var(--sp-2);
     line-height: 1.3;
   }
 
   #productos .service-desc {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
     margin-bottom: var(--sp-3);
     flex-grow: 1; /* Empuja el botón hacia abajo para alinear todas las tarjetas */
+    line-height: 1.4;
+  }
+
+  .precio-tag {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+    margin-bottom: var(--sp-3);
+    display: block;
+  }
+
+  /* Encabezados de categorías */
+  .categoria-title {
+    width: 100%;
+    grid-column: 1 / -1;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray-dark);
+    border-left: 4px solid var(--blue);
+    padding-left: var(--sp-3);
+    margin-top: var(--sp-5);
+    margin-bottom: var(--sp-2);
   }
 </style>
 </head>
 <body>
 
-<!-- El Navbar se inyectará automáticamente aquí mediante componentes.js -->
-
-<!-- ═══ TIENDA HERO / CABECERA ═══ -->
 <section id="tienda-header" style="padding-top: 140px; background: var(--gray-light); border-bottom: 1px solid var(--gray-border);">
   <div class="section-header centered fade-up">
     <div class="section-label">Catálogo de Stock</div>
@@ -84,45 +117,702 @@
   </div>
 </section>
 
-<!-- ═══ CATÁLOGO DE PRODUCTOS ═══ -->
-<section id="productos" style="background: var(--white);">
+<section id="productos" style="background: var(--white); padding-bottom: 60px;">
   <div class="services-grid">
     
-    <!-- Producto 1 -->
+    <div class="categoria-title">Oximetría (Sensores SpO2)</div>
+
     <div class="service-card fade-up">
       <div class="producto-img-box">
-        <img src="img/spo2.png" alt="Sensor de SpO2 Reutilizable">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto - Ficha Redel">
       </div>
-      <div class="service-title">Sensor de SpO2 Reutilizable</div>
-      <div class="service-desc">Alta durabilidad y excelente precisión de lectura en condiciones críticas. Cables reforzados diseñados para resistir el uso clínico diario intensivo.</div>
-      <span class="service-tag" style="margin-bottom: var(--sp-4);">Mindray - Edan/Leex - Drager</span>
-      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20stock%20y%20precio%20del%20Sensor%20de%20SpO2%20Reutilizable" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+      <div class="service-title">Sensor SpO2 Broche Adulto - Ficha Redel</div>
+      <div class="service-desc">Cable largo directo. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN LEEX IM8 / IM70 / M3 / DRAGER VISTA.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Leex / Drager</span>
+      <span class="precio-tag">$110.533,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20Redel%20Compatible%20con%20Mindray%2FEdan%2FDrager" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
         Consultar Stock
       </a>
     </div>
 
-    <!-- Producto 2 -->
-    <div class="service-card fade-up stagger-1">
+    <div class="service-card fade-up">
       <div class="producto-img-box">
-        <img src="img/ecg.png" alt="Cable de ECG de 5 vías">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ficha Redel">
       </div>
-      <div class="service-title">Cable de ECG de 5 Vías</div>
-      <div class="service-desc">Cable troncal con terminales tipo pinza (snap). Excelente blindaje interno para la supresión de artefactos y ruidos en el trazado de pantallas.</div>
-      <span class="service-tag" style="margin-bottom: var(--sp-4);">Mindray - Edan/Leex</span>
-      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20stock%20y%20precio%20del%20Cable%20de%20ECG%20de%205%20V%C3%ADas" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+      <div class="service-title">Sensor SpO2 Ped/Neo Ficha Redel</div>
+      <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN - LEEX IM8 / IM70 / M3 / DRAGER VISTA.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Leex / Drager</span>
+      <span class="precio-tag">$118.428,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ficha%20Redel" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
         Consultar Stock
       </a>
     </div>
 
-    <!-- Producto 3 -->
-    <div class="service-card fade-up stagger-2">
+    <div class="service-card fade-up">
       <div class="producto-img-box">
-        <img src="img/pni.png" alt="Brazalete NIBP Adulto">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Ficha DB9">
       </div>
-      <div class="service-title">Brazalete NIBP (Adulto Estándar)</div>
-      <div class="service-desc">Manguito de presión no invasiva fabricado en material lavable de alta resistencia, libre de látex. Conectores rápidos universales.</div>
-      <span class="service-tag" style="margin-bottom: var(--sp-4);">Consumibles</span>
-      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20stock%20y%20precio%20del%20Brazalete%20NIBP%20Adulto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+      <div class="service-title">Sensor SpO2 Broche Adulto Ficha DB9</div>
+      <div class="service-desc">Cable corto para conectar a prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Universal</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Ficha DB9">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Ajustable Ficha DB9</div>
+      <div class="service-desc">Cable corto para prolongador. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Universal</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ajustable%20Ficha%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto - Línea Nueva Mindray">
+      </div>
+      <div class="service-title">Sensor SpO2 Broche Adulto - Línea Nueva</div>
+      <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray (Nueva Línea)</span>
+      <span class="precio-tag">$110.533,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Mindray%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable - Línea Nueva Mindray">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo - Línea Nueva</div>
+      <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray (Nueva Línea)</span>
+      <span class="precio-tag">$118.428,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Mindray%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Pediátrico DB9 Corto">
+      </div>
+      <div class="service-title">Sensor SpO2 Pediátrico DB9 Corto</div>
+      <div class="service-desc">Para interconectar con prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Corto</span>
+      <span class="precio-tag">$110.533,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Pediatrico%20DB9%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Tipo FEAS">
+      </div>
+      <div class="service-title">Sensor SpO2 Broche Adulto Tipo FEAS</div>
+      <div class="service-desc">Cable largo, conexión directa. Específico para compatibilidad con sistemas e instrumental médico FEAS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
+      <span class="precio-tag">$126.324,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Tipo FEAS">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Ajustable Tipo FEAS</div>
+      <div class="service-desc">Cable largo, conexión directa. Diseñado para control neonatal y pediátrico en sistemas de la línea FEAS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
+      <span class="precio-tag">$152.641,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto General Electric">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto General Electric</div>
+      <div class="service-desc">Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Equipado con tecnología integrada Ohmeda.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric / Ohmeda</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo General Electric">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo General Electric</div>
+      <div class="service-desc">Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Con soporte y tecnología Ohmeda.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric / Ohmeda</span>
+      <span class="precio-tag">$131.587,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto Drager Infinity">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Drager Infinity</div>
+      <div class="service-desc">Sensor de oximetría directo de alta fidelidad para sistemas DRAGER INFINITY.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
+      <span class="precio-tag">$144.746,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Drager Infinity">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Drager Infinity</div>
+      <div class="service-desc">Manguito ajustable de cable largo para monitorización pediátrica/neonatal en DRAGER INFINITY.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
+      <span class="precio-tag">$126.324,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Philips / Goldway">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Philips / Goldway</div>
+      <div class="service-desc">Sensor robusto tipo broche compatible con monitores PHILIPS MP20 y líneas GOLDWAY.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Philips / Goldway</span>
+      <span class="precio-tag">$126.324,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Philips%20Goldway" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Philips / Goldway">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Philips / Goldway</div>
+      <div class="service-desc">Modelo suave ajustable para pacientes pediátricos en entornos PHILIPS MP20 / GOLDWAY.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Philips / Goldway</span>
+      <span class="precio-tag">$155.273,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Philips%20Goldway" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto Tipo Hewlett Packard">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Hewlett Packard</div>
+      <div class="service-desc">Compatible con HEWLETT PACKARD / PHILIPS MP20. Específico para versiones con ficha redonda de 12 pines.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">HP / Philips (12 Pines)</span>
+      <span class="precio-tag">$155.273,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20HP%2012%20Pines" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Hewlett Packard">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Hewlett Packard</div>
+      <div class="service-desc">Compatible con HEWLETT PACKARD / PHILIPS que tengan asignada la ficha redonda de 12 pines.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">HP / Philips (12 Pines)</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20HP%2012%20Pines" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Ajustable Masimo">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Corto Masimo</div>
+      <div class="service-desc">Terminal DB9 corta para interconectar con cables de extensión y prolongadores MASIMO.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo (DB9 Corto)</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Masimo%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto Masimo">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Corto Masimo</div>
+      <div class="service-desc">Ficha DB9 corta para acoplar directo a prolongadores de oximetría con tecnología MASIMO.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo (DB9 Corto)</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Masimo%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto Contec Original">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Contec Original</div>
+      <div class="service-desc">Compatible con monitores multiparamétricos CONTEC series CMS 6000 / 7000 / 8000 / 9000 Original.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec Classic</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Original" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Contec (Línea Nueva)">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Contec (Línea Nueva)</div>
+      <div class="service-desc">Cable largo reforzado. Diseñado específicamente para monitores CONTEC NEW de última generación.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (Línea Nueva)</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Ped/Neo Contec DB9 Corto">
+      </div>
+      <div class="service-title">Sensor SpO2 Ped/Neo Contec Corto</div>
+      <div class="service-desc">Terminal DB9 corta para vinculación con cables prolongadores en equipos CONTEC.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (DB9 Corto)</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Contec%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Cardiotécnica">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Cardiotécnica</div>
+      <div class="service-desc">Ficha Redel premium de acople directo. Plena compatibilidad con monitor Cardiotécnica MA512.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Cardiotécnica</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Cardiotecnica" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Comen">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Comen</div>
+      <div class="service-desc">Equipado con ficha redonda de 12 pines. Compatible con monitores multiparámetro COMEN C50 / C80.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Comen (12 Pines)</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Comen" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Bistos">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Bistos</div>
+      <div class="service-desc">Ficha DB9 con cable largo directo. Compatible con toda la línea de monitores BISTOS BT740 / BT770.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Bistos</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Bistos" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto Dongjiang">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Dongjiang</div>
+      <div class="service-desc">Cable largo de alta resistencia, terminación en ficha Redel. Compatible con monitor DONGJIANG PM200A.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Dongjiang</span>
+      <span class="precio-tag">$155.273,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Dongjiang" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto Soft Nonin">
+      </div>
+      <div class="service-title">Sensor SpO2 Adulto Soft Tipo Nonin</div>
+      <div class="service-desc">Ficha DB9 corta para acoplar firmemente a cables prolongadores dedicados de oximetría NONIN.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Nonin (Soft)</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Soft%20Tipo%20Nonin" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto/Neonatal Descartable YKD (Nellcor)">
+      </div>
+      <div class="service-title">Sensores SpO2 Descartables YKD (Nellcor)</div>
+      <div class="service-desc">Pack por 10 unidades. Máxima higiene y adherencia médica. Compatible con equipos de tecnología NELLCOR.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Nellcor (Descartable)</span>
+      <span class="precio-tag">$368.445,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Nellcor" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Sensor SpO2 Adulto/Neonatal Descartable YKD (Masimo)">
+      </div>
+      <div class="service-title">Sensores SpO2 Descartables YKD (Masimo)</div>
+      <div class="service-desc">Pack por 10 unidades. Ficha DB9 para conexión segura sobre prolongadores MASIMO LNCS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo LNCS (Descartable)</span>
+      <span class="precio-tag">$205.276,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Masimo" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+
+    <div class="categoria-title">Cables Prolongadores de SpO2</div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Masimo">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Masimo</div>
+      <div class="service-desc">Extensión premium con conectores robustos distribuidos de DB20 a DB9 para tecnologías MASIMO.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo Extensión</span>
+      <span class="precio-tag">$97.374,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20SpO2%20Masimo" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Redel a DB9">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Redel a DB9</div>
+      <div class="service-desc">Compatible con monitores: MINDRAY PM9000 / MEC / VS800. EDAN LEEX IM8 / IM70 / M3.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Leex</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20Redel%20a%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Mindray Nueva Línea">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Nueva Línea</div>
+      <div class="service-desc">Alta fidelidad. Plena compatibilidad con: MINDRAY UMEC / IMEC / BENEVIEW / BENEVISION.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray (Nueva Línea)</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20Mindray%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Nellcor Covidien">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Nellcor OXIMAX</div>
+      <div class="service-desc">Conector estructurado OXIMAX a DB9 compatible con módulos NELLCOR y líneas COVIDIEN.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Nellcor / Covidien</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20Nellcor%20Oximax" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 DB9 a DB9 Universal">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 DB9 a DB9</div>
+      <div class="service-desc">Extensión ecualizada y blindada universal. Compatible con: NELLCOR / BCI / MEDIX / BISTOS / FEAS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Universal DB9</span>
+      <span class="precio-tag">$152.641,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20DB9%20a%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Philips a DB9">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Philips a DB9</div>
+      <div class="service-desc">Conector premium blindado de distribución para el acople de sensores SpO2 Philips a DB9.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Philips / Goldway</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20Philips%20a%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Cable Prolongador SpO2 Contec a DB9">
+      </div>
+      <div class="service-title">Cable Prolongador SpO2 Contec a DB9</div>
+      <div class="service-desc">Diseño específico compatible con los sistemas multiparamétricos de las series CMS 6000 / 7000 / 8000 / 9000.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec</span>
+      <span class="precio-tag">$152.641,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Prolongador%20Contec%20a%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Prolongador SpO2 Contec con Plaqueta (Mesa)">
+      </div>
+      <div class="service-title">Prolongador SpO2 Contec (Con Plaqueta)</div>
+      <div class="service-desc">Cable de extensión especial e integrado para oxímetros de mesa equipados con PNI modelo CMS5000.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec Especial</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Prolongador%20Contec%20con%20Plaqueta%20Mesa" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Prolongador SpO2 Contec con Plaqueta (Nihon Kohden)">
+      </div>
+      <div class="service-title">Prolongador SpO2 Contec (Nihon Kohden)</div>
+      <div class="service-desc">Módulo de interconexión con plaqueta dedicada para sistemas de monitorización NIHON KOHDEN NISMO.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Nihon Kohden / Contec</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Prolongador%20Contec%20Nihon%20Kohden" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/spo2.png" alt="Prolongador SpO2 Spacelabs Elance">
+      </div>
+      <div class="service-title">Prolongador SpO2 Spacelabs Elance</div>
+      <div class="service-desc">Extensión blindada de alta supresión de interferencias para líneas críticas de monitores SPACELABS ELANCE.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Spacelabs</span>
+      <span class="precio-tag">$92.111,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Prolongador%20SpO2%20Spacelabs%20Elance" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+
+    <div class="categoria-title">Electrocardiografía (Cables Paciente)</div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 3 o 5 Deriv - Ficha AAMI">
+      </div>
+      <div class="service-title">Cable Paciente ECG 3 y 5 Deriv (AAMI)</div>
+      <div class="service-desc">Excelente blindaje contra ruidos de línea. Compatible con: Mindray PM/MEC, Edan IM8, Contec, Cardiotécnica, Drager Vista 120.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">AAMI Estandar multiparamétrico</span>
+      <span class="precio-tag">$92.111,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Ficha%20AAMI" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 3 y 5 Deriv (Mindray/Philips)">
+      </div>
+      <div class="service-title">Cable Paciente ECG 3 y 5 Deriv (Línea Nueva)</div>
+      <div class="service-desc">Conexión dedicada estable. Compatible con: Mindray UMEC / IMEC / Beneview, Edan X Series, Philips, HP.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Philips / HP</span>
+      <span class="precio-tag">$92.111,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Mindray%20Philips%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv - Contec Línea Nueva">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv (Contec New)</div>
+      <div class="service-desc">Distribución blindada optimizada estructuralmente para los monitores Contec de última línea.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (Línea Nueva)</span>
+      <span class="precio-tag">$118.428,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Contec%20New" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv - Bistos BT740/BT770">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv Bistos</div>
+      <div class="service-desc">Repuesto directo clínico original para monitorización avanzada en unidades Bistos BT740 / BT770.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Bistos</span>
+      <span class="precio-tag">$131.587,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Bistos" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv - Monitores Comen C50/C80">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv Comen</div>
+      <div class="service-desc">Cable blindado específico para captación y supresión de ruidos en monitores Comen C50 / C80.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Comen</span>
+      <span class="precio-tag">$131.587,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Comen" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 3 Deriv - Tipo FEAS">
+      </div>
+      <div class="service-title">Cable Paciente ECG 3 Deriv Tipo FEAS</div>
+      <div class="service-desc">Tríptico clásico de derivaciones de alta fidelidad, compatible plenamente con instrumental FEAS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
+      <span class="precio-tag">$105.270,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv - Tipo FEAS">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv Tipo FEAS</div>
+      <div class="service-desc">Configuración integral de 5 vías reforzadas para un trazado completo de derivaciones en sistemas FEAS.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
+      <span class="precio-tag">$131.587,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 3 Deriv - GE B450/B650/B850">
+      </div>
+      <div class="service-title">Cable Paciente ECG 3 Deriv General Electric</div>
+      <div class="service-desc">Monitoreo y filtrado preciso de señal en equipos complejos de alta gama General Electric B450 / B650 / B850.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric</span>
+      <span class="precio-tag">$144.746,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv - GE B450/B650/B850">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv General Electric</div>
+      <div class="service-desc">Arquitectura multicanal blindada para registros estables de 5 vías en General Electric B450 / B650 / B850.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric</span>
+      <span class="precio-tag">$157.905,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Troncal Multimed - Tipo Drager Infinity">
+      </div>
+      <div class="service-title">Cable Troncal Multimed Drager Infinity</div>
+      <div class="service-desc">Tronco principal modular premium de interconexión multiseñal diseñado para Drager Infinity.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity (Troncal)</span>
+      <span class="precio-tag">$581.178,12</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Troncal%20Multimed%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG 5 Deriv Tipo Drager Infinity">
+      </div>
+      <div class="service-title">Cable Paciente ECG 5 Deriv Drager Infinity</div>
+      <div class="service-desc">Latiguillo terminal directo de paciente acoplable de forma segura a la línea Drager Infinity.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
+      <span class="precio-tag">$152.641,50</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG Decapolar DB15">
+      </div>
+      <div class="service-title">Cable Paciente ECG Decapolar DB15</div>
+      <div class="service-desc">Ideal para Ergometría y Holter. Plena compatibilidad con sistemas: Cardiotécnica, Contec, Edan, Schiller, etc.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Ergometría / Holter Multimarca</span>
+      <span class="precio-tag">$155.273,25</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Decapolar%20DB15" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG Decapolar Tipo Cardioprint">
+      </div>
+      <div class="service-title">Cable Paciente Decapolar Cardioprint</div>
+      <div class="service-desc">Repuesto diagnóstico de alta densidad, adaptado bajo especificaciones de electrocardiógrafos Cardioprint.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Cardioprint</span>
+      <span class="precio-tag">$171.063,75</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Cardioprint" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
+        Consultar Stock
+      </a>
+    </div>
+
+    <div class="service-card fade-up">
+      <div class="producto-img-box">
+        <img src="img/ecg.png" alt="Cable Paciente ECG Decapolar Tipo Fukuda C110">
+      </div>
+      <div class="service-title">Cable Paciente Decapolar Fukuda C110</div>
+      <div class="service-desc">Terminales con blindaje estructural especial adaptado a electrocardiógrafos de diagnóstico Fukuda C110.</div>
+      <span class="service-tag" style="margin-bottom: var(--sp-2);">Fukuda C110</span>
+      <span class="precio-tag">$189.486,00</span>
+      <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
         Consultar Stock
       </a>
     </div>
@@ -130,7 +820,6 @@
   </div>
 </section>
 
-<!-- ═══ CTA RECONVERSION / PEDIDOS ESPECIALES ═══ -->
 <section id="cta">
   <div class="cta-inner">
     <div class="section-label">¿Busca un componente específico?</div>
@@ -144,8 +833,6 @@
     </div>
   </div>
 </section>
-
-<!-- El Footer se inyectará automáticamente aquí mediante componentes.js -->
 
 <script src="componentes.js"></script>
 </body>
