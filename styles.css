@@ -384,22 +384,19 @@ section { padding: 96px 5vw; }
 }
 .hero-h1 {
   font-family: var(--font);
-  font-size: clamp(1.4rem, 2.2vw, 1.9rem); /* ← más chico */
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--white);
   letter-spacing: -1px;
-  margin-bottom: 1rem; /* ← menos espacio para dar lugar al subtítulo */
+  margin-bottom: 1rem;
 }
-
-/* ← NUEVO: subtítulo debajo del h1 */
 .hero-sub {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.78);
   margin: 0 0 2rem;
   line-height: 1.6;
 }
-
 .hero-actions {
   display: flex;
   align-items: center;
@@ -418,7 +415,10 @@ section { padding: 96px 5vw; }
 }
 @media (max-width: 900px) {
   #hero {
+    height: 100vh;
+    height: 100dvh;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 80px 5vw 0;
   }
 }
