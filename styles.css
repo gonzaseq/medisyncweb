@@ -1614,12 +1614,12 @@ footer {
 
   .hero-badge {
     font-size: 0.73rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0rem;
   }
 
   .hero-h1 {
     font-size: clamp(1.6rem, 8vw, 2.8rem);
-    margin-bottom: 1.1rem;
+    margin-bottom: 0rem;
   }
 
   .hero-sub {
@@ -1630,7 +1630,7 @@ footer {
   .hero-actions {
     flex-direction: column;
     gap: 0.7rem;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
   }
 
   #hero .btn-primary,
