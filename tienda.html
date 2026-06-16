@@ -138,15 +138,33 @@
 <section id="productos" style="background: var(--white); padding-bottom: 60px;">
   <div class="container">
 
-    <!-- ═══ BOTONES DE FILTRO ═══ -->
-    <div class="filtros-container fade-up" style="display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-5); justify-content: center;">
-      <button class="btn-filtro active" data-filter="todos">Todos los Productos</button>
-      <button class="btn-filtro" data-filter="oximetria">Oximetría (SpO2)</button>
-      <button class="btn-filtro" data-filter="ecg">Electrocardiografía</button>
-      <button class="btn-filtro" data-filter="pni">Presión No Invasiva (PNI)</button>
-      <button class="btn-filtro" data-filter="temperatura">Temperatura</button>
-      <button class="btn-filtro" data-filter="electrobisturi">Electrocirugía</button>
-    </div>
+  <!-- ═══ BOTONES DE FILTRO ═══ -->
+<div class="filtros-container fade-up">
+  <button class="btn-filtro active" data-filter="todos">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+    Todos los Productos
+  </button>
+  <button class="btn-filtro" data-filter="oximetria">
+    <svg viewBox="0 0 24 24"><path d="M3 12h3l2.5 7L13 5l2.5 7H21"/></svg>
+    Oximetría (SpO2)
+  </button>
+  <button class="btn-filtro" data-filter="ecg">
+    <svg viewBox="0 0 24 24"><path d="M2 12h4l2-5 4 10 3-7 2 4h5"/></svg>
+    Electrocardiografía
+  </button>
+  <button class="btn-filtro" data-filter="pni">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2"/><path d="M9 3h6"/></svg>
+    Presión No Invasiva (PNI)
+  </button>
+  <button class="btn-filtro" data-filter="temperatura">
+    <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2 2 0 1 0-4 0v11.26a4 4 0 1 0 4 0Z"/></svg>
+    Temperatura
+  </button>
+  <button class="btn-filtro" data-filter="electrobisturi">
+    <svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-12h-7l0-8Z"/></svg>
+    Electrocirugía
+  </button>
+</div>
 
     <!-- ══════════════ OXIMETRÍA (SpO2) ══════════════ -->
     <div class="categoria-title" data-cat="oximetria">Oximetría (Sensores SpO2)</div>
