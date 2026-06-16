@@ -1965,3 +1965,77 @@ footer {
   .team-photo-wrap { height: 240px; }
   .team-wrapper { margin: 0 5vw; }
 }
+
+/* ─── FILTROS DE CATEGORÍA (TIENDA) — Barra tipo segmented pills ─── */
+.filtros-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-6);
+  padding: var(--sp-2);
+  background: var(--gray-light);
+  border: 1px solid var(--gray-border);
+  border-radius: var(--r-pill);
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.filtros-container::-webkit-scrollbar { display: none; }
+
+.btn-filtro {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-mid);
+  background: transparent;
+  border: none;
+  border-radius: var(--r-pill);
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--t-fast) var(--ease),
+              color var(--t-fast) var(--ease),
+              box-shadow var(--t-fast) var(--ease),
+              transform var(--t-fast) var(--ease-bounce);
+}
+
+.btn-filtro svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.btn-filtro:hover {
+  color: var(--blue-dark);
+  background: var(--white);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-filtro.active {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  box-shadow: var(--shadow-blue-sm);
+  transform: translateY(-1px);
+}
+
+.btn-filtro.active svg { transform: scale(1.08); }
+
+@media (max-width: 768px) {
+  .filtros-container {
+    max-width: 100%;
+    justify-content: flex-start;
+    border-radius: var(--r-lg);
+  }
+  .btn-filtro { padding: 9px 16px; font-size: 0.8rem; }
+}
