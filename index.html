@@ -13,54 +13,64 @@
 <style>
   html, body { overflow-x: hidden; }
 
-  /* ─── HERO ─── */
+  /* ─── HERO FULL-BLEED ─── */
   #hero {
-    min-height: auto;
-    padding: 108px 5vw 72px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 4rem;
-    background: linear-gradient(135deg, #F0F9FF 0%, #FFFFFF 55%, #E6F4FA 100%);
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 5vw 0;   /* 80px arriba = alto de la navbar fija */
     overflow: hidden;
   }
 
+  /* Foto de fondo */
+  #hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  /* Overlay azul de marca: arriba más oscuro (contraste del título), abajo se funde con la sección siguiente */
   #hero::before {
     content: '';
     position: absolute;
-    top: -120px; right: -120px;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,134,196,0.07) 0%, transparent 70%);
-    pointer-events: none;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg,
+        rgba(0,53,82,0.78) 0%,
+        rgba(0,75,114,0.72) 40%,
+        rgba(0,91,143,0.74) 75%,
+        rgba(0,75,114,0.88) 100%);
   }
 
-  /* Decoración de puntos (sutil) */
-  #hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--blue-mid), transparent);
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
   }
-
-  .hero-content { position: relative; z-index: 2; }
 
   .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--blue-light);
-    color: var(--blue-dark);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+    background: rgba(255,255,255,0.12);
+    color: #FFFFFF;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 100px;
-    margin-bottom: 1.25rem;
-    border: 1px solid var(--blue-mid);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
   }
 
   .hero-badge::before {
@@ -68,7 +78,7 @@
     display: block;
     width: 6px; height: 6px;
     border-radius: 50%;
-    background: var(--blue);
+    background: #FFFFFF;
     animation: pulse-dot 2s infinite;
   }
 
@@ -79,111 +89,32 @@
 
   .hero-h1 {
     font-family: var(--font);
-    font-size: clamp(2.1rem, 3.5vw, 3rem);
+    font-size: clamp(2.3rem, 5vw, 4rem);
     font-weight: 800;
-    line-height: 1.08;
-    color: var(--gray-dark);
-    letter-spacing: -1.5px;
-    margin-bottom: 1.1rem;
-  }
-
-  .hero-h1 span { color: var(--blue); }
-
-  .hero-sub {
-    font-size: 0.97rem;
-    color: var(--gray-mid);
-    max-width: 460px;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-    font-weight: 400;
+    line-height: 1.1;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 24px rgba(0,30,55,0.45);
   }
 
   .hero-actions {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    gap: 0.85rem;
     flex-wrap: wrap;
   }
 
-  /* ─── HERO VISUAL ─── */
-  .hero-visual {
-    position: relative; z-index: 2;
-    display: flex; flex-direction: column; gap: 0.75rem;
-  }
-
-  .hero-photo-slot {
-    width: 100%;
-    aspect-ratio: 16/10;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0,100,180,0.15), 0 4px 16px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,130,200,0.12);
-    background: var(--blue-light);
-  }
-
-  .hero-photo-slot img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .hero-photo-slot::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 60%, rgba(0, 40, 80, 0.18) 100%);
-    pointer-events: none;
-  }
-
-  .hero-info-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-
-  .hero-info-card {
+  /* En el hero, el segundo botón va blanco para contrastar sobre el azul */
+  #hero .btn-secondary {
     background: var(--white);
-    border-radius: 12px;
-    padding: 1rem 1.15rem;
-    border: 1px solid var(--gray-border);
-    box-shadow: 0 2px 12px rgba(0,100,180,0.06);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    color: var(--blue-dark);
+    border-color: var(--white);
   }
-
-  .hero-info-icon {
-    width: 36px; height: 36px;
-    border-radius: 9px;
-    background: var(--blue-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .hero-info-icon svg {
-    width: 16px; height: 16px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .hero-info-title {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--gray-dark);
-    line-height: 1.2;
-  }
-
-  .hero-info-sub {
-    font-size: 0.68rem;
-    color: var(--gray-soft);
-    margin-top: 2px;
-    font-weight: 400;
+  #hero .btn-secondary:hover {
+    background: rgba(255,255,255,0.9);
+    border-color: var(--white);
   }
 
   /* ─── SECCIONES ─── */
@@ -197,22 +128,8 @@
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     #hero {
-      grid-template-columns: 1fr;
-      padding: 100px 5vw 60px;
-      gap: 2rem;
-    }
-
-    /* En mobile: ocultar la foto, mostrar solo las info-cards */
-    .hero-photo-slot { display: none; }
-
-    .hero-info-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.65rem;
-    }
-
-    .hero-info-card {
-      padding: 0.9rem 1rem;
+      min-height: 100vh;
+      padding: 80px 5vw 0;
     }
 
     #problems,
@@ -222,10 +139,9 @@
   }
 
   @media (max-width: 480px) {
-    .hero-info-row { grid-template-columns: 1fr; }
-    .hero-h1 { letter-spacing: -0.8px; }
+    .hero-h1 { letter-spacing: -0.6px; }
   }
-  
+
 </style>
 </head>
 <body>
@@ -250,7 +166,7 @@
     </div>
   </div>
 </section>
-  
+
 <!-- ═══ PROBLEMS ═══ -->
 <section id="problems">
   <div class="problems-intro section-header">
@@ -271,7 +187,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
       </div>
       <div class="problem-title">Fallas repetidas sin diagnóstico de fondo</div>
-      <div class="problem-desc">Un problema mal resuelto siempre vuelve. Sin diagnóstico preciso, la institución entra en un ciclo de roturas recurrentes."</div>
+      <div class="problem-desc">Un problema mal resuelto siempre vuelve. Sin diagnóstico preciso, la institución entra en un ciclo de roturas recurrentes.</div>
     </div>
     <div class="problem-card">
       <div class="problem-icon">
@@ -322,16 +238,16 @@
       <div class="service-desc">Diagnóstico técnico completo y reparación de equipamiento médico crítico. Trabajo documentado con informe de intervención.</div>
       <span class="service-tag">Misiones · NEA</span>
     </div>
-<div class="service-card fade-up stagger-2">
-  <div class="service-icon-wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-    </svg>
-  </div>
-  <div class="service-title">Ecógrafos Mindray</div>
-  <div class="service-desc">Soporte técnico oficial de equipos Mindray a través de Sonocare. Reparaciones, mantenimientos y actualización de software con respaldo de fábrica.</div>
-  <span class="service-tag">Misiones – Formosa</span>
-</div>
+    <div class="service-card fade-up stagger-2">
+      <div class="service-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <div class="service-title">Ecógrafos Mindray</div>
+      <div class="service-desc">Soporte técnico oficial de equipos Mindray a través de Sonocare. Reparaciones, mantenimientos y actualización de software con respaldo de fábrica.</div>
+      <span class="service-tag">Misiones – Formosa</span>
+    </div>
   </div>
   <div style="text-align:center; margin-top:2.5rem;">
     <a href="servicios.html" class="btn-secondary">
@@ -392,9 +308,10 @@
     <p class="cta-sub">Hablemos y diseñamos juntos el plan de servicio que su institución necesita.</p>
     <div class="cta-actions">
       <a href="contacto.html" class="btn-white">
-  Agendar relevamiento gratuito
-  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-</a>
+        Agendar relevamiento gratuito
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
