@@ -50,19 +50,36 @@
   </div>
 </div>`;
 
-  /* ── FOOTER ── */
+/* ── FOOTER ── */
   const footerHTML = `
 <footer>
   <div class="footer-grid">
 
-    <!-- Col 1: Logo -->
+    <!-- Col 1: Logo + descripción -->
     <div class="footer-brand">
       <div class="footer-logo-img">
         <img src="img/logo.white.png" alt="MediSync Ingeniería Clínica">
       </div>
+      <p class="footer-desc">Ingeniería clínica especializada para equipamiento médico, con base en Posadas y cobertura en toda Misiones y el NEA.</p>
+      <div class="footer-location">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Posadas, Misiones
+      </div>
     </div>
 
-    <!-- Col 2: Contacto y ubicación -->
+    <!-- Col 2: Navegación -->
+    <div>
+      <div class="footer-heading">Navegación</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="equipos.html">Equipamiento</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contacto + Redes -->
     <div>
       <div class="footer-heading">Contacto</div>
       <div class="footer-phones">
@@ -72,29 +89,16 @@
         <a href="tel:+543764639426" class="footer-phone-link">
           ${phoneSVG(13)} +54 9 376 463-9426
         </a>
+        <a href="mailto:medisync.ar@gmail.com" class="footer-phone-link">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          medisync.ar@gmail.com
+        </a>
       </div>
-      <p style="margin-top:10px;font-size:0.85rem;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:6px;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5;flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Posadas, Misiones
-      </p>
-    </div>
-
-    <!-- Col 3: Redes sociales -->
-    <div>
-      <div class="footer-heading">Seguinos</div>
-      <div style="display:flex;gap:12px;margin-top:8px;">
-        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener noreferrer"
-           style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5);text-decoration:none;transition:background 0.2s,color 0.2s,border-color 0.2s;"
-           onmouseover="this.style.background='rgba(225,48,108,0.2)';this.style.color='#E1306C';this.style.borderColor='rgba(225,48,108,0.4)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.color='rgba(255,255,255,0.5)';this.style.borderColor='rgba(255,255,255,0.12)'"
-           aria-label="Instagram">
+      <div class="footer-social-row">
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener noreferrer" class="footer-social-link instagram" aria-label="Instagram">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.047.49-4.184 1.627C1.732 2.836 1.316 4.274 1.242 5.883 1.184 7.163 1.17 7.571 1.17 12c0 4.429.014 4.837.072 6.117.074 1.609.49 3.047 1.627 4.184 1.137 1.137 2.575 1.553 4.184 1.627C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.609-.074 3.047-.49 4.184-1.627 1.137-1.137 1.553-2.575 1.627-4.184.058-1.28.072-1.688.072-6.117 0-4.429-.014-4.837-.072-6.117-.074-1.609-.49-3.047-1.627-4.184C19.994 1.732 18.556 1.316 16.947 1.242 15.667 1.184 15.259 1.17 12 1.17zm0 5.838a5.163 5.163 0 100 10.326 5.163 5.163 0 000-10.326zm0 8.163a3 3 0 110-6 3 3 0 010 6zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener noreferrer"
-           style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5);text-decoration:none;transition:background 0.2s,color 0.2s,border-color 0.2s;"
-           onmouseover="this.style.background='rgba(10,102,194,0.2)';this.style.color='#0A66C2';this.style.borderColor='rgba(10,102,194,0.4)'"
-           onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.color='rgba(255,255,255,0.5)';this.style.borderColor='rgba(255,255,255,0.12)'"
-           aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener noreferrer" class="footer-social-link linkedin" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
       </div>
@@ -109,7 +113,6 @@
     </span>
   </div>
 </footer>`;
-
   /* ── Montar DOM ── */
   document.addEventListener('DOMContentLoaded', () => {
     document.body.insertAdjacentHTML('afterbegin', navHTML);
