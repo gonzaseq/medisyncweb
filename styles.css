@@ -337,16 +337,15 @@ section { padding: 96px 5vw; }
 /* ─── HERO FULL-BLEED ─── */
   #hero {
     position: relative;
-    min-height: 88vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 5vw 90px;
+    padding: 80px 5vw 0;   /* 80px = alto navbar fija */
     overflow: hidden;
   }
 
-  /* Foto de fondo */
   #hero .hero-bg {
     position: absolute;
     inset: 0;
@@ -356,7 +355,6 @@ section { padding: 96px 5vw; }
     z-index: 0;
   }
 
-  /* Overlay azul de marca sobre la foto */
   #hero::before {
     content: '';
     position: absolute;
@@ -371,14 +369,14 @@ section { padding: 96px 5vw; }
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
   }
 
   .hero-badge {
     display: inline-block;
     color: rgba(255,255,255,0.9);
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -389,19 +387,10 @@ section { padding: 96px 5vw; }
     font-family: var(--font);
     font-size: clamp(2.3rem, 5vw, 4rem);
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.1;
     color: var(--white);
     letter-spacing: -1px;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-sub {
-    font-size: clamp(1rem, 1.4vw, 1.2rem);
-    color: rgba(255,255,255,0.88);
-    max-width: 620px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
-    font-weight: 400;
+    margin-bottom: 2.5rem;
   }
 
   .hero-actions {
@@ -412,7 +401,6 @@ section { padding: 96px 5vw; }
     flex-wrap: wrap;
   }
 
-  /* En el hero, el botón blanco con borde */
   #hero .btn-secondary {
     background: var(--white);
     color: var(--blue-dark);
@@ -425,8 +413,8 @@ section { padding: 96px 5vw; }
 
   @media (max-width: 900px) {
     #hero {
-      min-height: 80vh;
-      padding: 110px 5vw 70px;
+      min-height: 100vh;
+      padding: 80px 5vw 0;
     }
   }
 /* ─── STRIP ─── */
