@@ -366,7 +366,7 @@ section { padding: 96px 5vw; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .hero-badge {
@@ -380,7 +380,7 @@ section { padding: 96px 5vw; }
 }
 .hero-h1 {
   font-family: var(--font);
-  font-size: clamp(1.6rem, 3vw, 2rem); /* ← más chico */
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem); /* ← más chico */
   font-weight: 800;
   line-height: 1.1;
   color: var(--white);
