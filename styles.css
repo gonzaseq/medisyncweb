@@ -384,7 +384,7 @@ section { padding: 96px 5vw; }
 }
 .hero-h1 {
   font-family: var(--font);
-  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-size: clamp(2rem, 2.2vw, 3.4rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--white);
