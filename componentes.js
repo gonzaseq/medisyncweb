@@ -76,6 +76,7 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="equipos.html">Equipamiento</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
