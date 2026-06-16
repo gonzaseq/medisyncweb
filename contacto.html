@@ -212,8 +212,6 @@
     gap: 3rem;
   }
   .contact-info-block { position: static; }
-  .page-hero-inner { grid-template-columns: 1fr; }
-  .page-hero-img { display: none; }
 }
 
   @media (max-width: 500px) {
@@ -223,22 +221,27 @@
 </head>
 <body>
 
-<!-- ═══ PAGE HERO ═══ -->
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <div>
-      <div class="page-hero-breadcrumb">
-        <a href="index.html">Inicio</a>
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-        <span>Contacto</span>
-      </div>
-      <div class="page-hero-label">Estamos disponibles</div>
-      <h1 class="page-hero-title">Hablemos sobre<br><span>su equipamiento</span></h1>
-      <p class="page-hero-desc">Cuéntenos qué equipos utiliza y sus necesidades. Nuestro equipo le brindará una rápida respuesta.</p>
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1726485333539-9f571001a610?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contacto MediSync" fetchpriority="high">
+  <div class="hero-content">
+    <div class="hero-top">
+      <div class="hero-badge">Estamos disponibles</div>
+      <h1 class="hero-h1">Hablemos sobre<br>su equipamiento.</h1>
+      <p class="hero-sub">Cuéntenos qué equipos utiliza y sus necesidades. Nuestro equipo le brindará una rápida respuesta.</p>
     </div>
-    <img class="page-hero-img" src="https://plus.unsplash.com/premium_photo-1726485333539-9f571001a610?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contacto MediSync">
+    <div class="hero-actions">
+      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync." class="btn-primary" target="_blank" rel="noopener">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="#contacto-main" class="btn-secondary">
+        Ir al formulario
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
   </div>
-</div>
+</section>
 <!-- ═══ MAIN ═══ -->
 <section id="contacto-main">
   <div class="contact-grid">
