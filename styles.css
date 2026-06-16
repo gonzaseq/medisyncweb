@@ -1529,7 +1529,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-  #hero { min-height: auto !important; }
   .why-grid { grid-template-columns: 1fr; }
   .trust-cols { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1578,6 +1577,37 @@ footer {
   }
   .logo-strip-row { gap: var(--sp-4); }
   .section-label::before { display: none; }
+
+  #hero {
+    min-height: 100vh;
+    padding: 70px 6vw 24px;
+  }
+  .hero-badge {
+    font-size: 0.68rem;
+    margin-bottom: 1rem;
+  }
+  .hero-h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: 0.9rem;
+  }
+  .hero-sub {
+    font-size: 0.88rem;
+    margin-bottom: 1.4rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 600px) {
+  #hero { padding-top: 56px; }
+  .hero-badge { display: none; }
 }
 
 /* ─── TEAM SECTION ─── */
