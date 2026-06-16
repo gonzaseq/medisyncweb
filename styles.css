@@ -4,11 +4,6 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ─── DESIGN TOKENS ─── */
-:root {
-  --blue:        #0082C8;
-  --blue-dark:   #0069A8;
-  --blue-deep:   #004B72;
-  --blue-light:  #EBF6FD;
   --blue-mid:    #AACFE8;
   --blue-glow:   rgba(0, 130, 200, 0.12);
 
@@ -380,7 +375,7 @@ section { padding: 96px 5vw; }
 }
 .hero-h1 {
   font-family: var(--font);
-  font-size: clamp(1.6rem, 3vw, 2.5rem); /* ← más chico */
+  font-size: clamp(1.6rem, 3vw, 2rem); /* ← más chico */
   font-weight: 800;
   line-height: 1.1;
   color: var(--white);
