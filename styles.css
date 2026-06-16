@@ -1646,8 +1646,8 @@ footer {
   }
 }
 @media (max-height: 700px) and (max-width: 600px) {
-  #hero { padding-top: 56px; }
-  .hero-badge { display: none; }
+  .hero-badge { margin-bottom: 0.6rem; }
+  .hero-h1 { margin-bottom: 0.7rem; }
 }
 
 /* ─── TEAM SECTION ─── */
