@@ -131,7 +131,12 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     if (hamburger) {
-      hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+      });
     }
 
     /* Fade-up observer */
@@ -146,38 +151,18 @@
   waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync.';
   waBtn.target = '_blank';
   waBtn.rel = 'noopener noreferrer';
+  waBtn.className = 'wa-float-btn';
   waBtn.setAttribute('aria-label', 'Consultar por WhatsApp');
-  waBtn.innerHTML = `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px">
+  waBtn.innerHTML = `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/>
   </svg>`;
-  waBtn.style.cssText = `
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 24px rgba(37,211,102,0.45);
-    z-index: 9999;
-    transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
-  `;
-  waBtn.addEventListener('mouseenter', () => {
-    waBtn.style.transform = 'scale(1.1)';
-    waBtn.style.boxShadow = '0 6px 28px rgba(37,211,102,0.6)';
-  });
-  waBtn.addEventListener('mouseleave', () => {
-    waBtn.style.transform = 'scale(1)';
-    waBtn.style.boxShadow = '0 4px 24px rgba(37,211,102,0.45)';
-  });
   document.body.appendChild(waBtn);
 
   window.closeMobile = function () {
     const m = document.getElementById('mobileMenu');
+    const h = document.getElementById('hamburger');
     if (m) m.classList.remove('open');
+    if (h) { h.classList.remove('active'); h.setAttribute('aria-expanded', 'false'); }
   };
 
 })();

@@ -5,7 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto | MediSync Ingeniería Clínica – Posadas, Misiones</title>
 <meta name="description" content="Contacte a MediSync para solicitar servicio técnico de equipamiento médico en Misiones. Teléfono, WhatsApp y email disponibles.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="MediSync Ingeniería Clínica">
+<meta property="og:title" content="Contacto | MediSync Ingeniería Clínica – Posadas, Misiones">
+<meta property="og:description" content="Contacte a MediSync para solicitar servicio técnico de equipamiento médico en Misiones. Teléfono, WhatsApp y email disponibles.">
+<meta property="og:image" content="img/logo1.png">
+<meta property="og:url" content="https://medisync.com.ar/contacto.html">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="canonical" href="https://medisync.com.ar/contacto.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -241,6 +250,10 @@
       </a>
     </div>
   </div>
+  <a href="#contacto-main" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
+    Descubrir más
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </a>
 </section>
 <!-- ═══ MAIN ═══ -->
 <section id="contacto-main">
@@ -268,22 +281,22 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
           <div class="form-group">
             <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Su nombre o razón social" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Su nombre o razón social" autocomplete="name" required>
           </div>
           <div class="form-group">
             <label for="institucion">Institución / Empresa</label>
-            <input type="text" id="institucion" name="institucion" placeholder="Hospital, clínica...">
+            <input type="text" id="institucion" name="institucion" placeholder="Hospital, clínica..." autocomplete="organization">
           </div>
         </div>
 
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
           <div class="form-group">
             <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="376-4123456" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="376-4123456" autocomplete="tel" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="su@email.com">
+            <input type="email" id="email" name="email" placeholder="su@email.com" autocomplete="email">
           </div>
         </div>
 
@@ -307,7 +320,7 @@
           <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa el equipo, la falla o el tipo de servicio que necesita..." required></textarea>
         </div>
 
-        <button type="submit" class="btn-primary btn-submit">
+        <button type="submit" class="btn-primary btn-submit" id="submitBtn">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Enviar consulta por WhatsApp
         </button>
@@ -379,12 +392,17 @@ function handleSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
+  const submitBtn = document.getElementById('submitBtn');
 
   const nombre      = document.getElementById('nombre').value;
   const institucion = document.getElementById('institucion').value;
   const telefono    = document.getElementById('telefono').value;
   const equipo      = document.getElementById('equipo').value;
   const mensaje     = document.getElementById('mensaje').value;
+
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+  submitBtn.innerHTML = 'Enviando…';
 
   const texto = `Consulta desde el sitio web:\n\nNombre: ${nombre}\nInstitución: ${institucion || 'No indicada'}\nTeléfono: ${telefono}\nEquipo/Servicio: ${equipo || 'No especificado'}\n\nMensaje:\n${mensaje}`;
   const waUrl = `https://wa.me/5493764374545?text=${encodeURIComponent(texto)}`;
