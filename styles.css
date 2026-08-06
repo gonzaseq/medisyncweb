@@ -2251,14 +2251,6 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .logo-item { height: 85px; min-width: 110px; }
-  .logos-track { gap: 2.5rem; }
-}
-Entendido — en desktop mantenemos el carrusel animado, y en celular lo convertimos en una grilla estática que muestre todos los logos, sin cortar el mask que solo deja ver 2.
-
-Agregá esto al final de tu styles.css
-css
-@media (max-width: 640px) {
   .logos-marquee {
     -webkit-mask-image: none;
     mask-image: none;
@@ -2273,7 +2265,7 @@ css
   }
 
   .logo-item {
-    height: 70px;
-    min-width: 100px;
+    height: 85px;
+    min-width: 110px;
   }
 }
