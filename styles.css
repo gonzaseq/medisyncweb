@@ -2267,5 +2267,11 @@ footer {
   .logo-item {
     height: 85px;
     min-width: 110px;
+    flex: 0 1 calc(33.333% - 1.5rem);
+  }
+
+  /* Oculta la segunda mitad (los duplicados usados para el loop infinito) */
+  .logo-item:nth-child(n+7) {
+    display: none;
   }
 }
