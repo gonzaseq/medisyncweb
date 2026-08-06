@@ -2204,3 +2204,50 @@ footer {
   }
   .btn-filtro { padding: 9px 16px; font-size: 0.8rem; }
 }
+
+#trust {
+  padding: 4rem 1.5rem;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.logos-marquee {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-logos 30s linear infinite;
+}
+
+.logos-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.3s ease;
+}
+
+.logo-item:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes scroll-logos {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+  .logo-item { height: 36px; }
+  .logos-track { gap: 2.5rem; }
+}
