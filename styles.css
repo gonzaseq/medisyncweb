@@ -2251,11 +2251,18 @@ footer {
 }
 
 @media (max-width: 640px) {
+  #logos-trust {
+    padding: 2rem 1.5rem;
+  }
+
+  #logos-trust .section-header {
+    margin-bottom: 1.5rem;
+  }
+
   .logos-marquee {
     -webkit-mask-image: none;
     mask-image: none;
   }
-
   .logos-track {
     animation: none;
     flex-wrap: wrap;
@@ -2263,13 +2270,11 @@ footer {
     width: 100%;
     gap: 1.5rem;
   }
-
   .logo-item {
     height: 85px;
     min-width: 110px;
     flex: 0 1 calc(33.333% - 1.5rem);
   }
-
   /* Oculta la segunda mitad (los duplicados usados para el loop infinito) */
   .logo-item:nth-child(n+7) {
     display: none;
