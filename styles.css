@@ -2231,9 +2231,9 @@ footer {
 }
 
 .logo-item {
-  height: 90px;
+  height: 130px;
   width: auto;
-  min-width: 120px;
+  min-width: 170px;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.6);
   transition: filter 0.3s ease;
@@ -2249,6 +2249,6 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .logo-item { height: 60px; min-width: 90px; }
+  .logo-item { height: 85px; min-width: 110px; }
   .logos-track { gap: 2.5rem; }
 }
