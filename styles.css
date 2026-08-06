@@ -2226,8 +2226,10 @@ footer {
   animation: scroll-logos 30s linear infinite;
 }
 
-.logos-track:hover {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .logos-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 .logo-item {
