@@ -27,8 +27,8 @@
 
   <ul class="nav-links">
     <li><a href="index.html"     class="${isActive('index.html')}">Inicio</a></li>
-    <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
     <li><a href="equipos.html"   class="${isActive('equipos.html')}">Equipamiento</a></li>
+    <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
     <li><a href="tienda.html"    class="${isActive('tienda.html')}">Tienda</a></li>
     <li><a href="nosotros.html"  class="${isActive('nosotros.html')}">Nosotros</a></li>
     <li><a href="contacto.html"  class="nav-cta ${isActive('contacto.html')}">Solicitar servicio</a></li>
@@ -41,8 +41,8 @@
 
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="index.html"     onclick="closeMobile()">Inicio</a>
-  <a href="servicios.html" onclick="closeMobile()">Servicios</a>
   <a href="equipos.html"   onclick="closeMobile()">Equipamiento</a>
+  <a href="servicios.html" onclick="closeMobile()">Servicios</a>
   <a href="tienda.html"    onclick="closeMobile()">Tienda</a>
   <a href="nosotros.html"  onclick="closeMobile()">Nosotros</a>
   <a href="contacto.html"  class="nav-cta" onclick="closeMobile()">Solicitar servicio</a>
@@ -74,8 +74,8 @@
       <div class="footer-heading">Navegación</div>
       <ul class="footer-links">
         <li><a href="index.html">Inicio</a></li>
+         <li><a href="equipos.html">Equipamiento</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="equipos.html">Equipamiento</a></li>
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
