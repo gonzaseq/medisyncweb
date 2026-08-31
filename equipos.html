@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equipos | MediSync Ingeniería Clínica – Posadas, Misiones</title>
-<meta name="description" content="Equipamiento médico crítico que atendemos: ecógrafos, monitores, electrocardiógrafos, desfibriladores, ventiladores, bombas de infusión y más.">
+<title>Ecógrafos Mindray | MediSync – Posadas, Misiones</title>
+<meta name="description" content="Venta de ecógrafos Mindray: portátiles, institucionales y veterinarios. Equipos con garantía y soporte técnico especializado.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="MediSync Ingeniería Clínica">
-<meta property="og:title" content="Equipos | MediSync Ingeniería Clínica – Posadas, Misiones">
-<meta property="og:description" content="Equipamiento médico crítico que atendemos: ecógrafos, monitores, electrocardiógrafos, desfibriladores, ventiladores, bombas de infusión y más.">
+<meta property="og:title" content="Ecógrafos Mindray | MediSync – Posadas, Misiones">
+<meta property="og:description" content="Venta de ecógrafos Mindray: portátiles, institucionales y veterinarios. Equipos con garantía y soporte técnico especializado.">
 <meta property="og:image" content="img/logo1.png">
 <meta property="og:url" content="https://medisync.com.ar/equipos.html">
 <meta name="twitter:card" content="summary">
@@ -20,12 +20,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* ─── Equipment category / breadcrumb block ─── */
-  .equip-category {
-    margin-top: 3rem;
+  /* ─── Ecógrafos: nav de subcategorías ─── */
+  .equip-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
   }
-  .equip-category + .equip-category {
-    margin-top: 3.5rem;
+  .equip-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: 1.5px solid var(--gray-border);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    text-decoration: none;
+    transition: border-color var(--t-base) var(--ease),
+                background var(--t-base) var(--ease),
+                color var(--t-base) var(--ease);
+  }
+  .equip-nav-link:hover {
+    border-color: var(--blue);
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  /* ─── Bloques de categoría (Portátiles / Institucionales / Veterinarios) ─── */
+  .equip-category {
+    margin-top: 4rem;
+    scroll-margin-top: 100px;
   }
   .equip-breadcrumb {
     display: flex;
@@ -35,55 +62,81 @@
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--gray-dark);
-    margin-bottom: 1.5rem;
-  }
-  .equip-breadcrumb .crumb-root {
-    color: var(--gray-dark);
+    margin-bottom: 0.4rem;
   }
   .equip-breadcrumb .crumb-sep {
     color: var(--gray-mid);
     font-weight: 400;
   }
-  .equip-breadcrumb .crumb-brand {
+  .equip-breadcrumb .crumb-brand,
+  .equip-breadcrumb .crumb-current {
     color: var(--blue);
   }
-
-  .equip-subcategory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.25rem;
+  .equip-category-desc {
+    font-size: 0.9rem;
+    color: var(--gray-mid);
+    font-weight: 300;
+    margin-bottom: 1.75rem;
   }
-  .equip-subcategory-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
+
+  /* ─── Grilla de productos (ecógrafos individuales) ─── */
+  .equip-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .equip-product-card {
     border: 1.5px solid var(--gray-border);
     border-radius: 18px;
+    overflow: hidden;
     background: var(--white);
-    padding: 1.5rem 1.75rem;
     transition: border-color var(--t-base) var(--ease),
                 box-shadow var(--t-base) var(--ease),
                 transform var(--t-base) var(--ease-bounce);
-    text-decoration: none;
   }
-  .equip-subcategory-card:hover {
+  .equip-product-card:hover {
     border-color: var(--blue);
     box-shadow: var(--shadow-md);
     transform: translateY(-3px);
   }
-  .equip-subcategory-name {
+  .equip-product-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: var(--gray-light);
+  }
+  .equip-product-card-body {
+    padding: 1.5rem;
+  }
+  .equip-product-name {
     font-size: 1rem;
     font-weight: 700;
     color: var(--gray-dark);
+    margin-bottom: 0.4rem;
   }
-  .equip-subcategory-arrow {
-    flex-shrink: 0;
+  .equip-product-desc {
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    line-height: 1.7;
+    font-weight: 300;
+    margin: 0 0 0.9rem 0;
+  }
+  .equip-product-price {
+    font-size: 0.95rem;
+    font-weight: 700;
     color: var(--blue);
-    transition: transform var(--t-base) var(--ease);
   }
-  .equip-subcategory-card:hover .equip-subcategory-arrow {
-    transform: translateX(4px);
+
+  /* Placeholder visible mientras no hay equipos cargados en una categoría */
+  .equip-empty-note {
+    border: 1.5px dashed var(--gray-border);
+    border-radius: 18px;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    font-weight: 300;
+    text-align: center;
   }
 
   #gallery { background: var(--gray-light); }
@@ -115,20 +168,20 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
-  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1661889752049-44bb9f857e67?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Servicio técnico de equipamiento médico" fetchpriority="high">
+  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1661889752049-44bb9f857e67?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ecógrafos Mindray" fetchpriority="high">
   <div class="hero-content">
     <div class="hero-top">
-      <div class="hero-badge">Equipamiento médico</div>
-      <h1 class="hero-h1">Presentes en cada<br>Área Crítica.</h1>
-      <p class="hero-sub">Damos cobertura técnica a una amplia variedad de equipamiento médico crítico, con el protocolo de servicio que cada equipo necesita.</p>
+      <div class="hero-badge">Venta de ecógrafos</div>
+      <h1 class="hero-h1">Ecógrafos Mindray<br>para cada necesidad.</h1>
+      <p class="hero-sub">Comercializamos ecógrafos Mindray portátiles, institucionales y veterinarios, con garantía y soporte técnico especializado.</p>
     </div>
     <div class="hero-actions">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20servicio%20para%20un%20equipo" class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20un%20ecógrafo" class="btn-primary" target="_blank" rel="noopener">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
         Consultar por WhatsApp
       </a>
       <a href="#equipment" class="btn-secondary">
-        Ver equipamiento
+        Ver ecógrafos
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
       </a>
     </div>
@@ -142,34 +195,78 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 <!-- ═══ EQUIPMENT ═══ -->
 <section id="equipment">
   <div class="section-header">
-    <div class="section-label">Equipamiento</div>
-    <h2 class="section-title">Trabajamos con equipamiento crítico</h2>
-    <p class="section-desc">Desde ecógrafos de alta complejidad hasta equipos de diagnóstico básico: cada tipo de dispositivo recibe un protocolo de servicio específico.</p>
+    <div class="section-label">Ecógrafos Mindray</div>
+    <h2 class="section-title">Nuestra línea de ecógrafos</h2>
+    <p class="section-desc">Trabajamos exclusivamente con equipos Mindray, organizados según el uso que le vas a dar: portátil, institucional o veterinario.</p>
   </div>
 
-  <div class="equip-category fade-up">
+  <!-- Nav rápido entre subcategorías -->
+  <nav class="equip-nav" aria-label="Categorías de ecógrafos">
+    <a href="#portatiles" class="equip-nav-link">Portátiles</a>
+    <a href="#institucionales" class="equip-nav-link">Institucionales</a>
+    <a href="#veterinarios" class="equip-nav-link">Veterinarios</a>
+  </nav>
+
+  <!-- ── Ecógrafos › Mindray › Portátiles ── -->
+  <div class="equip-category fade-up" id="portatiles">
     <div class="equip-breadcrumb">
-      <span class="crumb-root">Ecógrafos</span>
+      <span>Ecógrafos</span>
       <span class="crumb-sep">›</span>
       <span class="crumb-brand">Mindray</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-current">Portátiles</span>
     </div>
-    <div class="equip-subcategory-grid">
-      <a href="contacto.html?equipo=ecografo-mindray-portatil" class="equip-subcategory-card fade-up stagger-1">
-        <span class="equip-subcategory-name">Portátiles</span>
-        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-      <a href="contacto.html?equipo=ecografo-mindray-institucional" class="equip-subcategory-card fade-up stagger-2">
-        <span class="equip-subcategory-name">Institucionales</span>
-        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-      <a href="contacto.html?equipo=ecografo-mindray-veterinario" class="equip-subcategory-card fade-up stagger-3">
-        <span class="equip-subcategory-name">Veterinarios</span>
-        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
+    <p class="equip-category-desc">Equipos livianos y compactos, pensados para consultorios, guardias y traslados.</p>
+
+    <div class="equip-products-grid">
+      <!--
+        Duplicar este bloque por cada ecógrafo portátil.
+        <div class="equip-product-card">
+          <img class="equip-product-card-img" src="img/RUTA_DE_LA_IMAGEN.jpg" alt="Nombre del ecógrafo">
+          <div class="equip-product-card-body">
+            <div class="equip-product-name">Mindray [Modelo]</div>
+            <p class="equip-product-desc">Descripción, especificaciones y usos del equipo.</p>
+            <div class="equip-product-price">Consultar precio</div>
+          </div>
+        </div>
+      -->
+      <div class="equip-empty-note">Próximamente vas a poder cargar acá los ecógrafos portátiles disponibles.</div>
     </div>
   </div>
 
-  <p style="margin-top:2rem; font-size:.85rem; color:var(--gray-mid); font-weight:300;">¿No ve su equipo? <a href="contacto.html" style="color:var(--blue); font-weight:600;">Contáctenos</a>. Evaluamos cada caso individualmente.</p>
+  <!-- ── Ecógrafos › Mindray › Institucionales ── -->
+  <div class="equip-category fade-up" id="institucionales">
+    <div class="equip-breadcrumb">
+      <span>Ecógrafos</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-brand">Mindray</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-current">Institucionales</span>
+    </div>
+    <p class="equip-category-desc">Equipos de alta gama para hospitales y clínicas, con mayor capacidad diagnóstica.</p>
+
+    <div class="equip-products-grid">
+      <div class="equip-empty-note">Próximamente vas a poder cargar acá los ecógrafos institucionales disponibles.</div>
+    </div>
+  </div>
+
+  <!-- ── Ecógrafos › Mindray › Veterinarios ── -->
+  <div class="equip-category fade-up" id="veterinarios">
+    <div class="equip-breadcrumb">
+      <span>Ecógrafos</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-brand">Mindray</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-current">Veterinarios</span>
+    </div>
+    <p class="equip-category-desc">Equipos adaptados para uso veterinario, con presets específicos por especie.</p>
+
+    <div class="equip-products-grid">
+      <div class="equip-empty-note">Próximamente vas a poder cargar acá los ecógrafos veterinarios disponibles.</div>
+    </div>
+  </div>
+
+  <p style="margin-top:3rem; font-size:.85rem; color:var(--gray-mid); font-weight:300;">¿Buscás un modelo específico? <a href="contacto.html" style="color:var(--blue); font-weight:600;">Contáctenos</a>.</p>
 </section>
 
 <!-- ═══ GALERÍA ═══ -->
@@ -204,11 +301,11 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 <!-- ═══ CTA ═══ -->
 <section id="cta">
   <div class="cta-inner">
-    <div class="section-label">¿Su institución necesita soporte técnico?</div>
-    <h2 class="section-title">Agende una evaluación técnica</h2>
-    <p class="cta-sub">Contáctenos con el modelo y la falla o necesidad de mantenimiento. Le respondemos a la brevedad.</p>
+    <div class="section-label">¿Necesitás un ecógrafo Mindray?</div>
+    <h2 class="section-title">Consultanos por el modelo que buscás</h2>
+    <p class="cta-sub">Contanos qué necesitás (portátil, institucional o veterinario) y te asesoramos según tu caso.</p>
     <div class="cta-actions">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20servicio%20para%20un%20equipo" class="btn-white" target="_blank" rel="noopener">
+      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20sobre%20un%20ecógrafo" class="btn-white" target="_blank" rel="noopener">
         Consultar por WhatsApp
       </a>
       <a href="servicios.html" class="btn-outline-white">Ver todos los servicios</a>
