@@ -20,53 +20,77 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* ─── Equipment detail cards ─── */
-  .equip-detail-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+  /* ─── Equipment category / breadcrumb block ─── */
+  .equip-category {
     margin-top: 3rem;
   }
-  .equip-detail-card {
+  .equip-category + .equip-category {
+    margin-top: 3.5rem;
+  }
+  .equip-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 1.5rem;
+  }
+  .equip-breadcrumb .crumb-root {
+    color: var(--gray-dark);
+  }
+  .equip-breadcrumb .crumb-sep {
+    color: var(--gray-mid);
+    font-weight: 400;
+  }
+  .equip-breadcrumb .crumb-brand {
+    color: var(--blue);
+  }
+
+  .equip-subcategory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .equip-subcategory-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
     border: 1.5px solid var(--gray-border);
     border-radius: 18px;
-    overflow: hidden;
     background: var(--white);
+    padding: 1.5rem 1.75rem;
     transition: border-color var(--t-base) var(--ease),
                 box-shadow var(--t-base) var(--ease),
                 transform var(--t-base) var(--ease-bounce);
+    text-decoration: none;
   }
-  .equip-detail-card:hover {
-    border-color: var(--blue-mid);
+  .equip-subcategory-card:hover {
+    border-color: var(--blue);
     box-shadow: var(--shadow-md);
     transform: translateY(-3px);
   }
-  .equip-detail-card { border-color: var(--blue); }
-  .equip-detail-card.highlight { border-color: var(--blue); background: var(--blue-light); }
- 
-
-  .equip-detail-card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
+  .equip-subcategory-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-dark);
   }
-  .equip-detail-card-body {
-    padding: 1.5rem;
+  .equip-subcategory-arrow {
+    flex-shrink: 0;
+    color: var(--blue);
+    transition: transform var(--t-base) var(--ease);
   }
-  .equip-detail-name { font-size: 1rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.5rem; }
-  .equip-detail-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; margin: 0; }
+  .equip-subcategory-card:hover .equip-subcategory-arrow {
+    transform: translateX(4px);
+  }
 
   #gallery { background: var(--gray-light); }
-  @media (max-width: 900px) {
-
-  }
   @media (max-width: 700px) {
     .partners-intro { flex-direction: column; }
     .partners-intro-badge { min-width: auto; width: 100%; }
-    .equip-detail-grid {
-      grid-template-columns: 1fr;
-    }
+    .equip-breadcrumb { font-size: 0.95rem; }
   }
 </style>
 <!-- Meta Pixel Code -->
@@ -123,104 +147,26 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
     <p class="section-desc">Desde ecógrafos de alta complejidad hasta equipos de diagnóstico básico: cada tipo de dispositivo recibe un protocolo de servicio específico.</p>
   </div>
 
-  <div class="equip-detail-grid">
-
-    <div class="equip-detail-card highlight fade-up">
-      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1691933880037-ce9d151ab922?w=600&q=80&auto=format&fit=crop" alt="Ecógrafo" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Ecógrafos</div>
-        <p class="equip-detail-desc">Soporte técnico para toda la gama de ecógrafos: portátiles, institucionales y de alta gama. Diagnóstico, reparación, mantenimientos.</p>
-      </div>
+  <div class="equip-category fade-up">
+    <div class="equip-breadcrumb">
+      <span class="crumb-root">Ecógrafos</span>
+      <span class="crumb-sep">›</span>
+      <span class="crumb-brand">Mindray</span>
     </div>
-
-    <div class="equip-detail-card fade-up stagger-1">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/11198232/pexels-photo-11198232.jpeg" alt="Monitor de paciente" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Monitores de paciente</div>
-        <p class="equip-detail-desc">Mantenimiento y reparación de monitores multiparamétricos. Verificación de sensores, alarmas, módulos de medición y pantallas. Equipos de UCI, quirófano y sala general.</p>
-      </div>
+    <div class="equip-subcategory-grid">
+      <a href="contacto.html?equipo=ecografo-mindray-portatil" class="equip-subcategory-card fade-up stagger-1">
+        <span class="equip-subcategory-name">Portátiles</span>
+        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="contacto.html?equipo=ecografo-mindray-institucional" class="equip-subcategory-card fade-up stagger-2">
+        <span class="equip-subcategory-name">Institucionales</span>
+        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="contacto.html?equipo=ecografo-mindray-veterinario" class="equip-subcategory-card fade-up stagger-3">
+        <span class="equip-subcategory-name">Veterinarios</span>
+        <svg class="equip-subcategory-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
     </div>
-
-    <div class="equip-detail-card fade-up stagger-2">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/8943271/pexels-photo-8943271.jpeg" alt="Desfibrilador" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Desfibriladores</div>
-        <p class="equip-detail-desc">Servicio técnico de desfibriladores manuales y automáticos. Verificación de descarga, reemplazo de electrodos, mantenimiento de baterías y calibración según normas de seguridad eléctrica.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-3">
-      <img class="equip-detail-card-img" src="https://infonegocios.info/content/images/2022/07/20/21253/tecme-leistung-fabricantes-respiradores-cordoba-03-cba.jpg" alt="Ventilador mecánico" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Ventiladores mecánicos</div>
-        <p class="equip-detail-desc">Diagnóstico y reparación de ventiladores para UCI y sala. Verificación de válvulas, sensores de flujo y presión, sistemas de alarma y software de control de ciclos ventilatorios.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-1">
-      <img class="equip-detail-card-img" src="https://api.kalstein.com.pa/uploads/2022/11/240_F_11610650_ZgRDx7zeRebWmkj5BStkm4JIcXf09aoY.jpg" alt="Bomba de infusión" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Bombas de infusión</div>
-        <p class="equip-detail-desc">Mantenimiento preventivo y correctivo de bombas de jeringa e infusión. Verificación de precisión de caudal, alarmas de oclusión y baterías.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-2">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/6501860/pexels-photo-6501860.jpeg" alt="Equipo de Rx" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Equipos de Rx</div>
-        <p class="equip-detail-desc">Servicio técnico de equipos de radiología. Revisión de generadores, sistemas de alimentación y mecanismos de posicionamiento.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-3">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/10996739/pexels-photo-10996739.jpeg" alt="Electrobisturí" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Electrobisturís</div>
-        <p class="equip-detail-desc">Mantenimiento y calibración de unidades de electrocirugía. Verificación de potencia de salida, modos de corte y coagulación, y sistemas de seguridad.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/9408868/pexels-photo-9408868.jpeg" alt="Equipos de diagnóstico" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Equipos de diagnóstico</div>
-        <p class="equip-detail-desc">Diagnóstico y reparación de equipos varios: electrocardiógrafos, oxímetros, tensiómetros digitales y equipos de laboratorio básico.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-1">
-      <img class="equip-detail-card-img" src="https://images.pexels.com/photos/7108115/pexels-photo-7108115.jpeg" alt="Mesa de cirugía" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Mesas de cirugía</div>
-        <p class="equip-detail-desc">Mantenimiento y reparación de mesas quirúrgicas eléctricas e hidráulicas. Verificación de actuadores, sistemas de posicionamiento y controles.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-2">
-      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1685997176548-14f9f7f3a918?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lámpara cialítica" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Lámparas cialíticas</div>
-        <p class="equip-detail-desc">Servicio técnico de lámparas quirúrgicas de techo y móviles. Revisión de sistemas de iluminación LED, brazos articulados y controles de intensidad.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up stagger-3">
-      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=600&q=80&auto=format&fit=crop" alt="Torre de laparoscopía" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Torres de laparoscopía</div>
-        <p class="equip-detail-desc">Diagnóstico y reparación de torres laparoscópicas. Mantenimiento de insufladores, fuentes de luz, cámaras e inyectores de CO₂.</p>
-      </div>
-    </div>
-
-    <div class="equip-detail-card fade-up">
-      <img class="equip-detail-card-img" src="https://images.unsplash.com/photo-1702428903130-dda216ebd63f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Incubadora neonatal" loading="lazy">
-      <div class="equip-detail-card-body">
-        <div class="equip-detail-name">Incubadoras</div>
-        <p class="equip-detail-desc">Mantenimiento preventivo y correctivo de incubadoras neonatales. Verificación de control de temperatura, humedad, alarmas y sistemas de oxígeno.</p>
-      </div>
-    </div>
-
   </div>
 
   <p style="margin-top:2rem; font-size:.85rem; color:var(--gray-mid); font-weight:300;">¿No ve su equipo? <a href="contacto.html" style="color:var(--blue); font-weight:600;">Contáctenos</a>. Evaluamos cada caso individualmente.</p>
