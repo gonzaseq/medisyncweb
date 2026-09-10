@@ -128,6 +128,21 @@
     color: var(--blue);
   }
 
+  /* Placeholder de foto mientras no se cargue la imagen real */
+  .equip-product-img-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-light);
+    color: var(--gray-mid);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
   /* Placeholder visible mientras no hay equipos cargados en una categoría */
   .equip-empty-note {
     border: 1.5px dashed var(--gray-border);
@@ -257,7 +272,36 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
     <p class="equip-category-desc">Equipos adaptados para uso veterinario, con presets específicos por especie.</p>
 
     <div class="equip-products-grid">
-      <div class="equip-empty-note">Próximamente vas a poder cargar acá los ecógrafos veterinarios disponibles.</div>
+      <div class="equip-product-card fade-up stagger-1">
+        <div class="equip-product-img-placeholder">Foto Esaote MyLab Fox</div>
+        <!-- Cuando tengas la foto, reemplazar la línea de arriba por: -->
+        <!-- <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Fox.png" alt="Esaote MyLab Fox"> -->
+        <div class="equip-product-card-body">
+          <div class="equip-product-name">Esaote MyLab Fox</div>
+          <p class="equip-product-desc">Ecógrafo veterinario. Especificaciones y usos a completar.</p>
+          <div class="equip-product-price">Consultar precio</div>
+        </div>
+      </div>
+
+      <div class="equip-product-card fade-up stagger-2">
+        <div class="equip-product-img-placeholder">Foto Esaote MyLab Heron</div>
+        <!-- <img class="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Heron-.png" alt="Esaote MyLab Heron"> -->
+        <div class="equip-product-card-body">
+          <div class="equip-product-name">Esaote MyLab Heron</div>
+          <p class="equip-product-desc">Ecógrafo veterinario. Especificaciones y usos a completar.</p>
+          <div class="equip-product-price">Consultar precio</div>
+        </div>
+      </div>
+
+      <div class="equip-product-card fade-up stagger-3">
+        <div class="equip-product-img-placeholder">Foto Esaote MyLab Panther</div>
+        <!-- <img class="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Panther-1.png" alt="Esaote MyLab Panther"> -->
+        <div class="equip-product-card-body">
+          <div class="equip-product-name">Esaote MyLab Panther</div>
+          <p class="equip-product-desc">Ecógrafo veterinario. Especificaciones y usos a completar.</p>
+          <div class="equip-product-price">Consultar precio</div>
+        </div>
+      </div>
     </div>
   </div>
 
