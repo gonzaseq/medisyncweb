@@ -67,7 +67,11 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 <body>
 
 <!-- ═══ HERO ═══ -->
-<section id="hero" class="hero-grid-only" data-grid-beam>
+<section id="hero" data-grid-beam>
+  <!-- Fondo del hero: video sin sonido en bucle. Para volver a una foto, reemplazar <video> por <img class="hero-bg" src="..." alt=""> -->
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg" aria-hidden="true">
+    <source src="img/hero.mp4" type="video/mp4">
+  </video>
   <div class="hero-content">
     <div class="hero-top">
       <div class="hero-badge">Equipamiento · Insumos · Servicio técnico</div>

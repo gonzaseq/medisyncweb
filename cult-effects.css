@@ -120,3 +120,9 @@
   .beam::after  { animation: none; }
   .ta-word      { animation: none; }
 }
+
+/* Video de fondo del hero: se oculta si el visitante pidió reducir el movimiento */
+#hero video.hero-bg { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  #hero video.hero-bg { display: none; }
+}
