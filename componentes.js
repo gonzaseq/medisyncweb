@@ -28,10 +28,10 @@
   <ul class="nav-links">
     <li><a href="index.html"     class="${isActive('index.html')}">Inicio</a></li>
     <li><a href="equipos.html"   class="${isActive('equipos.html')}">Equipamiento</a></li>
-    <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
-    <li><a href="tienda.html"    class="${isActive('tienda.html')}">Tienda</a></li>
+    <li><a href="tienda.html"    class="${isActive('tienda.html')}">Insumos</a></li>
+    <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicio técnico</a></li>
     <li><a href="nosotros.html"  class="${isActive('nosotros.html')}">Nosotros</a></li>
-    <li><a href="contacto.html"  class="nav-cta beam ${isActive('contacto.html')}">Solicitar servicio</a></li>
+    <li><a href="contacto.html"  class="nav-cta beam ${isActive('contacto.html')}">Contacto</a></li>
   </ul>
 
   <button class="nav-hamburger" id="hamburger" aria-label="Menú">
@@ -42,10 +42,10 @@
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="index.html"     onclick="closeMobile()">Inicio</a>
   <a href="equipos.html"   onclick="closeMobile()">Equipamiento</a>
-  <a href="servicios.html" onclick="closeMobile()">Servicios</a>
-  <a href="tienda.html"    onclick="closeMobile()">Tienda</a>
+  <a href="tienda.html"    onclick="closeMobile()">Insumos y accesorios</a>
+  <a href="servicios.html" onclick="closeMobile()">Servicio técnico</a>
   <a href="nosotros.html"  onclick="closeMobile()">Nosotros</a>
-  <a href="contacto.html"  class="nav-cta" onclick="closeMobile()">Solicitar servicio</a>
+  <a href="contacto.html"  class="nav-cta" onclick="closeMobile()">Contacto</a>
   <div class="nav-mobile-phones">
     <a href="tel:+543764374545">${phoneSVG(14)} 376 437-4545</a>
     <a href="tel:+543764639426">${phoneSVG(14)} 376 463-9426</a>
@@ -62,7 +62,7 @@
       <div class="footer-logo-img">
         <img src="img/logo.white.png" alt="MediSync Ingeniería Clínica">
       </div>
-      <p class="footer-desc">Ingeniería clínica especializada para equipamiento médico, con base en Posadas y cobertura en toda Misiones y el NEA.</p>
+      <p class="footer-desc">Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica. Con base en Posadas y cobertura en Misiones y el NEA.</p>
       <div class="footer-location">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Posadas, Misiones
@@ -75,8 +75,8 @@
       <ul class="footer-links">
         <li><a href="index.html">Inicio</a></li>
          <li><a href="equipos.html">Equipamiento</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="tienda.html">Insumos y accesorios</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -148,7 +148,7 @@
 
   /* ── Botón flotante WhatsApp ── */
   const waBtn = document.createElement('a');
-  waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync.';
+  waBtn.href = 'https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync.';
   waBtn.target = '_blank';
   waBtn.rel = 'noopener noreferrer';
   waBtn.className = 'wa-float-btn';

@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto | MediSync Ingeniería Clínica – Posadas, Misiones</title>
-<meta name="description" content="Contacte a MediSync para solicitar servicio técnico de equipamiento médico en Misiones. Teléfono, WhatsApp y email disponibles.">
+<meta name="description" content="Contacte a MediSync para consultar por equipamiento médico, accesorios e insumos o servicio técnico en Misiones. Teléfono, WhatsApp y email.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="MediSync Ingeniería Clínica">
 <meta property="og:title" content="Contacto | MediSync Ingeniería Clínica – Posadas, Misiones">
-<meta property="og:description" content="Contacte a MediSync para solicitar servicio técnico de equipamiento médico en Misiones. Teléfono, WhatsApp y email disponibles.">
+<meta property="og:description" content="Contacte a MediSync para consultar por equipamiento médico, accesorios e insumos o servicio técnico en Misiones. Teléfono, WhatsApp y email.">
 <meta property="og:image" content="img/logo1.png">
 <meta property="og:url" content="https://medisync.com.ar/contacto.html">
 <meta name="twitter:card" content="summary">
@@ -255,7 +255,7 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
     <div class="hero-top">
       <div class="hero-badge">Estamos disponibles</div>
       <h1 class="hero-h1" data-text-animate>Hablemos sobre<br>su equipamiento.</h1>
-      <p class="hero-sub">Cuéntenos qué equipos utiliza y sus necesidades. Nuestro equipo le brindará una rápida respuesta.</p>
+      <p class="hero-sub">Cuéntenos qué equipo busca, qué insumo necesita o qué servicio requiere. Le respondemos a la brevedad.</p>
     </div>
     <div class="hero-actions">
       <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync." class="btn-primary beam" target="_blank" rel="noopener">
@@ -319,23 +319,30 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
         </div>
 
         <div class="form-group">
-          <label for="equipo">Equipo / tipo de servicio</label>
+          <label for="equipo">¿Qué necesita?</label>
           <select id="equipo" name="equipo">
             <option value="">Seleccionar...</option>
-            <option>Ecógrafo Mindray</option>
-            <option>Monitor de paciente</option>
-            <option>Desfibrilador</option>
-            <option>Ventilador mecánico</option>
-            <option>Bomba de infusión</option>
-            <option>Otro equipo</option>
-            <option>Contrato de mantenimiento</option>
-            <option>Consulta general</option>
+            <optgroup label="Equipamiento">
+              <option value="Comprar un ecógrafo">Comprar un ecógrafo</option>
+              <option value="Comprar otro equipo médico">Comprar otro equipo médico</option>
+            </optgroup>
+            <optgroup label="Insumos y accesorios">
+              <option value="Accesorios o insumos">Accesorios o insumos (sensores, cables, manguitos)</option>
+              <option value="Repuesto específico">Repuesto específico</option>
+            </optgroup>
+            <optgroup label="Servicio técnico">
+              <option value="Reparación de un equipo">Reparación de un equipo</option>
+              <option value="Servicio técnico Mindray">Servicio técnico Mindray</option>
+              <option value="Contrato de mantenimiento">Contrato de mantenimiento</option>
+              <option value="Relevamiento gratuito">Relevamiento gratuito</option>
+            </optgroup>
+            <option value="Otra consulta">Otra consulta</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="mensaje">Descripción de la necesidad *</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa el equipo, la falla o el tipo de servicio que necesita..." required></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Indique el equipo o insumo que busca, o describa la falla y el modelo del equipo..." required></textarea>
         </div>
 
         <button type="submit" class="btn-primary btn-submit" id="submitBtn">
@@ -422,7 +429,7 @@ function handleSubmit(e) {
   submitBtn.style.opacity = '0.7';
   submitBtn.innerHTML = 'Enviando…';
 
-  const texto = `Consulta desde el sitio web:\n\nNombre: ${nombre}\nInstitución: ${institucion || 'No indicada'}\nTeléfono: ${telefono}\nEquipo/Servicio: ${equipo || 'No especificado'}\n\nMensaje:\n${mensaje}`;
+  const texto = `Consulta desde el sitio web:\n\nNombre: ${nombre}\nInstitución: ${institucion || 'No indicada'}\nTeléfono: ${telefono}\nNecesita: ${equipo || 'No especificado'}\n\nMensaje:\n${mensaje}`;
   const waUrl = `https://wa.me/5493764374545?text=${encodeURIComponent(texto)}`;
 
   window.open(waUrl, '_blank');
