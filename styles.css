@@ -2627,3 +2627,23 @@ a.equip-product-price:hover { text-decoration: underline; }
 .mv-compact .mv-label { font-family: var(--font-label); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
 .mv-compact p { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; line-height: 1.5; color: var(--gray-dark); }
 @media (max-width: 760px) { .mv-compact { grid-template-columns: 1fr; } }
+
+/* ─── HERO EN CELULAR (v3) ───
+   El hero crece si el contenido no entra, en lugar de esconderlo detrás del menú. */
+@media (max-width: 600px) {
+  #hero {
+    height: auto;
+    min-height: 100svh;
+    padding-top: 104px;
+    padding-bottom: 40px;
+  }
+  .hero-content { height: auto; gap: 2rem; }
+  .hero-top { gap: 1.25rem; justify-content: center; }
+  .hero-badge { font-size: 0.7rem; letter-spacing: 0.04em; }
+}
+
+/* Imagen de respaldo del video: se ve mientras carga, en modo de ahorro de batería
+   o si el visitante pidió reducir el movimiento. */
+#hero.has-video {
+  background: #003A59 url("img/hero-poster.jpg") center 30% / cover no-repeat;
+}
