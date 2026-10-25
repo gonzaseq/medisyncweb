@@ -13,8 +13,9 @@
 <link rel="canonical" href="https://medisync.com.ar/tienda.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cult-effects.css">
 
 <style>
   /* Reducimos el tamaño de las columnas en la grilla para que las tarjetas sean más chicas */
@@ -150,16 +151,16 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 <body>
 
 <!-- ═══ HERO ═══ -->
-<section id="hero">
+<section id="hero" data-grid-beam>
   <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1702598502002-f36d61e5c9a3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Catálogo de accesorios y repuestos para electromedicina en Misiones" fetchpriority="high">
   <div class="hero-content">
   <div class="hero-top">
     <div class="hero-badge">Catálogo · Stock · Repuestos</div>
-    <h1 class="hero-h1">Accesorios y repuestos<br>para electromedicina.</h1>
+    <h1 class="hero-h1" data-text-animate>Accesorios y repuestos<br>para electromedicina.</h1>
     <p class="hero-sub">Componentes legítimos, trazabilidad garantizada y respaldo de nuestro equipo de ingeniería clínica.</p>
   </div>
   <div class="hero-actions">
-    <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20stock%20de%20accesorios" class="btn-primary" target="_blank" rel="noopener">
+    <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20stock%20de%20accesorios" class="btn-primary beam" target="_blank" rel="noopener">
       <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
       Consultar stock
     </a>
@@ -923,7 +924,7 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
     <h2 class="section-title">Importamos y gestionamos repuestos a medida</h2>
     <p class="cta-sub">Si el accesorio o consumible que necesita no está disponible en nuestro stock permanente, nuestro equipo de ingeniería se encarga de localizarlo y calibrarlo para su institución.</p>
     <div class="cta-actions">
-      <a href="contacto.html" class="btn-white">
+      <a href="contacto.html" class="btn-white beam">
         Solicitar repuesto especial
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
       </a>
@@ -932,6 +933,7 @@ src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 </section>
 
 <script src="componentes.js"></script>
+<script src="cult-effects.js" defer></script>
 <script>
   // Filtro de productos por categoría (data-cat) — funciona con la estructura corregida arriba
   document.addEventListener('DOMContentLoaded', function () {

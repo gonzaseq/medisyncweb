@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MediSync — Design System v2.2
+   MediSync — Design System v2.3
    Ingeniería Biomédica · Premium · Confianza · Precisión
 ═══════════════════════════════════════════════════════ */
 
@@ -21,7 +21,8 @@
   --gray-border: #E4E9EF;
   --gray-border-strong: #C8D4DE;
 
-  --font: 'Poppins', sans-serif;
+  --font: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --sp-1:  4px;
   --sp-2:  8px;
@@ -2279,4 +2280,30 @@ footer {
   .logo-item:nth-child(n+7) {
     display: none;
   }
+}
+
+
+/* ─── TIPOGRAFÍA DE TÍTULOS (v2.3) ───
+   Bricolage Grotesque para títulos y cifras; Instrument Sans para el resto. */
+h1, h2, h3,
+.hero-h1,
+.section-title,
+.service-title,
+.problem-title,
+.why-title,
+.why-num,
+.equip-name,
+.team-name,
+.trust-block-title,
+.trust-card-title,
+.contact-info-card-title,
+.stat-card-num,
+#cta h2 {
+  font-family: var(--font-display);
+}
+
+.hero-h1,
+.section-title {
+  font-weight: 700;
+  letter-spacing: -1.2px;
 }

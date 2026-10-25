@@ -31,7 +31,7 @@
     <li><a href="servicios.html" class="${isActive('servicios.html')}">Servicios</a></li>
     <li><a href="tienda.html"    class="${isActive('tienda.html')}">Tienda</a></li>
     <li><a href="nosotros.html"  class="${isActive('nosotros.html')}">Nosotros</a></li>
-    <li><a href="contacto.html"  class="nav-cta ${isActive('contacto.html')}">Solicitar servicio</a></li>
+    <li><a href="contacto.html"  class="nav-cta beam ${isActive('contacto.html')}">Solicitar servicio</a></li>
   </ul>
 
   <button class="nav-hamburger" id="hamburger" aria-label="Menú">

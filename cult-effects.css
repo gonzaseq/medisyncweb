@@ -1,0 +1,122 @@
+/* ═══════════════════════════════════════════════════════
+   MediSync — Efectos inspirados en Cult UI (MIT)
+   Border Beam · Grid Beam · Text Animate
+   Versión en CSS/JS puro, sin React ni Tailwind.
+═══════════════════════════════════════════════════════ */
+
+/* ─── BORDER BEAM ───
+   Uso: agregar la clase "beam" a un botón (.btn-primary, .nav-cta, .btn-white).
+   Una línea de luz recorre el borde del botón. */
+@property --beam-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.beam {
+  position: relative;
+  isolation: isolate;
+  --beam-width: 2px;
+  --beam-speed: 3.4s;
+  --beam-color: #8FDcFF;
+  --beam-core: #FFFFFF;
+}
+
+.beam::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--beam-width) * -1);
+  padding: var(--beam-width);
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--beam-angle),
+    transparent 0deg 250deg,
+    color-mix(in srgb, var(--beam-color) 35%, transparent) 290deg,
+    var(--beam-color) 330deg,
+    var(--beam-core) 345deg,
+    var(--beam-color) 352deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: beam-spin var(--beam-speed) linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Halo suave que respira junto con el haz */
+.beam::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--beam-color) 0%, transparent);
+  animation: beam-glow var(--beam-speed) ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.beam:hover { --beam-speed: 1.8s; }
+
+@keyframes beam-spin { to { --beam-angle: 360deg; } }
+
+@keyframes beam-glow {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--beam-color) 0%, transparent); }
+  50%      { box-shadow: 0 0 18px 2px color-mix(in srgb, var(--beam-color) 45%, transparent); }
+}
+
+/* El navbar ya oculta su ::after; el halo se reemplaza por la sombra existente */
+.nav-cta.beam { --beam-width: 1.5px; }
+
+/* Botón blanco sobre fondo azul (sección final de cada página) */
+.btn-white.beam {
+  --beam-color: #0082C8;
+  --beam-core: #004B72;
+}
+
+/* Navegadores sin @property muestran el haz quieto en un punto del borde. */
+
+/* ─── GRID BEAM ───
+   Uso: data-grid-beam en el contenedor (por ejemplo #hero).
+   cult-effects.js inserta un <canvas class="grid-beam-canvas">. */
+.grid-beam-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 110% 95% at 50% 45%, #000 45%, transparent 100%);
+          mask-image: radial-gradient(ellipse 110% 95% at 50% 45%, #000 45%, transparent 100%);
+}
+
+/* Variante sin foto: fondo azul profundo propio de la marca */
+#hero.hero-grid-only {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 35%, rgba(0,130,200,0.45), transparent 70%),
+    linear-gradient(180deg, #003A59 0%, var(--blue-deep) 55%, #00314B 100%);
+}
+#hero.hero-grid-only::before { display: none; }
+#hero.hero-grid-only .hero-bg { display: none; }
+
+/* ─── TEXT ANIMATE ───
+   Uso: data-text-animate en un título. Las palabras aparecen una por una. */
+.ta-word {
+  display: inline-block;
+  animation: ta-in 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 75ms + 120ms);
+  will-change: transform, filter, opacity;
+}
+
+@keyframes ta-in {
+  from { opacity: 0; transform: translateY(0.35em); filter: blur(8px); }
+  to   { opacity: 1; transform: none;               filter: none; }
+}
+
+/* ─── MOVIMIENTO REDUCIDO ─── */
+@media (prefers-reduced-motion: reduce) {
+  .beam::before { animation: none; --beam-angle: 300deg; }
+  .beam::after  { animation: none; }
+  .ta-word      { animation: none; }
+}
