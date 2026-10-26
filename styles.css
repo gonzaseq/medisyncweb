@@ -342,3 +342,9 @@ footer ul { gap: 6px; }
   .foot-brand { display: flex; align-items: center; justify-content: space-between; }
   .social { margin-top: 0; }
 }
+
+/* Logos de clientes más grandes */
+.logos { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 40px 48px; }
+.logos img { height: 96px; max-height: none; opacity: 1; }
+@media (max-width: 860px) { .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; } .logos img { height: 80px; } }
+@media (max-width: 480px) { .logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; } .logos img { height: 72px; } }
