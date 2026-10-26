@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nosotros | MediSync Ingeniería Clínica – Posadas, Misiones</title>
 <meta name="description" content="Quiénes somos, nuestra misión y visión. Ingeniería clínica con foco en el sector salud del NEA, con base en Posadas, Misiones.">
 <meta property="og:type" content="website">
@@ -15,150 +15,6 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="canonical" href="https://medisync.com.ar/nosotros.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cult-effects.css">
-<style>
-  /* ─── MISIÓN / VISIÓN ─── */
-  .mv-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  .mv-card {
-    border-radius: 20px;
-    padding: 2.5rem;
-    border: 1.5px solid var(--gray-border);
-    background: var(--white);
-    position: relative;
-    overflow: hidden;
-    transition: border-color var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
-  }
-  .mv-card:hover { border-color: var(--blue-mid); box-shadow: var(--shadow-md); }
-  .mv-card.mission { background: var(--blue); border-color: var(--blue); color: var(--white); }
-  .mv-card.mission .mv-label { color: rgba(255,255,255,0.65); }
-  .mv-card.mission .mv-title { color: var(--white); }
-  .mv-card.mission .mv-text { color: rgba(255,255,255,0.82); }
-  .mv-card::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-    pointer-events: none;
-  }
-  .mv-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
-  .mv-icon-wrap {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.15);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1rem;
-    flex-shrink: 0;
-  }
-  .mv-card:not(.mission) .mv-icon-wrap {
-    background: var(--blue-light);
-    border: 1px solid var(--blue-mid);
-  }
-  .mv-icon-wrap svg {
-    width: 22px; height: 22px;
-    stroke: var(--white);
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .mv-card:not(.mission) .mv-icon-wrap svg { stroke: var(--blue); }
-  .mv-title { font-size: 1.35rem; font-weight: 800; color: var(--gray-dark); margin-bottom: 1rem; line-height: 1.2; }
-  .mv-text { font-size: 0.88rem; color: var(--gray-mid); line-height: 1.8; font-weight: 300; }
-
-  /* ─── VALORES ─── */
-  #valores { background: var(--gray-light); }
-  .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  .valor-item {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 2rem;
-    border: 1px solid var(--gray-border);
-    text-align: center;
-    transition: border-color var(--t-base) var(--ease),
-                transform var(--t-base) var(--ease-bounce),
-                box-shadow var(--t-base) var(--ease);
-  }
-  .valor-item:hover {
-    border-color: var(--blue-mid);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-  }
-  .valor-icon-wrap {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    background: var(--blue-light);
-    border: 1px solid var(--blue-mid);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1rem;
-  }
-  .valor-icon-wrap svg {
-    width: 22px; height: 22px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .valor-title { font-size: 0.95rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.5rem; }
-  .valor-desc { font-size: 0.82rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; }
-
-  /* ─── HISTORIA ─── */
-  #historia { background: var(--white); }
-  .historia-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .historia-img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: var(--shadow-lg);
-  }
-
-  /* ─── COBERTURA ─── */
-  #cobertura { background: var(--blue-light); }
-  .cobertura-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .cobertura-img {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: var(--shadow-md);
-  }
-
-  @media (max-width: 900px) {
-    .mv-grid { grid-template-columns: 1fr; }
-    .historia-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-    .historia-img { height: 260px; }
-    .cobertura-layout { grid-template-columns: 1fr; }
-    .cobertura-img { display: none; }
-  }
-</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -176,207 +32,129 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" data-grid-beam>
-  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1682145090620-3b48a670306d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ingeniería clínica MediSync" fetchpriority="high">
-  <div class="hero-content">
-    <div class="hero-top">
-      <div class="hero-badge">Quiénes somos</div>
-      <h1 class="hero-h1" data-text-animate>Ingeniería clínica<br>con foco en salud.</h1>
-      <p class="hero-sub">Un equipo de profesionales en ingeniería biomédica, con base en Posadas y presencia en toda Misiones y el NEA.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="contacto.html" class="btn-primary beam">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Contactarnos
-      </a>
-      <a href="#historia" class="btn-secondary">
-        Conocer nuestra historia
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-    </div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="MediSync, inicio"><img src="img/logo-header.png" alt="MediSync Ingeniería Clínica"></a>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="equipos.html">Equipamiento</a></li><li><a href="tienda.html">Insumos</a></li><li><a href="servicios.html">Servicio técnico</a></li><li><a href="nosotros.html" aria-current="page">Nosotros</a></li></ul>
+    <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <a href="#historia" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
-    Descubrir más
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-  </a>
-</section>
-<!-- ═══ HISTORIA / TRAYECTORIA ═══ -->
-<section id="historia">
-  <div class="historia-layout">
+  <nav class="mobile-menu" id="mmenu" aria-label="Menú"><a href="index.html">Inicio</a><a href="equipos.html">Equipamiento</a><a href="tienda.html">Insumos</a><a href="servicios.html">Servicio técnico</a><a href="nosotros.html" aria-current="page">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<div class="wrap crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span>Nosotros</div>
+
+<section class="hero-light simple">
+  <div class="wrap">
     <div>
-      <div class="section-header">
-        <div class="section-label">Quiénes somos</div>
-        <h2 class="section-title">Ingenieros de Posadas<br>para la salud del NEA</h2>
-        <p class="section-desc">MediSync es una empresa de ingeniería biomédica con experiencia de campo en instituciones de alta complejidad de la ciudad de Córdoba. Nacimos para que las instituciones de salud del NEA tengan ese nivel de ingeniería clínica con respaldo local.</p>
-      </div>
-      <div class="why-points">
-        <div class="why-point fade-up">
-          <div class="why-num">01</div>
-          <div>
-            <div class="why-title">Raíces en Misiones</div>
-            <div class="why-text">Somos una empresa de Posadas, con conocimiento del territorio y de las necesidades específicas del sistema de salud provincial y regional.</div>
-          </div>
-        </div>
-        <div class="why-point fade-up stagger-1">
-          <div class="why-num">02</div>
-          <div>
-            <div class="why-title">Formación universitaria</div>
-            <div class="why-text">Formación en ingeniería biomédica, con conocimiento de las normativas sanitarias y los protocolos técnicos del sector.</div>
-          </div>
-        </div>
-        <div class="why-point fade-up stagger-2">
-          <div class="why-num">03</div>
-          <div>
-            <div class="why-title">Foco exclusivo en salud</div>
-            <div class="why-text">Todo lo que hacemos gira en torno al equipamiento médico: lo vendemos, le proveemos insumos y lo mantenemos en funcionamiento.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img class="historia-img fade-up" src="https://images.unsplash.com/photo-1688565631550-ff8aa569f71a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Técnico en trabajo" loading="lazy">
-  </div>
-</section>
-
-<!-- ═══ MISIÓN / VISIÓN ═══ -->
-<section id="mision" style="background: var(--gray-light); padding-top: 72px; padding-bottom: 72px;">
-  <div class="mv-compact">
-    <div class="fade-up">
-      <div class="mv-label">Misión</div>
-      <p>Equipar, abastecer y mantener la tecnología médica de las instituciones de salud del NEA, con criterio técnico y respaldo local.</p>
-    </div>
-    <div class="fade-up stagger-1">
-      <div class="mv-label">Visión</div>
-      <p>Ser el socio técnico de referencia en equipamiento médico para las instituciones de Misiones y el NEA.</p>
+      <h1>Nosotros</h1>
+      <p>Una empresa de ingeniería biomédica de Posadas, dedicada al equipamiento médico de las instituciones de salud de Misiones y el NEA.</p>
     </div>
   </div>
 </section>
-
-<!-- ═══ VALORES ═══ -->
-<section id="valores">
-  <div class="section-header centered">
-    <div class="section-label">Cómo trabajamos</div>
-    <h2 class="section-title">Nuestros valores</h2>
-    <p class="section-desc">Los principios que guían cada decisión técnica y comercial que tomamos.</p>
-  </div>
-  <div class="valores-grid">
-
-    <div class="valor-item fade-up">
-      <div class="valor-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      </div>
-      <div class="valor-title">Compromiso con la continuidad</div>
-      <p class="valor-desc">Entendemos que un equipo parado en una clínica no es solo un problema técnico — afecta pacientes. Por eso cada intervención la tratamos con la urgencia y la precisión que la situación exige.</p>
-    </div>
-
-    <div class="valor-item fade-up stagger-1">
-      <div class="valor-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <div class="valor-title">Trazabilidad</div>
-      <p class="valor-desc">Cada intervención queda documentada. Su institución sabe exactamente qué se hizo, cuándo y con qué componentes.</p>
-    </div>
-
-    <div class="valor-item fade-up stagger-2">
-      <div class="valor-icon-wrap">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <div class="valor-title">Respuesta rápida</div>
-      <p class="valor-desc">Estamos en Posadas. Cuando su equipo falla, no espera que llegue un técnico de otra provincia. Respondemos en horas.</p>
-    </div>
-
-    <div class="valor-item fade-up stagger-3">
-      <div class="valor-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="valor-title">Relaciones de largo plazo</div>
-      <p class="valor-desc">Trabajamos para construir relaciones sostenibles con cada institución, aportando acompañamiento técnico continuo y conocimiento especializado de su equipamiento.</p>
-    </div>
-
+<section class="block">
+  <div class="wrap">
+    <div class="split"><div><h2>Ingeniería clínica con respaldo local</h2><p>MediSync es una empresa de ingeniería biomédica con experiencia de campo en instituciones de alta complejidad de la ciudad de Córdoba. Nacimos para que las instituciones de salud del NEA tengan ese nivel de ingeniería clínica, cerca y con respuesta rápida.</p></div><div class="ph"><img src="img/nosotros.jpg" alt="Habitación hospitalaria con equipamiento moderno" loading="lazy"></div></div>
   </div>
 </section>
-
-<!-- ═══ COBERTURA ═══ -->
-<section id="cobertura">
-  <div class="section-header">
-    <div class="section-label">Cobertura geográfica</div>
-    <h2 class="section-title">Dónde trabajamos</h2>
-    <p class="section-desc">Brindamos cobertura completa en toda la provincia de Misiones, con base operativa en Posadas para una respuesta rápida.</p>
+<section class="block tinted">
+  <div class="wrap">
+    <div class="head-row"><h2>Por qué MediSync</h2></div>
+    <div class="cols3">
+      <div class="col"><span class="num"></span><h3>Ingenieros en Posadas</h3><p>Respondemos en menos de 24 horas en Misiones, sin costos de traslado de técnicos de otras provincias.</p></div>
+      <div class="col"><span class="num"></span><h3>Todo el ciclo en un solo lugar</h3><p>Quien le vende el equipo también lo instala, le provee los insumos y lo mantiene.</p></div>
+      <div class="col"><span class="num"></span><h3>Documentación para auditorías</h3><p>Cada intervención queda registrada con su informe técnico, lista para habilitaciones y prepagas.</p></div>
+    </div>
   </div>
-  <div class="cobertura-layout">
+</section>
+<section class="block">
+  <div class="wrap">
+    <div class="mv">
+      <div><h3>Misión</h3><p>Equipar, abastecer y mantener la tecnología médica de las instituciones de salud del NEA, con criterio técnico y respaldo local.</p></div>
+      <div><h3>Visión</h3><p>Ser el socio técnico de referencia en equipamiento médico para las instituciones de Misiones y el NEA.</p></div>
+    </div>
+  </div>
+</section>
+<section class="block tinted">
+  <div class="wrap">
+    <div class="head-row"><h2>Cómo trabajamos</h2></div>
+    <div class="cols4">
+      <div class="col"><span class="num"></span><h3>Compromiso con la continuidad</h3><p>Un equipo parado afecta pacientes. Cada intervención la tratamos con esa urgencia.</p></div>
+      <div class="col"><span class="num"></span><h3>Trazabilidad</h3><p>Su institución sabe qué se hizo, cuándo y con qué componentes.</p></div>
+      <div class="col"><span class="num"></span><h3>Respuesta rápida</h3><p>Estamos en Posadas. Cuando un equipo falla, respondemos en horas.</p></div>
+      <div class="col"><span class="num"></span><h3>Relaciones de largo plazo</h3><p>Conocemos su equipamiento en profundidad y lo acompañamos en el tiempo.</p></div>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="wrap">
+    <div class="head-row"><h2>Nuestro trabajo</h2></div>
+    <div class="gallery"><div><img src="img/s-placa.jpg" alt="Placa electrónica en reparación" loading="lazy"></div><div><img src="img/s-mesa.jpg" alt="Mesa de trabajo técnico" loading="lazy"></div><div><img src="img/s-orto.jpg" alt="Equipo instalado en una institución" loading="lazy"></div><div><img src="img/s-cec.jpg" alt="Equipo abierto en el taller" loading="lazy"></div><div><img src="img/s-lampara.jpg" alt="Lámpara quirúrgica en mantenimiento" loading="lazy"></div><div><img src="img/s-desfi.jpg" alt="Desfibrilador en servicio" loading="lazy"></div></div>
+    <p class="note">Cobertura en toda la provincia de Misiones, con base operativa en Posadas. ¿Necesita servicio en otra provincia? <a href="contacto.html">Consúltenos</a>.</p>
+  </div>
+</section>
+<section class="block tinted cta"><div class="wrap"><h2>Seamos socios técnicos de su institución</h2><p>Coordinemos una visita para conocer su equipamiento y armar un plan a su medida.</p><div class="actions"><a class="btn btn-primary" href="contacto.html">Contactar a MediSync</a></div></div></section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo-white.png" alt="MediSync Ingeniería Clínica">
+      <p>Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica para las instituciones de salud de Misiones y el NEA.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener" aria-label="MediSync en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener" aria-label="MediSync en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
     <div>
-      <div class="coverage-single fade-up">
-        <div class="coverage-card">
-          <span class="coverage-badge">✓ Cobertura completa</span>
-          <div class="coverage-province">Misiones</div>
-          <div class="coverage-city">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:-2px; margin-right:4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Base operativa: Posadas
-          </div>
-          <p class="coverage-desc">Todos nuestros servicios disponibles en la provincia. Mantenimiento preventivo, reparación, diagnóstico, servicio de urgencia y asesoramiento.</p>
-          <ul class="coverage-list">
-            <li>Servicio técnico general de equipamiento médico</li>
-            <li>Ecógrafos Mindray (soporte especializado)</li>
-            <li>Monitores, desfibriladores, ventiladores</li>
-            <li>Urgencias con respuesta en menos de 24 horas</li>
-            <li>Planes de mantenimiento programado</li>
-          </ul>
-        </div>
-      </div>
-      <div class="coverage-note fade-up stagger-1" style="max-width:640px; margin-top:1.5rem;">
-        <strong>¿Necesita servicio en otra provincia?</strong> Contáctenos y evaluamos la viabilidad según el equipo y la ubicación. Podemos orientarle sobre el proveedor más adecuado para su caso.
-      </div>
+      <h3>Soluciones</h3>
+      <ul>
+        <li><a href="equipos.html">Equipamiento médico</a></li>
+        <li><a href="equipos.html#ecografos">Ecógrafos Mindray y Esaote</a></li>
+        <li><a href="tienda.html">Accesorios e insumos</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
+        <li><a href="servicios.html#planes">Planes de mantenimiento</a></li>
+      </ul>
     </div>
-    <img class="cobertura-img fade-up stagger-1" src="https://plus.unsplash.com/premium_photo-1698421947098-d68176a8f5b2?q=80&w=452&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cobertura en Misiones" loading="lazy">
+    <div>
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></li>
+        <li>+54 9 376 463-9426</li>
+        <li>medisync.ar@gmail.com</li>
+        <li>Posadas, Misiones, Argentina</li>
+      </ul>
+    </div>
   </div>
-</section>
+  <div class="wrap foot-bottom">
+    <span>© 2026 MediSync Ingeniería Clínica</span>
+    <span>Cobertura en Misiones y el NEA</span>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/></svg></a>
+<script>
+(function () {
+  /* Cada página nueva arranca arriba (al volver con "Atrás" se respeta la posición) */
+  function top() {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!location.hash && (!n || n.type !== 'back_forward')) window.scrollTo(0, 0);
+  }
+  top(); window.addEventListener('load', function () { top(); setTimeout(top, 80); });
+  var b = document.querySelector('.menu-btn'), m = document.getElementById('mmenu');
+  b.addEventListener('click', function () { var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+})();
+</script>
 
-<!-- ═══ GALERÍA ═══ -->
-<section id="gallery">
-  <div class="section-header centered">
-    <div class="section-label">Galería</div>
-    <h2 class="section-title">Nuestro equipo en acción</h2>
-    <p class="section-desc">Conozca el trabajo que realizamos en nuestro taller y en instituciones de Misiones.</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item large fade-up">
-      <img src="img/img1.jpeg" alt="Servicio técnico en institución" loading="lazy">
-    </div>
-    <div class="gallery-item fade-up stagger-1">
-      <img src="img/teclado.jpeg" alt="Ecógrafo Mindray" loading="lazy">
-    </div>
-    <div class="gallery-item fade-up stagger-2">
-      <img src="img/mesa.jpeg" alt="Mesa de trabajo técnico" loading="lazy">
-    </div>
-    <div class="gallery-item fade-up">
-      <img src="img/desfi.jpeg" alt="Desfibrilador en servicio" loading="lazy">
-    </div>
-    <div class="gallery-item fade-up stagger-1">
-      <img src="img/orto.jpeg" alt="Técnico en trabajo" loading="lazy">
-    </div>
-    <div class="gallery-item fade-up stagger-2">
-      <img src="img/img2.jpeg" alt="Ventilador mecánico" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA ═══ -->
-<section id="cta">
-  <div class="cta-inner">
-    <div class="section-label">El próximo paso</div>
-    <h2 class="section-title">Seamos socios técnicos de su institución</h2>
-    <p class="cta-sub">Escríbanos para coordinar una visita a su clínica. Evaluaremos su equipamiento y diseñaremos un plan de gestión a su medida.</p>
-    <div class="cta-actions">
-      <a href="contacto.html" class="btn-white beam">Contactarnos</a>
-      <a href="servicios.html" class="btn-outline-white">Ver planes de mantenimiento</a>
-    </div>
-  </div>
-</section>
-
-<script src="componentes.js"></script>
-<script src="cult-effects.js" defer></script>
 </body>
 </html>

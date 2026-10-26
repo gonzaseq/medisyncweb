@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Equipamiento médico | MediSync – Posadas, Misiones</title>
 <meta name="description" content="Venta de equipamiento médico en Misiones: ecógrafos Mindray, ecógrafos veterinarios Esaote y equipos de monitoreo, cardiología, quirófano e infusión.">
 <meta property="og:type" content="website">
@@ -15,156 +15,6 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="canonical" href="https://medisync.com.ar/equipos.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cult-effects.css">
-<style>
-  
-  /* ─── Ecógrafos: nav de subcategorías ─── */
-  .equip-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .equip-nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.6rem 1.2rem;
-    border: 1.5px solid var(--gray-border);
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--gray-dark);
-    text-decoration: none;
-    transition: border-color var(--t-base) var(--ease),
-                background var(--t-base) var(--ease),
-                color var(--t-base) var(--ease);
-  }
-  .equip-nav-link:hover {
-    border-color: var(--blue);
-    background: var(--blue-light);
-    color: var(--blue);
-  }
-
-  /* ─── Bloques de categoría (Portátiles / Institucionales / Veterinarios) ─── */
-  .equip-category {
-    margin-top: 4rem;
-    scroll-margin-top: 100px;
-  }
-  .equip-breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--gray-dark);
-    margin-bottom: 0.4rem;
-  }
-  .equip-breadcrumb .crumb-sep {
-    color: var(--gray-mid);
-    font-weight: 400;
-  }
-  .equip-breadcrumb .crumb-brand,
-  .equip-breadcrumb .crumb-current {
-    color: var(--blue);
-  }
-  .equip-category-desc {
-    font-size: 0.9rem;
-    color: var(--gray-mid);
-    font-weight: 300;
-    margin-bottom: 1.75rem;
-  }
-
-  /* ─── Grilla de productos (ecógrafos individuales) ─── */
-  .equip-products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .equip-product-card {
-    border: 1.5px solid var(--gray-border);
-    border-radius: 18px;
-    overflow: hidden;
-    background: var(--white);
-    transition: border-color var(--t-base) var(--ease),
-                box-shadow var(--t-base) var(--ease),
-                transform var(--t-base) var(--ease-bounce);
-  }
-  .equip-product-card:hover {
-    border-color: var(--blue);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
-  }
-  .equip-product-card-img {
-    width: 100%;
-    height: 280px;
-    object-fit: contain;
-    display: block;
-    background: var(--white);
-    padding: 1rem;
-    border-bottom: 1px solid var(--gray-border);
-  }
-  .equip-product-card-body {
-    padding: 1.5rem;
-  }
-  .equip-product-name {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gray-dark);
-    margin-bottom: 0.4rem;
-  }
-  .equip-product-desc {
-    font-size: 0.85rem;
-    color: var(--gray-mid);
-    line-height: 1.7;
-    font-weight: 300;
-    margin: 0 0 0.9rem 0;
-  }
-  .equip-product-price {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--blue);
-  }
-
-  /* Placeholder de foto mientras no se cargue la imagen real */
-  .equip-product-img-placeholder {
-    width: 100%;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gray-light);
-    color: var(--gray-mid);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  /* Placeholder visible mientras no hay equipos cargados en una categoría */
-  .equip-empty-note {
-    border: 1.5px dashed var(--gray-border);
-    border-radius: 18px;
-    padding: 2rem;
-    font-size: 0.85rem;
-    color: var(--gray-mid);
-    font-weight: 300;
-    text-align: center;
-  }
-
-  #gallery { background: var(--gray-light); }
-  @media (max-width: 700px) {
-    .partners-intro { flex-direction: column; }
-    .partners-intro-badge { min-width: auto; width: 100%; }
-    .equip-breadcrumb { font-size: 0.95rem; }
-  }
-</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -182,339 +32,201 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" data-grid-beam>
-  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1661889752049-44bb9f857e67?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Equipamiento médico" fetchpriority="high">
-  <div class="hero-content">
-    <div class="hero-top">
-      <div class="hero-badge">Venta de equipamiento médico</div>
-      <h1 class="hero-h1" data-text-animate>Equipamiento médico<br>para cada institución.</h1>
-      <p class="hero-sub">Ecógrafos Mindray y Esaote, y equipamiento de distintos fabricantes para su institución.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20un%20equipo." class="btn-primary beam" target="_blank" rel="noopener">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Consultar por un equipo
-      </a>
-      <a href="#categorias" class="btn-secondary">
-        Ver equipamiento
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-    </div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="MediSync, inicio"><img src="img/logo-header.png" alt="MediSync Ingeniería Clínica"></a>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="equipos.html" aria-current="page">Equipamiento</a></li><li><a href="tienda.html">Insumos</a></li><li><a href="servicios.html">Servicio técnico</a></li><li><a href="nosotros.html">Nosotros</a></li></ul>
+    <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <a href="#categorias" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
-    Descubrir más
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-  </a>
+  <nav class="mobile-menu" id="mmenu" aria-label="Menú"><a href="index.html">Inicio</a><a href="equipos.html" aria-current="page">Equipamiento</a><a href="tienda.html">Insumos</a><a href="servicios.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<div class="wrap crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span>Equipamiento</div>
+
+<section class="hero">
+  <img src="img/hero-equipos.jpg" alt="Profesional realizando una ecografía con un equipo Mindray" style="object-position:center 35%">
+  <div class="wrap">
+    <h1>Equipamiento médico</h1>
+    <p>Ecógrafos Mindray y Esaote, y equipamiento de distintos fabricantes para su institución.</p>
+    <div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20equipamiento." target="_blank" rel="noopener">Solicitar cotización</a><a class="btn btn-outline-light" href="servicios.html">Servicio técnico</a></div>
+  </div>
 </section>
-
-<!-- ═══ CATEGORÍAS ═══ -->
-<section id="categorias">
-  <div class="section-header wide">
-    <div class="section-label">Lo que comercializamos</div>
-    <h2 class="section-title">Una amplia gama de equipamiento</h2>
-    <p class="section-desc">Trabajamos con distintos fabricantes y proveedores. Le recomendamos el equipo adecuado para su uso, su presupuesto y el servicio técnico disponible en la región.</p>
+<section class="block">
+  <div class="wrap intro">
+    <h2>Tecnología para cada área de su institución</h2>
+    <p>Le ayudamos a elegir el equipo adecuado para su uso y su presupuesto. Después de la compra, el mismo equipo de ingenieros lo instala, capacita a su personal y lo mantiene funcionando.</p>
   </div>
-  <div class="cat-grid">
-    <div class="cat-card featured fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 13a4 4 0 018 0"/></svg></span><span class="cat-name">Ecografía</span></div>
-      <span class="cat-badge">Mindray · Esaote</span>
-      <p class="cat-text">Ecógrafos de consola, portátiles y veterinarios, con garantía de fábrica.</p>
-      <a class="cat-link" href="#ecografos">Ver ecógrafos ↓</a>
-    </div>
-    <div class="cat-card fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span class="cat-name">Monitoreo de pacientes</span></div>
-      <p class="cat-text">Monitores multiparamétricos, oxímetros de pulso y equipos de signos vitales.</p>
-      <a class="cat-link" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20monitoreo%20de%20pacientes." target="_blank" rel="noopener">Consultar →</a>
-    </div>
-    <div class="cat-card fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/><path d="M8 11h2l1-2 2 4 1-2h2"/></svg></span><span class="cat-name">Cardiología y emergencias</span></div>
-      <p class="cat-text">Electrocardiógrafos, desfibriladores y desfibriladores externos automáticos (DEA).</p>
-      <a class="cat-link" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20cardiolog%C3%ADa%20y%20emergencias." target="_blank" rel="noopener">Consultar →</a>
-    </div>
-    <div class="cat-card fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M8 21h8"/></svg></span><span class="cat-name">Quirófano</span></div>
-      <p class="cat-text">Electrobisturíes, aspiradores quirúrgicos e iluminación para salas de cirugía.</p>
-      <a class="cat-link" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20quir%C3%B3fano." target="_blank" rel="noopener">Consultar →</a>
-    </div>
-    <div class="cat-card fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4M12 2v4"/><rect x="8" y="6" width="8" height="10" rx="2"/><path d="M12 16v6"/></svg></span><span class="cat-name">Infusión</span></div>
-      <p class="cat-text">Bombas de infusión volumétricas y de jeringa para internación y terapia intensiva.</p>
-      <a class="cat-link" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20infusi%C3%B3n." target="_blank" rel="noopener">Consultar →</a>
-    </div>
-    <div class="cat-card fade-up">
-      <div class="cat-head"><span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 105 2H4a2 2 0 00-2 2v5a6 6 0 006 6 6 6 0 006-6V4a2 2 0 00-2-2h-1a.2.2 0 10.3.3"/><path d="M8 15v1a6 6 0 006 6 6 6 0 006-6v-4"/><circle cx="20" cy="10" r="2"/></svg></span><span class="cat-name">Consultorio y diagnóstico</span></div>
-      <p class="cat-text">Tensiómetros, doppler fetal, otoscopios y equipamiento para consultorio.</p>
-      <a class="cat-link" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20consultorio%20y%20diagn%C3%B3stico." target="_blank" rel="noopener">Consultar →</a>
-    </div>
-  </div>
-  <p class="cat-note">¿Busca otro equipo? <a href="https://wa.me/5493764374545?text=Hola%2C%20estoy%20buscando%20un%20equipo%20m%C3%A9dico%20espec%C3%ADfico." target="_blank" rel="noopener">Consúltenos</a> y se lo conseguimos a través de nuestra red de proveedores.</p>
 </section>
-
-<!-- ═══ ECÓGRAFOS ═══ -->
-<section id="ecografos" style="background: var(--gray-light);">
-  <div class="section-header">
-    <div class="section-label">Ecografía</div>
-    <h2 class="section-title">Ecógrafos Mindray y Esaote</h2>
-    <p class="section-desc">Ecógrafos Mindray de consola y portátiles, y ecógrafos veterinarios Esaote. Todos con garantía de fábrica, y los Mindray con nuestro servicio técnico oficial en Misiones.</p>
-  </div>
-
-  <div class="equip-category fade-up" id="institucionales">
-    <div class="equip-breadcrumb">
-      <span>Ecógrafos</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-brand">Mindray</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-current">Consola · Hospitales y clínicas</span>
-    </div>
-    <p class="equip-category-desc">Equipos de consola para servicios de diagnóstico por imágenes, maternidades y consultorios de alto volumen.</p>
-    <div class="equip-products-grid">
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/RESONA-I9-1.jpg" alt="Mindray Resona I9" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Resona I9</div>
-          <div class="equip-product-tags">Radiología · Mama · Tiroides</div>
-          <p class="equip-product-desc">Ecógrafo de alta gama para diagnóstico por imágenes general. Plataforma ZST+, elastografía de onda de corte y análisis automático de lesiones de mama y tiroides.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Resona%20I9." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/RESONA-I8-1.jpg" alt="Mindray Resona I8" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Resona I8</div>
-          <div class="equip-product-tags">Radiología · Imágenes generales</div>
-          <p class="equip-product-desc">Integra la serie Resona de radiología sobre la plataforma ZST+. Una opción de alta prestación para servicios de imágenes con distintos presupuestos.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Resona%20I8." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/08/Nuewa-I9-1-3.jpg" alt="Mindray Nuewa I9 Elite" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Nuewa I9 Elite</div>
-          <div class="equip-product-tags">Obstetricia · Ginecología · Neonatología</div>
-          <p class="equip-product-desc">Dedicado a la salud de la mujer y neonatal. Pantalla de 23,8", herramientas automáticas para obstetricia, fertilidad, piso pélvico y cadera neonatal.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Nuewa%20I9%20Elite." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/Consona-N9-1.png" alt="Mindray Consona N9" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Consona N9</div>
-          <div class="equip-product-tags">General · Ginecobstetricia · Cardiovascular</div>
-          <p class="equip-product-desc">Consola versátil para servicios compartidos. Herramientas automáticas como AutoEF, análisis BI-RADS de mama, TI-RADS de tiroides y biometría fetal.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N9." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/Consona-N8-1.png" alt="Mindray Consona N8" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Consona N8</div>
-          <div class="equip-product-tags">General · Ginecobstetricia</div>
-          <p class="equip-product-desc">De la serie Consona, con plataforma ZST+, pantalla táctil y panel de control flotante ajustable. Para clínicas con exámenes variados.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N8." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-05-at-14.04-1.jpg" alt="Mindray Consona N6" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Consona N6</div>
-          <div class="equip-product-tags">Consultorio · Imágenes generales</div>
-          <p class="equip-product-desc">La opción más compacta de la serie Consona, pensada para consultorios privados que necesitan buena imagen en menos espacio.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N6." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/DC-80A-1.png" alt="Mindray DC-80A" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray DC-80A</div>
-          <div class="equip-product-tags">Radiología · Vascular</div>
-          <p class="equip-product-desc">Consola con plataforma X-Insight, elastografía, ecografía con contraste y herramientas de análisis de mama y vascular.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DC-80A." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
+<section class="block" style="padding-top:0" id="categorias">
+  <div class="wrap">
+    <div class="head-row"><h2>Categorías</h2></div>
+    <div class="cats">
+      <a class="cat" href="#ecografos"><div class="ph product"><img src="img/cat-ecografos.png" alt="Ecógrafo institucional" loading="lazy"></div><div class="row"><div><h3>Ecógrafos</h3><p>Institucionales, portátiles y veterinarios. Mindray y Esaote con garantía de fábrica.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20cardiolog%C3%ADa." target="_blank" rel="noopener"><div class="ph"><img src="img/cat-cardiologia.jpg" alt="Trazos de electrocardiograma" loading="lazy"></div><div class="row"><div><h3>Cardiología</h3><p>Electrocardiógrafos, desfibriladores y DEA para consultorio, guardia y traslado.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20quir%C3%B3fano." target="_blank" rel="noopener"><div class="ph"><img src="img/cat-quirofano.jpg" alt="Lámparas quirúrgicas en un quirófano" loading="lazy"></div><div class="row"><div><h3>Quirófano</h3><p>Electrobisturíes, aspiración, iluminación y monitoreo para salas de cirugía.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20cuidado%20cr%C3%ADtico%20y%20emergencia." target="_blank" rel="noopener"><div class="ph"><img src="img/cat-critico.jpg" alt="Monitor multiparamétrico junto a una cama" loading="lazy"></div><div class="row"><div><h3>Cuidado crítico y emergencia</h3><p>Monitores multiparamétricos, ventilación y bombas de infusión para terapia intensiva y guardia.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20internaci%C3%B3n%20y%20mobiliario." target="_blank" rel="noopener"><div class="ph"><img src="img/cat-internacion.jpg" alt="Habitación de internación equipada" loading="lazy"></div><div class="row"><div><h3>Internación y mobiliario</h3><p>Camas, camillas y mobiliario clínico para habitaciones, consultorios y guardias.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20equipamiento%20de%20neonatolog%C3%ADa." target="_blank" rel="noopener"><div class="ph"><img src="img/cat-neo.jpg" alt="Recién nacido en una incubadora" loading="lazy"></div><div class="row"><div><h3>Neonatología</h3><p>Incubadoras, servocunas, fototerapia y monitoreo para el cuidado neonatal.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
     </div>
   </div>
-  <div class="equip-category fade-up" id="portatiles">
-    <div class="equip-breadcrumb">
-      <span>Ecógrafos</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-brand">Mindray</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-current">Portátiles</span>
-    </div>
-    <p class="equip-category-desc">Equipos livianos para consultorios, guardias, terapia intensiva y atención junto al paciente.</p>
-    <div class="equip-products-grid">
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/DP-10-1.jpg" alt="Mindray DP-10" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray DP-10</div>
-          <div class="equip-product-tags">Blanco y negro · Abdomen · Ginecobstetricia</div>
-          <p class="equip-product-desc">Ecógrafo portátil en blanco y negro, con modos B y M. Para abdomen, obstetricia, ginecología, partes blandas y vasos periféricos.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DP-10." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
+</section>
+<section class="block" id="ecografos" style="padding-top:24px">
+  <div class="wrap">
+    <div class="intro" style="margin-bottom:56px"><h2>Ecógrafos</h2><p>Mindray institucionales y portátiles, y Esaote para uso veterinario. Todos con garantía de fábrica.</p></div>
+    <div class="showcase">
+      <div class="sc-img"><img src="img/eco-mindray-nuewa-i9-elite-v.jpg" alt="Mindray Nuewa I9 Elite" loading="lazy"></div>
+      <div class="sc-text"><span class="kicker">Salud de la mujer</span><h3>Mindray Nuewa I9 Elite</h3><p>Diseñado para obstetricia, ginecología y neonatología. Combina una pantalla de 23,8&quot; con un panel táctil de 15,6&quot; y herramientas automáticas que agilizan los estudios, desde la fertilidad hasta el posparto.</p><ul><li>Herramientas automáticas obstétricas, fetales y de piso pélvico</li><li>Reconstrucción 3D inteligente</li><li>Diseño silencioso con hasta 4 horas de batería</li></ul>
+        <div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Nuewa%20I9%20Elite." target="_blank" rel="noopener">Consultar precio</a><a class="btn btn-outline" href="#todos">Ver todos los modelos</a></div>
       </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/DP-30-11-1.jpg" alt="Mindray DP-30" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray DP-30</div>
-          <div class="equip-product-tags">Blanco y negro · Atención primaria</div>
-          <p class="equip-product-desc">Portátil en blanco y negro de la línea DP. Un equipo confiable y fácil de trasladar para atención primaria y consultorio.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DP-30." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/Z60-1.jpg" alt="Mindray Z60" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray Z60</div>
-          <div class="equip-product-tags">Color · Obstetricia · Abdomen · Vascular</div>
-          <p class="equip-product-desc">Portátil color con pantalla de 15", Doppler, 3D/4D y medición obstétrica automática. También guía procedimientos con aguja.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Z60." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/M6-vet-1-1.jpg" alt="Mindray M6" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray M6</div>
-          <div class="equip-product-tags">Emergencias · Terapia intensiva · Cardiología</div>
-          <p class="equip-product-desc">Formato notebook con carcasa resistente a golpes y salpicaduras, pensado para moverse entre servicios y entornos exigentes.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20M6." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/M8-1.jpg" alt="Mindray M8" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray M8</div>
-          <div class="equip-product-tags">Emergencias · Cardiología · Ginecobstetricia</div>
-          <p class="equip-product-desc">Portátil de alta gama con pantalla HD de 15,6", contraste, elastografía y Doppler tisular. Se puede montar en carro.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20M8." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MX3.jpg" alt="Mindray MX3" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray MX3</div>
-          <div class="equip-product-tags">Atención primaria · General</div>
-          <p class="equip-product-desc">Compacto y simple de usar, con funciones de aprendizaje integradas y conexión a la app MiCo+ para compartir imágenes.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX3." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MX5-1.jpg" alt="Mindray MX5" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray MX5</div>
-          <div class="equip-product-tags">Atención primaria · General</div>
-          <p class="equip-product-desc">Compacto de la serie MX con herramientas inteligentes e intercambio de imágenes. Abdomen, tiroides, carótida, cardiología y obstetricia.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX5." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MX6-1.jpg" alt="Mindray MX6" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray MX6</div>
-          <div class="equip-product-tags">Punto de atención · General</div>
-          <p class="equip-product-desc">Integrante de la serie MX orientado al punto de atención: un equipo liviano para usar junto al paciente en distintos servicios.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX6." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2024/04/MX7-1.jpg" alt="Mindray MX7" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Mindray MX7</div>
-          <div class="equip-product-tags">Punto de atención · Cardiología</div>
-          <p class="equip-product-desc">De los portátiles tipo notebook más livianos y delgados del mercado. Pantalla táctil de 12,3" y herramientas cardiovasculares avanzadas.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX7." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="equip-category fade-up" id="veterinarios">
-    <div class="equip-breadcrumb">
-      <span>Ecógrafos</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-brand">Esaote</span>
-      <span class="crumb-sep">›</span>
-      <span class="crumb-current">Veterinarios</span>
-    </div>
-    <p class="equip-category-desc">Ecógrafos de uso veterinario de la línea MyLab de Esaote.</p>
-    <div class="equip-products-grid">
-      <div class="equip-product-card fade-up stagger-1">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Fox.png" alt="Esaote MyLab Fox" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Esaote MyLab Fox</div>
-          <div class="equip-product-tags">Veterinaria · Multidisciplinar · Cardiología</div>
-          <p class="equip-product-desc">Ecógrafo veterinario multidisciplinar para todo tipo de animales. Herramientas automáticas con IA, cardiología avanzada y panel de control completamente lavable.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Fox." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-2">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Heron-.png" alt="Esaote MyLab Heron" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Esaote MyLab Heron</div>
-          <div class="equip-product-tags">Veterinaria · Portátil · Grandes y pequeños animales</div>
-          <p class="equip-product-desc">Portátil liviano y compacto con pantalla de 15,6" y táctil de 15". Desde pequeños animales y exóticos hasta equinos: abdomen, cardiología, musculoesquelético y reproducción.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Heron." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
-      </div>
-      <div class="equip-product-card fade-up stagger-3">
-        <img class="equip-product-card-img" src="https://sonocare.com.ar/wp-content/uploads/2026/01/MyLab-Panther-1.png" alt="Esaote MyLab Panther" loading="lazy">
-        <div class="equip-product-card-body">
-          <div class="equip-product-name">Esaote MyLab Panther</div>
-          <div class="equip-product-tags">Veterinaria · Gama alta · Cardiología</div>
-          <p class="equip-product-desc">Plataforma veterinaria de gama alta para distintas especies. Monitor de 24", pantalla táctil de 15,6", cinco conectores de transductores y mediciones cardíacas automáticas con IA.</p>
-          <a class="equip-product-price" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Panther." target="_blank" rel="noopener">Consultar precio →</a>
-        </div>
+    </div><div class="showcase rev">
+      <div class="sc-img"><img src="img/eco-mindray-consona-n9-v.jpg" alt="Mindray Consona N9" loading="lazy"></div>
+      <div class="sc-text"><span class="kicker">Imágenes generales y cardiovascular</span><h3>Mindray Consona N9</h3><p>Un equipo institucional versátil para servicios que combinan estudios generales, ginecobstétricos y cardiovasculares, con herramientas inteligentes que estandarizan y aceleran cada examen.</p><ul><li>AutoEF, BI-RADS de mama y TI-RADS de tiroides</li><li>Análisis de rigidez vascular e IMT en tiempo real</li><li>Amplia variedad de transductores, incluido 4D</li></ul>
+        <div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N9." target="_blank" rel="noopener">Consultar precio</a><a class="btn btn-outline" href="#todos">Ver todos los modelos</a></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ═══ CON CADA EQUIPO ═══ -->
-<section id="con-cada-equipo">
-  <div class="section-header wide">
-    <div class="section-label">Con cada equipo</div>
-    <h2 class="section-title">Después de la compra,<br>seguimos a su lado</h2>
-  </div>
-  <div class="bridge-grid">
-    <div class="bridge-item fade-up">
-      <div class="bridge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
-      <div class="bridge-title">Instalación y puesta en marcha</div>
-      <p class="bridge-text">Entregamos el equipo instalado, configurado y verificado en su institución.</p>
-    </div>
-    <div class="bridge-item fade-up stagger-1">
-      <div class="bridge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <div class="bridge-title">Capacitación del personal</div>
-      <p class="bridge-text">Explicamos el uso correcto y los cuidados básicos para evitar fallas.</p>
-    </div>
-    <div class="bridge-item fade-up stagger-2">
-      <div class="bridge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-      <div class="bridge-title">Garantía y servicio técnico local</div>
-      <p class="bridge-text">Mantenimiento y reparaciones con ingenieros en Posadas. <a href="servicios.html">Ver servicio técnico</a></p>
-    </div>
-    <div class="bridge-item fade-up stagger-3">
-      <div class="bridge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
-      <div class="bridge-title">Insumos y accesorios compatibles</div>
-      <p class="bridge-text">Sensores, cables y accesorios para que el equipo no se detenga. <a href="tienda.html">Ver catálogo</a></p>
-    </div>
+<section class="block tinted" id="todos">
+  <div class="wrap">
+    <div class="head-row"><h2>Todos los ecógrafos</h2></div>
+    <div class="pills" role="group" aria-label="Filtrar ecógrafos"><button class="pill" type="button" data-f="todos" aria-pressed="true">Todos<small>19</small></button><button class="pill" type="button" data-f="consola" aria-pressed="false">Institucionales<small>7</small></button><button class="pill" type="button" data-f="portatil" aria-pressed="false">Portátiles<small>9</small></button><button class="pill" type="button" data-f="veterinario" aria-pressed="false">Veterinarios<small>3</small></button></div><div class="group" data-g="consola"><h3 class="group-title">Institucionales</h3><div class="eco-grid"><article class="eco"><div class="eco-img"><img src="img/eco-mindray-resona-i9-v.jpg" alt="Mindray Resona I9" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Resona I9</h3><p class="eco-tag">Alta gama para diagnóstico por imágenes</p><p class="eco-uses">Radiología · Mama · Tiroides</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Ecógrafo premium de la serie Resona, diseñado para servicios de diagnóstico por imágenes de alta demanda.</p><ul><li>Plataforma ZST+ de procesamiento por canal</li><li>Elastografía de onda de corte de alta frecuencia</li><li>Análisis automático de mama y tiroides</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Resona%20I9." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-resona-i8-v.jpg" alt="Mindray Resona I8" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Resona I8</h3><p class="eco-tag">La serie Resona para cada presupuesto</p><p class="eco-uses">Radiología · Imágenes generales</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Integra la línea Resona de radiología sobre la misma plataforma ZST+, en una configuración más accesible.</p><ul><li>Plataforma ZST+</li><li>Diseño móvil para servicios exigentes</li><li>Flujo de trabajo pensado para el ecografista</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Resona%20I8." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-nuewa-i9-elite-v.jpg" alt="Mindray Nuewa I9 Elite" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Nuewa I9 Elite</h3><p class="eco-tag">Dedicado a la salud de la mujer</p><p class="eco-uses">Obstetricia · Ginecología · Neonatología</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Pensado para obstetricia, ginecología y neonatología, desde la fertilidad hasta el posparto.</p><ul><li>Pantalla de 23,8&quot; y táctil de 15,6&quot;</li><li>Herramientas automáticas obstétricas y 3D</li><li>Funcionamiento silencioso y a batería</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Nuewa%20I9%20Elite." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-consona-n9-v.jpg" alt="Mindray Consona N9" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Consona N9</h3><p class="eco-tag">Versatilidad para servicios compartidos</p><p class="eco-uses">General · Ginecobstetricia · Cardiovascular</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Equipo institucional completo para clínicas que combinan imágenes generales, ginecobstetricia y cardiovascular.</p><ul><li>Herramientas inteligentes: AutoEF, BI-RADS, TI-RADS</li><li>Análisis cardiovascular avanzado</li><li>Transductores convexos, lineales, sectoriales y 4D</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N9." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-consona-n8-v.jpg" alt="Mindray Consona N8" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Consona N8</h3><p class="eco-tag">La serie Consona, equilibrada</p><p class="eco-uses">General · Ginecobstetricia</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Equipo institucional de la serie Consona con pantalla táctil y panel de control flotante ajustable.</p><ul><li>Plataforma ZST+</li><li>Pantalla táctil configurable</li><li>Panel de control flotante</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N8." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-consona-n6-v.jpg" alt="Mindray Consona N6" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Consona N6</h3><p class="eco-tag">Compacto para consultorio</p><p class="eco-uses">Consultorio · Imágenes generales</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">La opción más compacta de la serie Consona, para consultorios que necesitan buena imagen en menos espacio.</p><ul><li>Plataforma ZST+</li><li>Formato compacto</li><li>Ideal para práctica privada</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Consona%20N6." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-dc-80a-v.jpg" alt="Mindray DC-80A" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray DC-80A</h3><p class="eco-tag">Radiología y vascular</p><p class="eco-uses">Radiología · Vascular</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Equipo institucional sobre la plataforma X-Insight, con herramientas avanzadas de contraste y elastografía.</p><ul><li>Elastografía Sound Touch</li><li>Ecografía con contraste UWN+</li><li>Análisis de mama y medición automática de IMT</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DC-80A." target="_blank" rel="noopener">Consultar precio →</a></div></article></div></div><div class="group" data-g="portatil"><h3 class="group-title">Portátiles</h3><div class="eco-grid"><article class="eco"><div class="eco-img"><img src="img/eco-mindray-dp-10-v.jpg" alt="Mindray DP-10" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray DP-10</h3><p class="eco-tag">Portátil en blanco y negro</p><p class="eco-uses">Abdomen · Ginecobstetricia · Partes blandas</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Equipo portátil confiable para estudios básicos, con modos B y M y dos conectores de transductor.</p><ul><li>Modos B y M</li><li>Dos conectores de transductor</li><li>Liviano y fácil de trasladar</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DP-10." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-dp-30-v.jpg" alt="Mindray DP-30" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray DP-30</h3><p class="eco-tag">Blanco y negro para atención primaria</p><p class="eco-uses">Atención primaria · General</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Portátil de la línea DP, pensado para consultorios y atención primaria.</p><ul><li>Imagen en blanco y negro</li><li>Formato portátil</li><li>Uso simple</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20DP-30." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-z60-v.jpg" alt="Mindray Z60" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray Z60</h3><p class="eco-tag">Portátil color con 3D/4D</p><p class="eco-uses">Obstetricia · Abdomen · Vascular</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Ecógrafo color portátil con buena imagen, herramientas obstétricas y guía de procedimientos.</p><ul><li>Pantalla de 15&quot; inclinable</li><li>3D/4D y medición obstétrica automática</li><li>Hasta tres conectores de transductor</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20Z60." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-m6-v.jpg" alt="Mindray M6" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray M6</h3><p class="eco-tag">Resistente para entornos exigentes</p><p class="eco-uses">Emergencias · Terapia intensiva · Cardiología</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Formato notebook con carcasa resistente a golpes y salpicaduras, para moverse entre servicios.</p><ul><li>Carcasa resistente a golpes y salpicaduras</li><li>Mediciones automáticas cardíacas y Doppler</li><li>Conectividad DICOM</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20M6." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-m8-v.jpg" alt="Mindray M8" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray M8</h3><p class="eco-tag">Portátil premium</p><p class="eco-uses">Emergencias · Cardiología · Ginecobstetricia</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Portátil de alta gama con prestaciones avanzadas, que también puede montarse en carro.</p><ul><li>Pantalla HD de 15,6&quot;</li><li>Contraste, elastografía y Doppler tisular</li><li>Batería integrada y carro opcional</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20M8." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-mx3-v.jpg" alt="Mindray MX3" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray MX3</h3><p class="eco-tag">Compacto y simple</p><p class="eco-uses">Atención primaria · General</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Ecógrafo compacto con funciones de aprendizaje integradas, ideal para incorporar ecografía en atención primaria.</p><ul><li>Funciones de aprendizaje integradas</li><li>Imágenes compartibles con la app MiCo+</li><li>Muy portátil</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX3." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-mx5-v.jpg" alt="Mindray MX5" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray MX5</h3><p class="eco-tag">Serie MX con herramientas inteligentes</p><p class="eco-uses">Atención primaria · General</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Compacto de la serie MX para abdomen, tiroides, carótida, cardiología y obstetricia.</p><ul><li>Herramientas inteligentes de imagen</li><li>Colaboración remota con MiCo+</li><li>Formato compacto</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX5." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-mx6-v.jpg" alt="Mindray MX6" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray MX6</h3><p class="eco-tag">Para el punto de atención</p><p class="eco-uses">Punto de atención · General</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Equipo liviano de la serie MX pensado para usar junto al paciente en distintos servicios.</p><ul><li>Formato liviano</li><li>Orientado al punto de atención</li><li>Serie MX</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX6." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-mindray-mx7-v.jpg" alt="Mindray MX7" loading="lazy"></div>
+        <div class="eco-body"><h3>Mindray MX7</h3><p class="eco-tag">Ultradelgado con cardiología avanzada</p><p class="eco-uses">Punto de atención · Cardiología</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">De los portátiles tipo notebook más livianos y delgados del mercado, con herramientas cardiovasculares completas.</p><ul><li>Pantalla táctil de 12,3&quot;</li><li>Auto EF, eco estrés y Doppler tisular</li><li>Hasta 8 horas con batería extra</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Mindray%20MX7." target="_blank" rel="noopener">Consultar precio →</a></div></article></div></div><div class="group" data-g="veterinario"><h3 class="group-title">Veterinarios</h3><div class="eco-grid"><article class="eco"><div class="eco-img"><img src="img/eco-esaote-mylab-fox-v.jpg" alt="Esaote MyLab Fox" loading="lazy"></div>
+        <div class="eco-body"><h3>Esaote MyLab Fox</h3><p class="eco-tag">Veterinario multidisciplinar</p><p class="eco-uses">Veterinaria · Abdomen · Cardiología</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Ecógrafo veterinario para todo tipo de animales, desde abdomen hasta cardiología.</p><ul><li>Pantalla táctil de 13&quot;</li><li>Herramientas automáticas con IA</li><li>Panel completamente lavable</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Fox." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-esaote-mylab-heron-v.jpg" alt="Esaote MyLab Heron" loading="lazy"></div>
+        <div class="eco-body"><h3>Esaote MyLab Heron</h3><p class="eco-tag">Portátil para grandes y pequeños animales</p><p class="eco-uses">Veterinaria · Portátil</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">Portátil liviano que cubre desde pequeños animales y exóticos hasta equinos.</p><ul><li>Pantalla de 15,6&quot; y táctil de 15&quot;</li><li>Abdomen, cardiología, musculoesquelético y reproducción</li><li>Funcionamiento a batería</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Heron." target="_blank" rel="noopener">Consultar precio →</a></div></article><article class="eco"><div class="eco-img"><img src="img/eco-esaote-mylab-panther-v.jpg" alt="Esaote MyLab Panther" loading="lazy"></div>
+        <div class="eco-body"><h3>Esaote MyLab Panther</h3><p class="eco-tag">Gama alta veterinaria</p><p class="eco-uses">Veterinaria · Gama alta · Cardiología</p>
+        <details class="eco-more"><summary>Características</summary><p class="eco-desc">La plataforma más completa de la línea veterinaria de Esaote, para clínicas y hospitales.</p><ul><li>Monitor de 24&quot; y táctil de 15,6&quot;</li><li>Cinco conectores de transductor</li><li>Mediciones cardíacas automáticas con IA</li></ul></details>
+        <a class="ask" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20precio%20del%20ec%C3%B3grafo%20Esaote%20MyLab%20Panther." target="_blank" rel="noopener">Consultar precio →</a></div></article></div></div>
   </div>
 </section>
-
-<!-- ═══ CTA ═══ -->
-<section id="cta">
-  <div class="cta-inner">
-    <div class="section-label">Asesoramiento sin cargo</div>
-    <h2 class="section-title">Le ayudamos a elegir el equipo</h2>
-    <p class="cta-sub">Cuéntenos para qué lo necesita y qué presupuesto maneja. Le recomendamos opciones y le enviamos una cotización.</p>
-    <div class="cta-actions multi">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20asesoramiento%20para%20comprar%20un%20equipo." class="btn-white beam" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-      <a href="contacto.html" class="btn-outline-white">Ir al formulario</a>
-    </div>
+<section class="block">
+  <div class="wrap">
+    <div class="split"><div><h2>Mindray y Esaote, con garantía de fábrica</h2><p>Ecógrafos Mindray institucionales y portátiles, y ecógrafos veterinarios Esaote. En los equipos Mindray, el servicio técnico oficial lo brindamos nosotros.</p><a class="btn btn-outline" href="#ecografos">Ver ecógrafos</a></div><div class="ph"><img src="img/mr-general.jpg" alt="Profesionales analizando imágenes en un monitor Mindray" loading="lazy"></div></div>
+    <div class="split rev"><div><h2>Después de la compra, seguimos a su lado</h2><p>El mismo equipo que le vende el equipo se ocupa de que funcione durante toda su vida útil.</p><ul><li>Instalación y puesta en marcha</li><li>Capacitación del personal</li><li>Mantenimiento y reparaciones</li><li>Accesorios e insumos compatibles</li></ul><a class="btn btn-outline" href="servicios.html">Conocer el servicio técnico</a></div><div class="ph"><img src="img/nosotros.jpg" alt="Habitación hospitalaria con equipamiento instalado" loading="lazy"></div></div>
   </div>
 </section>
+<section class="block tinted cta"><div class="wrap"><h2>¿Necesita ayuda para elegir un equipo?</h2><p>Cuéntenos para qué lo necesita y le enviamos opciones y una cotización.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20equipamiento." target="_blank" rel="noopener">Solicitar cotización</a><a class="btn btn-outline" href="contacto.html">Ir al formulario</a></div></div></section>
 
-<script src="componentes.js"></script>
-<script src="cult-effects.js" defer></script>
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo-white.png" alt="MediSync Ingeniería Clínica">
+      <p>Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica para las instituciones de salud de Misiones y el NEA.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener" aria-label="MediSync en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener" aria-label="MediSync en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3>Soluciones</h3>
+      <ul>
+        <li><a href="equipos.html">Equipamiento médico</a></li>
+        <li><a href="equipos.html#ecografos">Ecógrafos Mindray y Esaote</a></li>
+        <li><a href="tienda.html">Accesorios e insumos</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
+        <li><a href="servicios.html#planes">Planes de mantenimiento</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></li>
+        <li>+54 9 376 463-9426</li>
+        <li>medisync.ar@gmail.com</li>
+        <li>Posadas, Misiones, Argentina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 MediSync Ingeniería Clínica</span>
+    <span>Cobertura en Misiones y el NEA</span>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/></svg></a>
+<script>
+(function () {
+  /* Cada página nueva arranca arriba (al volver con "Atrás" se respeta la posición) */
+  function top() {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!location.hash && (!n || n.type !== 'back_forward')) window.scrollTo(0, 0);
+  }
+  top(); window.addEventListener('load', function () { top(); setTimeout(top, 80); });
+  var b = document.querySelector('.menu-btn'), m = document.getElementById('mmenu');
+  b.addEventListener('click', function () { var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+})();
+</script>
+<script>
+(function () {
+  var pills = document.querySelectorAll('.pill'), groups = document.querySelectorAll('.group');
+  pills.forEach(function (p) { p.addEventListener('click', function () {
+    var f = p.dataset.f;
+    pills.forEach(function (x) { x.setAttribute('aria-pressed', String(x === p)); });
+    groups.forEach(function (g) { g.hidden = !(f === 'todos' || g.dataset.g === f); });
+  }); });
+})();
+</script>
 </body>
 </html>

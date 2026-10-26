@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contacto | MediSync Ingeniería Clínica – Posadas, Misiones</title>
 <meta name="description" content="Contacte a MediSync para consultar por equipamiento médico, accesorios e insumos o servicio técnico en Misiones. Teléfono, WhatsApp y email.">
 <meta property="og:type" content="website">
@@ -15,219 +15,6 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="canonical" href="https://medisync.com.ar/contacto.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cult-effects.css">
-<style>
-  #contacto-main { background: var(--white); }
-
-  /* ─── Grid principal con más aire ─── */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  /* ─── Formulario ─── */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: var(--gray-soft);
-    opacity: 1;
-  }
-
-  .form-group textarea {
-    min-height: 130px;
-    resize: vertical;
-  }
-
-  /* Select con apariencia consistente */
-  .form-group select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234B5A6B' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 40px;
-    cursor: pointer;
-  }
-
-  /* Botón submit ancho completo */
-  .btn-submit {
-    width: 100%;
-    justify-content: center;
-    padding: 13px 28px;
-    font-size: 0.92rem;
-    margin-top: 0.5rem;
-    border-radius: var(--r-md);
-  }
-
-  /* ─── Success state ─── */
-  .form-success {
-    display: none;
-    background: var(--blue-light);
-    border: 1.5px solid var(--blue-mid);
-    border-radius: 18px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-  }
-  .form-success.show { display: block; }
-  .form-success-icon { font-size: 2.75rem; margin-bottom: 1rem; display: block; }
-  .form-success h3 {
-    font-size: 1.15rem; font-weight: 800;
-    color: var(--gray-dark); margin-bottom: 0.6rem;
-    letter-spacing: -0.3px;
-  }
-  .form-success p {
-    font-size: 0.875rem; color: var(--gray-mid);
-    line-height: 1.75; max-width: 420px; margin: 0 auto 1.5rem;
-  }
-
-  /* ─── Info block ─── */
-  .contact-info-block {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: sticky;
-    top: 96px; /* debajo de la navbar */
-  }
-
-  .contact-info-card {
-    background: var(--gray-light);
-    border-radius: var(--r-lg);
-    padding: 1.5rem 1.75rem;
-    border: 1px solid var(--gray-border);
-    transition: box-shadow var(--t-base) var(--ease),
-                border-color var(--t-base) var(--ease);
-  }
-  .contact-info-card:hover {
-    box-shadow: var(--shadow-sm);
-    border-color: var(--blue-mid);
-  }
-
-  .contact-info-card-title {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .contact-info-card-title::before {
-    content: '';
-    display: block;
-    width: 16px; height: 2px;
-    background: var(--blue);
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  .contact-info-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--gray-dark);
-    text-decoration: none;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--gray-border);
-    transition: color var(--t-fast) var(--ease);
-  }
-  .contact-info-item:last-of-type { border-bottom: none; }
-  .contact-info-item:hover { color: var(--blue); }
-
-  .contact-info-item svg {
-    color: var(--blue);
-    flex-shrink: 0;
-    opacity: 0.7;
-  }
-
-  /* ─── WhatsApp card destacada ─── */
-  .contact-wa-card {
-    background: #F0FDF5;
-    border: 1.5px solid #86EFAC;
-    border-radius: var(--r-lg);
-    padding: 1.5rem 1.75rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    transition: box-shadow var(--t-base) var(--ease),
-                transform var(--t-fast) var(--ease-bounce),
-                border-color var(--t-base) var(--ease);
-  }
-  .contact-wa-card:hover {
-    box-shadow: 0 6px 24px rgba(37,211,102,0.18);
-    transform: translateY(-2px);
-    border-color: #25D366;
-  }
-  .contact-wa-icon {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    background: #25D366;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 4px 14px rgba(37,211,102,0.35);
-  }
-  .contact-wa-title {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: #166534;
-    margin-bottom: 2px;
-  }
-  .contact-wa-sub {
-    font-size: 0.78rem;
-    color: #15803D;
-    font-weight: 400;
-  }
-
-  /* ─── Mapa ─── */
-  .map-container {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--gray-border);
-    margin-top: 1rem;
-  }
-  .map-container iframe {
-    width: 100%; height: 100%; border: 0;
-  }
-
-  /* ─── Nota de dirección ─── */
-  .contact-location-note {
-    font-size: 0.82rem;
-    color: var(--gray-mid);
-    line-height: 1.7;
-    font-weight: 300;
-    margin-top: 0.75rem;
-  }
-
-  /* ─── Responsive ─── */
-  @media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .contact-info-block { position: static; }
-}
-
-  @media (max-width: 500px) {
-    .contact-wa-card { flex-direction: column; text-align: center; }
-  }
-</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -245,202 +32,129 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" data-grid-beam>
-  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1726485333539-9f571001a610?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contacto MediSync" fetchpriority="high">
-  <div class="hero-content">
-    <div class="hero-top">
-      <div class="hero-badge">Estamos disponibles</div>
-      <h1 class="hero-h1" data-text-animate>Hablemos sobre<br>su equipamiento.</h1>
-      <p class="hero-sub">Cuéntenos qué equipo busca, qué insumo necesita o qué servicio requiere. Le respondemos a la brevedad.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync." class="btn-primary beam" target="_blank" rel="noopener">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Escribir por WhatsApp
-      </a>
-      <a href="#contacto-main" class="btn-secondary">
-        Ir al formulario
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-    </div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="MediSync, inicio"><img src="img/logo-header.png" alt="MediSync Ingeniería Clínica"></a>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="equipos.html">Equipamiento</a></li><li><a href="tienda.html">Insumos</a></li><li><a href="servicios.html">Servicio técnico</a></li><li><a href="nosotros.html">Nosotros</a></li></ul>
+    <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <a href="#contacto-main" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
-    Descubrir más
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-  </a>
-</section>
-<!-- ═══ MAIN ═══ -->
-<section id="contacto-main">
-  <div class="contact-grid">
+  <nav class="mobile-menu" id="mmenu" aria-label="Menú"><a href="index.html">Inicio</a><a href="equipos.html">Equipamiento</a><a href="tienda.html">Insumos</a><a href="servicios.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html" aria-current="page">Contacto</a></nav>
+</header>
+<div class="wrap crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span>Contacto</div>
 
-    <!-- Columna izquierda: formulario -->
+<section class="hero-light simple">
+  <div class="wrap">
     <div>
-      <div class="section-header">
-        <div class="section-label">Formulario de contacto</div>
-        <h2 class="section-title">Envíenos su consulta</h2>
-        <p class="section-desc">Complete el formulario y le responderemos a la brevedad. Los datos se envían directamente a nuestro WhatsApp.</p>
-      </div>
-
-      <!-- Estado de éxito -->
-      <div class="form-success" id="formSuccess">
-        <span class="form-success-icon">✅</span>
-        <h3>¡Consulta enviada correctamente!</h3>
-        <p>Se abrió WhatsApp con su mensaje pre-cargado. Si no se abrió automáticamente, puede escribirnos directamente.</p>
-        <a href="https://wa.me/5493764374545" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; margin-top:0.5rem;">
-          Abrir WhatsApp
-        </a>
-      </div>
-
-      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
-          <div class="form-group">
-            <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Su nombre o razón social" autocomplete="name" required>
-          </div>
-          <div class="form-group">
-            <label for="institucion">Institución / Empresa</label>
-            <input type="text" id="institucion" name="institucion" placeholder="Hospital, clínica..." autocomplete="organization">
-          </div>
-        </div>
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
-          <div class="form-group">
-            <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="376-4123456" autocomplete="tel" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="su@email.com" autocomplete="email">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="equipo">¿Qué necesita?</label>
-          <select id="equipo" name="equipo">
-            <option value="">Seleccionar...</option>
-            <optgroup label="Equipamiento">
-              <option value="Comprar un ecógrafo">Comprar un ecógrafo</option>
-              <option value="Comprar otro equipo médico">Comprar otro equipo médico</option>
-            </optgroup>
-            <optgroup label="Insumos y accesorios">
-              <option value="Accesorios o insumos">Accesorios o insumos (sensores, cables, manguitos)</option>
-              <option value="Repuesto específico">Repuesto específico</option>
-            </optgroup>
-            <optgroup label="Servicio técnico">
-              <option value="Reparación de un equipo">Reparación de un equipo</option>
-              <option value="Servicio técnico Mindray">Servicio técnico Mindray</option>
-              <option value="Contrato de mantenimiento">Contrato de mantenimiento</option>
-              <option value="Relevamiento gratuito">Relevamiento gratuito</option>
-            </optgroup>
-            <option value="Otra consulta">Otra consulta</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="mensaje">Descripción de la necesidad *</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Indique el equipo o insumo que busca, o describa la falla y el modelo del equipo..." required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary btn-submit" id="submitBtn">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Enviar consulta por WhatsApp
-        </button>
-      </form>
+      <h1>Contacto</h1>
+      <p>Cuéntenos qué equipo busca, qué insumo necesita o qué servicio requiere. Le respondemos a la brevedad.</p>
     </div>
-
-    <!-- Columna derecha: info sticky -->
-    <div class="contact-info-block">
-
-      <!-- WhatsApp destacado arriba -->
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20de%20MediSync." target="_blank" rel="noopener" class="contact-wa-card fade-up">
-        <div class="contact-wa-icon">
-          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px">
-            <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/>
-          </svg>
-        </div>
-        <div>
-          <div class="contact-wa-title">Respuesta inmediata por WhatsApp</div>
-          <div class="contact-wa-sub">+54 9 376 437-4545 · Lun–Vie</div>
-        </div>
-      </a>
-
-      <!-- Teléfonos -->
-      <div class="contact-info-card fade-up stagger-1">
-        <div class="contact-info-card-title">Teléfonos</div>
-        <a href="tel:+543764374545" class="contact-info-item">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          +54 9 376 437-4545
-        </a>
-        <a href="tel:+543764639426" class="contact-info-item">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          +54 9 376 463-9426
-        </a>
+  </div>
+</section>
+<section class="block">
+  <div class="wrap contact">
+    <form class="form" id="cform">
+      <div class="two">
+        <div><label for="nombre">Nombre y apellido</label><input id="nombre" name="nombre" autocomplete="name" required></div>
+        <div><label for="inst">Institución</label><input id="inst" name="inst" autocomplete="organization"></div>
       </div>
-
-      <!-- Email -->
-      <div class="contact-info-card fade-up stagger-2">
-        <div class="contact-info-card-title">Email</div>
-        <a href="mailto:medisync.ar@gmail.com" class="contact-info-item">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          medisync.ar@gmail.com
-        </a>
+      <div class="two">
+        <div><label for="tel">Teléfono</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
       </div>
-
-      <!-- Ubicación + mapa -->
-      <div class="contact-info-card fade-up stagger-3">
-        <div class="contact-info-card-title">Ubicación</div>
-        <div class="contact-info-item" style="cursor:default;">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Posadas, Misiones, Argentina
-        </div>
-        <p class="contact-location-note">Base operativa en Posadas. Cobertura en toda la provincia de Misiones con respuesta en menos de 24 horas.</p>
-        <div class="map-container">
-          <iframe
-            src="https://maps.google.com/maps?q=Posadas,%20Misiones,%20Argentina&t=&z=14&ie=UTF8&iwloc=&output=embed"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+      <div><label for="need">¿Qué necesita?</label>
+        <select id="need" name="need">
+          <option value="">Seleccionar…</option>
+          <optgroup label="Equipamiento"><option>Comprar un ecógrafo</option><option>Comprar otro equipo médico</option></optgroup>
+          <optgroup label="Insumos y accesorios"><option>Accesorios o insumos</option><option>Repuesto específico</option></optgroup>
+          <optgroup label="Servicio técnico"><option>Reparación de un equipo</option><option>Servicio técnico Mindray</option><option>Plan de mantenimiento</option><option>Relevamiento gratuito</option></optgroup>
+          <option>Otra consulta</option>
+        </select>
       </div>
-
+      <div><label for="msg">Mensaje</label><textarea id="msg" name="msg" placeholder="Indique el equipo o insumo que busca, o describa la falla y el modelo del equipo." required></textarea></div>
+      <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+      <div class="ok" id="ok" role="status">Se abrió WhatsApp con su consulta ya escrita. Si no se abrió, escríbanos al +54 9 376 437-4545.</div>
+    </form>
+    <div class="info">
+      <div><h3>WhatsApp</h3><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></div>
+      <div><h3>Teléfonos</h3><p>+54 9 376 437-4545<br>+54 9 376 463-9426</p></div>
+      <div><h3>Email</h3><p>medisync.ar@gmail.com</p></div>
+      <div><h3>Ubicación</h3><p>Posadas, Misiones. Cobertura en toda la provincia.</p></div>
     </div>
   </div>
 </section>
 
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo-white.png" alt="MediSync Ingeniería Clínica">
+      <p>Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica para las instituciones de salud de Misiones y el NEA.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener" aria-label="MediSync en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener" aria-label="MediSync en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3>Soluciones</h3>
+      <ul>
+        <li><a href="equipos.html">Equipamiento médico</a></li>
+        <li><a href="equipos.html#ecografos">Ecógrafos Mindray y Esaote</a></li>
+        <li><a href="tienda.html">Accesorios e insumos</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
+        <li><a href="servicios.html#planes">Planes de mantenimiento</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></li>
+        <li>+54 9 376 463-9426</li>
+        <li>medisync.ar@gmail.com</li>
+        <li>Posadas, Misiones, Argentina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 MediSync Ingeniería Clínica</span>
+    <span>Cobertura en Misiones y el NEA</span>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/></svg></a>
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-  const submitBtn = document.getElementById('submitBtn');
-
-  const nombre      = document.getElementById('nombre').value;
-  const institucion = document.getElementById('institucion').value;
-  const telefono    = document.getElementById('telefono').value;
-  const equipo      = document.getElementById('equipo').value;
-  const mensaje     = document.getElementById('mensaje').value;
-
-  submitBtn.disabled = true;
-  submitBtn.style.opacity = '0.7';
-  submitBtn.innerHTML = 'Enviando…';
-
-  const texto = `Consulta desde el sitio web:\n\nNombre: ${nombre}\nInstitución: ${institucion || 'No indicada'}\nTeléfono: ${telefono}\nNecesita: ${equipo || 'No especificado'}\n\nMensaje:\n${mensaje}`;
-  const waUrl = `https://wa.me/5493764374545?text=${encodeURIComponent(texto)}`;
-
-  window.open(waUrl, '_blank');
-
-  form.style.display = 'none';
-  success.classList.add('show');
-  success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
+(function () {
+  /* Cada página nueva arranca arriba (al volver con "Atrás" se respeta la posición) */
+  function top() {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!location.hash && (!n || n.type !== 'back_forward')) window.scrollTo(0, 0);
+  }
+  top(); window.addEventListener('load', function () { top(); setTimeout(top, 80); });
+  var b = document.querySelector('.menu-btn'), m = document.getElementById('mmenu');
+  b.addEventListener('click', function () { var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+})();
 </script>
-
-<script src="componentes.js"></script>
-<script src="cult-effects.js" defer></script>
+<script>
+document.getElementById('cform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, v = function (id) { return (document.getElementById(id).value || '').trim(); };
+  if (!f.reportValidity()) return;
+  var texto = 'Consulta desde el sitio web:\n\nNombre: ' + v('nombre') + '\nInstitución: ' + (v('inst') || 'No indicada') +
+    '\nTeléfono: ' + v('tel') + '\nEmail: ' + (v('mail') || 'No indicado') + '\nNecesita: ' + (v('need') || 'No especificado') + '\n\nMensaje:\n' + v('msg');
+  window.open('https://wa.me/5493764374545?text=' + encodeURIComponent(texto), '_blank');
+  document.getElementById('ok').classList.add('show');
+});
+</script>
 </body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Servicio técnico e ingeniería clínica | MediSync – Posadas, Misiones</title>
 <meta name="description" content="Mantenimiento preventivo, reparación, urgencias técnicas y contratos de servicio para equipamiento médico en Misiones y el NEA.">
 <meta property="og:type" content="website">
@@ -15,151 +15,6 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="canonical" href="https://medisync.com.ar/servicios.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cult-effects.css">
-<style>
-  /* ─── Detalle de servicio expandido ─── */
-  .service-detail {
-    background: var(--gray-light);
-    border-radius: 20px;
-    padding: 2.5rem;
-    border: 1px solid var(--gray-border);
-    margin-top: 3rem;
-  }
-  .service-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 1.5rem;
-  }
-  .service-detail-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  .service-detail-icon {
-    width: 42px; height: 42px;
-    border-radius: 10px;
-    background: var(--blue-light);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    border: 1px solid var(--blue-mid);
-  }
-  .service-detail-icon svg {
-    width: 20px; height: 20px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .service-icon-wrap svg {
-    width: 22px; height: 22px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .trust-block-icon-wrap {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    background: var(--blue-light);
-    border: 1px solid var(--blue-mid);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: var(--sp-4);
-    flex-shrink: 0;
-  }
-  .trust-block-icon-wrap svg {
-    width: 22px; height: 22px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .service-detail-title { font-size: 0.9rem; font-weight: 700; color: var(--gray-dark); margin-bottom: 0.3rem; }
-  .service-detail-text { font-size: 0.82rem; color: var(--gray-mid); line-height: 1.7; font-weight: 300; }
-
-  .mindray-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-
-  /* ─── Contratos ─── */
-  .plans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  .plan-card {
-    border-radius: 18px;
-    padding: 2.25rem;
-    border: 1.5px solid var(--gray-border);
-    background: var(--white);
-    transition: border-color var(--t-base) var(--ease),
-                box-shadow var(--t-base) var(--ease),
-                transform var(--t-base) var(--ease-bounce);
-    position: relative;
-  }
-  .plan-card:hover {
-    border-color: var(--blue-mid);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
-  }
-  .plan-card.featured {
-    background: var(--blue);
-    border-color: var(--blue);
-    color: var(--white);
-    box-shadow: var(--shadow-blue-md);
-  }
-  .plan-card.featured:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,130,200,0.35);
-  }
-  .plan-card.featured .plan-title { color: var(--white); }
-  .plan-card.featured .plan-desc { color: rgba(255,255,255,0.8); }
-  .plan-card.featured .plan-list li { color: rgba(255,255,255,0.85); }
-  .plan-card.featured .plan-list li::before { color: rgba(255,255,255,0.6); }
-  .plan-badge {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    background: var(--blue-light);
-    color: var(--blue-dark);
-    padding: 4px 12px;
-    border-radius: 100px;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-  .plan-card.featured .plan-badge { background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); }
-  .plan-title { font-size: 1.2rem; font-weight: 800; color: var(--gray-dark); margin-bottom: 0.5rem; }
-  .plan-desc { font-size: 0.85rem; color: var(--gray-mid); line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300; }
-  .plan-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-  .plan-list li {
-    font-size: 0.85rem; color: var(--gray-mid);
-    display: flex; align-items: flex-start; gap: 8px;
-    font-weight: 400; line-height: 1.5;
-  }
-  .plan-list li::before { content: '✓'; color: var(--blue); font-weight: 700; font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
-
-  #contratos { background: var(--gray-light); }
-
-   @media (max-width: 900px) {
-    .service-detail-grid { grid-template-columns: 1fr; }
-    .mindray-header { grid-template-columns: 1fr; }
-    .page-hero-img { display: none; }
-    .page-hero-inner { grid-template-columns: 1fr; }
-  }
-</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -177,228 +32,120 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" data-grid-beam>
-  <img class="hero-bg" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Servicio técnico de equipamiento médico" fetchpriority="high">
-  <div class="hero-content">
-    <div class="hero-top">
-      <div class="hero-badge">Servicio técnico · Ingeniería clínica · Gestión hospitalaria</div>
-      <h1 class="hero-h1" data-text-animate>Servicio técnico<br>e ingeniería clínica.</h1>
-      <p class="hero-sub">Mantenimiento, reparación y gestión hospitalaria del equipamiento médico de su institución.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico" class="btn-primary beam" target="_blank" rel="noopener">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Solicitar relevamiento gratuito
-      </a>
-      <a href="#contratos" class="btn-secondary">
-        Ver planes
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-    </div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="MediSync, inicio"><img src="img/logo-header.png" alt="MediSync Ingeniería Clínica"></a>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="equipos.html">Equipamiento</a></li><li><a href="tienda.html">Insumos</a></li><li><a href="servicios.html" aria-current="page">Servicio técnico</a></li><li><a href="nosotros.html">Nosotros</a></li></ul>
+    <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <a href="#impacto" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
-    Descubrir más
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-  </a>
-</section>
-<!-- ═══ POR QUÉ IMPORTA ═══ -->
-<section id="impacto">
-  <div class="impact-layout">
-    <div class="section-header">
-      <div class="section-label">Por qué importa</div>
-      <h2 class="section-title">Un equipo fuera de servicio<br>es un turno perdido</h2>
-      <p class="section-desc">El mantenimiento a tiempo cuesta menos que una urgencia, y un técnico cerca resuelve en horas lo que de otra forma lleva días.</p>
-    </div>
-    <ul class="impact-list">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><b>Agendas frenadas</b><span>Cada día de espera son turnos cancelados y pacientes derivados.</span></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg><div><b>Fallas que vuelven</b><span>Sin un diagnóstico de fondo, el mismo problema se repite.</span></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div><b>Costos imprevistos</b><span>Con un plan de mantenimiento, su institución sabe de antemano cuánto va a gastar.</span></div></li>
-    </ul>
+  <nav class="mobile-menu" id="mmenu" aria-label="Menú"><a href="index.html">Inicio</a><a href="equipos.html">Equipamiento</a><a href="tienda.html">Insumos</a><a href="servicios.html" aria-current="page">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<div class="wrap crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span>Servicio técnico</div>
+
+<section class="hero">
+  <img src="img/hero-servicio.jpg" alt="Sala técnica con equipamiento de alta tecnología">
+  <div class="wrap">
+    <h1>Servicio técnico</h1>
+    <p>Mantenimiento, reparación y gestión hospitalaria del equipamiento médico de su institución.</p>
+    <div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20agendar%20un%20relevamiento%20gratuito." target="_blank" rel="noopener">Solicitar relevamiento gratuito</a><a class="btn btn-outline-light" href="#planes">Ver planes</a></div>
   </div>
 </section>
-
-<!-- ═══ SERVICES ═══ -->
-<section id="services">
-  <div class="section-header">
-    <div class="section-label">Qué hacemos</div>
-    <h2 class="section-title">Todo lo que necesita para mantener<br>su equipamiento en condiciones</h2>
-    <p class="section-desc">Desde el mantenimiento programado hasta la atención de urgencias y la gestión del parque tecnológico de su institución.</p>
+<section class="block">
+  <div class="wrap intro">
+    <h2>Un equipo fuera de servicio es un turno perdido</h2>
+    <p>El mantenimiento a tiempo cuesta menos que una urgencia. Con ingenieros en Posadas, resolvemos en horas lo que con técnicos de otras provincias lleva días.</p>
   </div>
-  <div class="services-grid">
-
-    <div class="service-card fade-up stagger-1">
-      <div class="service-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-      </div>
-      <div class="service-title">Mantenimiento preventivo</div>
-      <div class="service-desc">Planes de mantenimiento programado que reducen fallas, extienden la vida útil del equipo y mantienen la garantía del fabricante.</div>
-      <span class="service-tag">Misiones · NEA</span>
-    </div>
-
-    <div class="service-card fade-up stagger-2">
-      <div class="service-icon-wrap">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <div class="service-title">Reparación a demanda y urgencias</div>
-      <div class="service-desc">Diagnóstico técnico completo y reparación de equipamiento médico crítico. Trabajo documentado con informe de intervención.</div>
-      <span class="service-tag">Misiones · NEA</span>
-    </div>
-
-    <div class="service-card fade-up stagger-3">
-      <div class="service-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      </div>
-      <div class="service-title">Gestión hospitalaria del equipamiento</div>
-      <div class="service-desc">Inventario, historial técnico de cada equipo, planificación de renovaciones y reportes listos para auditorías sanitarias.</div>
-      <span class="service-tag">Misiones · NEA</span>
-    </div>
-
-    <div class="service-card fade-up stagger-2">
-      <div class="service-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-      </div>
-      <div class="service-title">Asesoramiento y capacitación</div>
-      <div class="service-desc">Entrenamiento al personal en el uso correcto y cuidados básicos del equipamiento para prevenir fallas evitables.</div>
-      <span class="service-tag">A coordinar</span>
-    </div>
-
-  </div>
-
-  <!-- Detalle Mindray -->
-  <div class="service-detail fade-up" id="mindray">
-
-    <div class="mindray-header">
-      <div>
-        <div class="section-label">Especialización Mindray</div>
-        <h3 class="section-title" style="font-size:1.5rem;">Servicio técnico oficial de ecógrafos Mindray</h3>
-        <p class="section-desc">Somos el servicio técnico oficial de Mindray en la región, con acceso a repuestos originales y respaldo de fábrica. <a href="equipos.html#ecografos" style="color:var(--blue); font-weight:600;">Ver ecógrafos →</a></p>
-        <img src="img/mindray.png" alt="Mindray" style="height:36px; width:auto; margin-top:1.25rem; object-fit:contain;" loading="lazy">
-      </div>
-      <img
-        src="https://www.mindray.com/content/dam/xpace/en/products-solutions/solutions/medical-imaging/women-care/womencare-insight-3@pc.jpg"
-        alt="Ecógrafo Mindray"
-        style="width:100%; height:100%; min-height:220px; object-fit:cover; border-radius:14px; border:1px solid var(--gray-border);" loading="lazy">
-    </div>
-
-    <div class="service-detail-grid">
-
-      <div class="service-detail-item">
-        <div class="service-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <div>
-          <div class="service-detail-title">Reparación con repuestos originales</div>
-          <div class="service-detail-text">Acceso a piezas genuinas Mindray a través de la cadena oficial, garantizando compatibilidad y rendimiento.</div>
-        </div>
-      </div>
-
-      <div class="service-detail-item">
-        <div class="service-detail-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
-        </div>
-        <div>
-          <div class="service-detail-title">Actualización de software</div>
-          <div class="service-detail-text">Mantenemos el firmware de sus equipos actualizado según las recomendaciones del fabricante.</div>
-        </div>
-      </div>
-
-      <div class="service-detail-item">
-        <div class="service-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <div>
-          <div class="service-detail-title">Calibración y verificación</div>
-          <div class="service-detail-text">Verificación de parámetros de imagen, controles y salidas según especificaciones técnicas del fabricante.</div>
-        </div>
-      </div>
-
-      <div class="service-detail-item">
-        <div class="service-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div>
-          <div class="service-detail-title">Mantenimientos preventivos</div>
-          <div class="service-detail-text">Planes de servicio programado para mantener sus equipos Mindray en óptimas condiciones, reducir fallas y prolongar su vida útil.</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-<p style="text-align:center; margin-top:3rem; font-size:0.95rem; color:var(--gray-mid);">Atendemos ecógrafos, monitores multiparamétricos, desfibriladores, ventiladores, bombas de infusión, electrobisturíes y más. <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20si%20atienden%20mi%20equipo." target="_blank" rel="noopener" style="color:var(--blue); font-weight:600;">Consulte por su equipo →</a></p>
 </section>
-
-<!-- ═══ CONTRATOS ═══ -->
-<section id="contratos">
-  <div class="section-header centered">
-    <div class="section-label">Planes de servicio</div>
-    <h2 class="section-title">Contratos de mantenimiento a medida</h2>
-    <p class="section-desc">Cada institución tiene necesidades distintas. Diseñamos planes adaptados al tamaño de su parque tecnológico, presupuesto y nivel de riesgo operativo.</p>
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="head-row"><h2>Qué hacemos</h2></div>
+    <div class="cats">
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20mantenimiento%20preventivo." target="_blank" rel="noopener"><div class="ph"><img src="img/p-servicio.jpg" alt="Profesional verificando un equipo" loading="lazy"></div><div class="row"><div><h3>Mantenimiento preventivo</h3><p>Planes programados que reducen fallas, extienden la vida útil y mantienen la garantía del fabricante.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20necesito%20reparar%20un%20equipo." target="_blank" rel="noopener"><div class="ph"><img src="img/sv-reparacion.jpg" alt="Profesional trabajando sobre un equipo médico" loading="lazy"></div><div class="row"><div><h3>Reparación y urgencias</h3><p>Diagnóstico completo y reparación de equipamiento crítico, con informe de cada intervención.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20gesti%C3%B3n%20del%20equipamiento." target="_blank" rel="noopener"><div class="ph"><img src="img/sv-gestion.jpg" alt="Sala con equipamiento médico organizado" loading="lazy"></div><div class="row"><div><h3>Gestión hospitalaria del equipamiento</h3><p>Inventario, historial técnico, planificación de renovaciones y reportes para auditorías.</p></div><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    </div>
   </div>
-  <div class="plans-grid">
-    <div class="plan-card fade-up">
-      <div class="plan-badge">Básico</div>
-      <div class="plan-title">Servicio a demanda</div>
-      <div class="plan-desc">Intervenciones puntuales sin contrato. Ideal para conocer nuestra metodología de trabajo.</div>
-      <ul class="plan-list">
-        <li>Diagnóstico y reparación por equipo</li>
-        <li>Entrega de informe técnico (válido para auditorías)</li>
-        <li>Garantía sobre la intervención realizada</li>
-        <li>Atención de urgencias (sujeto a disponibilidad)</li>
+</section>
+<section class="block tinted" id="mindray">
+  <div class="wrap">
+    <div class="split"><div><h2>Servicio técnico oficial de ecógrafos Mindray</h2><p>Somos el servicio técnico oficial de Mindray en la región, con acceso a repuestos originales y respaldo de fábrica.</p><ul><li>Reparación con repuestos originales</li><li>Actualización de software</li><li>Calibración y verificación</li><li>Mantenimientos preventivos</li></ul><a class="btn btn-outline" href="equipos.html#ecografos">Ver ecógrafos</a></div><div class="ph"><img src="img/mr-cardio.jpg" alt="Ecógrafo portátil Mindray en uso" loading="lazy"></div></div>
+  </div>
+</section>
+<section class="block" id="planes">
+  <div class="wrap">
+    <div class="head-row"><h2>Planes de mantenimiento</h2></div>
+    <div class="plans">
+      <div class="plan"><span class="kind">Básico</span><h3>Servicio a demanda</h3><p>Intervenciones puntuales, sin contrato.</p><ul><li>Diagnóstico y reparación por equipo</li><li>Informe técnico válido para auditorías</li><li>Garantía sobre la intervención</li><li>Urgencias según disponibilidad</li></ul><div class="spacer"></div><a class="btn btn-outline" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20a%20demanda." target="_blank" rel="noopener">Consultar</a></div>
+      <div class="plan featured"><span class="kind">Recomendado</span><h3>Plan preventivo</h3><p>Visitas programadas para sus equipos críticos, con urgencias priorizadas.</p><ul><li>Mantenimiento programado</li><li>Historial completo del equipamiento</li><li>Atención prioritaria ante fallas</li><li>Documentación lista para auditorías</li><li>Asesoramiento en decisiones de inversión</li></ul><div class="spacer"></div><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20preventivo." target="_blank" rel="noopener">Consultar</a></div>
+      <div class="plan"><span class="kind">Integral</span><h3>Gestión clínica total</h3><p>Tercerización completa de la ingeniería clínica de su institución.</p><ul><li>Todo lo del plan preventivo</li><li>Inventario digital y trazabilidad</li><li>Capacitación del personal</li><li>Planificación del ciclo de vida</li><li>Asesoramiento en compras y renovación</li></ul><div class="spacer"></div><a class="btn btn-outline" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20por%20la%20gesti%C3%B3n%20cl%C3%ADnica%20total." target="_blank" rel="noopener">Consultar</a></div>
+    </div>
+    <p class="note center">Atendemos ecógrafos, monitores multiparamétricos, desfibriladores, ventiladores, bombas de infusión, electrobisturíes y más.</p>
+  </div>
+</section>
+<section class="block tinted cta"><div class="wrap"><h2>Asegure la continuidad de su institución</h2><p>Un ingeniero visita su institución, revisa sus equipos críticos sin cargo y le arma una propuesta a medida.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20agendar%20un%20relevamiento%20gratuito." target="_blank" rel="noopener">Agendar relevamiento</a><a class="btn btn-outline" href="contacto.html">Ir al formulario</a></div></div></section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo-white.png" alt="MediSync Ingeniería Clínica">
+      <p>Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica para las instituciones de salud de Misiones y el NEA.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener" aria-label="MediSync en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener" aria-label="MediSync en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3>Soluciones</h3>
+      <ul>
+        <li><a href="equipos.html">Equipamiento médico</a></li>
+        <li><a href="equipos.html#ecografos">Ecógrafos Mindray y Esaote</a></li>
+        <li><a href="tienda.html">Accesorios e insumos</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
+        <li><a href="servicios.html#planes">Planes de mantenimiento</a></li>
       </ul>
     </div>
-    <div class="plan-card featured fade-up stagger-1">
-      <div class="plan-badge">Recomendado</div>
-      <div class="plan-title">Plan Preventivo Fijo</div>
-      <div class="plan-desc">Gestión programada de equipos críticos, con visitas periódicas e inclusión de urgencias priorizadas.</div>
-      <ul class="plan-list">
-        <li>Visitas de mantenimiento programado</li>
-        <li>Historial completo del equipamiento</li>
-        <li>Atención prioritaria ante fallas (respuesta rápida local)</li>
-        <li>Documentación técnica continua lista para auditorías</li>
-        <li>Asesoramiento técnico sin cargo en decisiones de inversión</li>
+    <div>
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
-    <div class="plan-card fade-up stagger-2">
-      <div class="plan-badge">Integral</div>
-      <div class="plan-title">Gestión Clínica Total</div>
-      <div class="plan-desc">Tercerización completa del departamento de ingeniería. Para instituciones que requieren cobertura total con máxima disponibilidad operativa.</div>
-      <ul class="plan-list">
-        <li>Todo lo incluido en el Plan Preventivo Fijo</li>
-        <li>Inventario digital y trazabilidad del equipamiento</li>
-        <li>Capacitación técnica al personal de la institución</li>
-        <li>Planificación estratégica del ciclo de vida de los equipos</li>
-        <li>Asesoramiento en compras y renovación</li>
+    <div>
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></li>
+        <li>+54 9 376 463-9426</li>
+        <li>medisync.ar@gmail.com</li>
+        <li>Posadas, Misiones, Argentina</li>
       </ul>
     </div>
   </div>
-  <div style="text-align:center; margin-top:2.5rem;">
-    <a href="contacto.html" class="btn-primary">
-      Solicitar relevamiento gratuito
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-    </a>
+  <div class="wrap foot-bottom">
+    <span>© 2026 MediSync Ingeniería Clínica</span>
+    <span>Cobertura en Misiones y el NEA</span>
   </div>
-</section>
+</footer>
+<a class="wa-float" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/></svg></a>
+<script>
+(function () {
+  /* Cada página nueva arranca arriba (al volver con "Atrás" se respeta la posición) */
+  function top() {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!location.hash && (!n || n.type !== 'back_forward')) window.scrollTo(0, 0);
+  }
+  top(); window.addEventListener('load', function () { top(); setTimeout(top, 80); });
+  var b = document.querySelector('.menu-btn'), m = document.getElementById('mmenu');
+  b.addEventListener('click', function () { var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+})();
+</script>
 
-<!-- ═══ CTA ═══ -->
-<section id="cta">
-  <div class="cta-inner">
-    <div class="section-label">¿Necesita un servicio?</div>
-    <h2 class="section-title">Asegure la continuidad operativa de su clínica</h2>
-    <p class="cta-sub">Un ingeniero de nuestro equipo visitará su institución para auditar sus equipos críticos sin cargo y armar una propuesta a la medida de su clínica.</p>
-    <div class="cta-actions multi">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20agendar%20un%20relevamiento%20gratuito." class="btn-white beam" target="_blank" rel="noopener">
-        Agendar relevamiento por WhatsApp
-      </a>
-      <a href="contacto.html" class="btn-outline-white">Ver formulario de contacto</a>
-    </div>
-  </div>
-</section>
-
-<script src="componentes.js"></script>
-<script src="cult-effects.js" defer></script>
 </body>
 </html>

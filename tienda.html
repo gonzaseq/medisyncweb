@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Accesorios e insumos | MediSync – Posadas, Misiones</title>
 <meta name="description" content="Accesorios e insumos para electromedicina en Misiones: sensores SpO2, cables ECG, manguitos PNI, sensores de temperatura y cables de electrocirugía compatibles con las principales marcas.">
 <meta property="og:type" content="website">
@@ -15,126 +15,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link rel="canonical" href="https://medisync.com.ar/tienda.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cult-effects.css">
-
-<style>
-  /* Reducimos el tamaño de las columnas en la grilla para que las tarjetas sean más chicas */
-  #productos .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--sp-4);
-    padding: var(--sp-5) var(--sp-4);
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* Compactamos el padding de la tarjeta y la estructuramos en formato vertical flexible */
-  #productos .service-card {
-    background: var(--white);
-    border: 1px solid var(--gray-border);
-    border-radius: var(--r-lg);
-    padding: var(--sp-4);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
-  }
-
-  #productos .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-  }
-
-  /* Contenedor de imagen 1:1 (Cuadrado Perfecto Proporcional) */
-  .producto-img-box {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Garantiza cuadratura exacta */
-    background: var(--off-white);
-    border-radius: var(--r-md);
-    margin-bottom: var(--sp-3);
-    overflow: hidden;
-    border: 1px solid var(--gray-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .producto-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Evita que el accesorio se deforme */
-    padding: var(--sp-4);
-    transition: transform 0.3s ease;
-  }
-
-  /* Efecto sutil de zoom al pasar el mouse por la tarjeta */
-  .service-card:hover .producto-img-box img {
-    transform: scale(1.04);
-  }
-
-  /* Ajustes tipográficos menores para la escala compacta */
-  #productos .service-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--gray-dark);
-    margin-bottom: var(--sp-2);
-    line-height: 1.3;
-  }
-
-  #productos .service-desc {
-    font-size: 0.85rem;
-    color: var(--gray-mid);
-    margin-bottom: var(--sp-3);
-    flex-grow: 1; /* Empuja el botón hacia abajo para alinear todas las tarjetas */
-    line-height: 1.4;
-  }
-
-  .precio-tag {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--blue-dark);
-    margin-bottom: var(--sp-3);
-    display: block;
-  }
-
-  /* Encabezados de categorías */
-  .categoria-title {
-    width: 100%;
-    grid-column: 1 / -1;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--gray-dark);
-    border-left: 4px solid var(--blue);
-    padding-left: var(--sp-3);
-    margin-top: var(--sp-5);
-    margin-bottom: var(--sp-2);
-  }
-
-  /* Subtítulos internos de subcategoría (ej. "Cables Prolongadores de SpO2") */
-  .subcategoria-title {
-    width: 100%;
-    grid-column: 1 / -1;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--gray-mid);
-    margin-top: var(--sp-4);
-    margin-bottom: var(--sp-1);
-  }
-
-  /* Oculta categorías y tarjetas que no matchean el filtro activo */
-  .categoria-title.oculto,
-  .subcategoria-title.oculto,
-  .service-card.oculto {
-    display: none !important;
-  }
-</style>
-  <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -151,825 +32,112 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1531481185148604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" data-grid-beam>
-  <img class="hero-bg" src="https://plus.unsplash.com/premium_photo-1702598502002-f36d61e5c9a3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Catálogo de accesorios y repuestos para electromedicina en Misiones" fetchpriority="high">
-  <div class="hero-content">
-  <div class="hero-top">
-    <div class="hero-badge">Catálogo de accesorios</div>
-    <h1 class="hero-h1" data-text-animate>Accesorios e insumos<br>para electromedicina.</h1>
-    <p class="hero-sub">Sensores, cables y accesorios compatibles con las principales marcas de monitores.</p>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="MediSync, inicio"><img src="img/logo-header.png" alt="MediSync Ingeniería Clínica"></a>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="equipos.html">Equipamiento</a></li><li><a href="tienda.html" aria-current="page">Insumos</a></li><li><a href="servicios.html">Servicio técnico</a></li><li><a href="nosotros.html">Nosotros</a></li></ul>
+    <a class="btn btn-primary" href="contacto.html">Contacto</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <div class="hero-actions">
-    <a href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20stock%20de%20accesorios" class="btn-primary beam" target="_blank" rel="noopener">
-      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-      Consultar stock
-    </a>
-    <a href="#productos" class="btn-secondary">
-      Ver catálogo
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-    </a>
-  </div>
-</div>
-<a href="#productos" class="hero-scroll-cue" aria-label="Bajar a la siguiente sección">
-  Descubrir más
-  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-</a>
-</section>
-
-<section id="productos" style="background: var(--white); padding-bottom: 60px;">
-  <div class="container">
-
-  <!-- ═══ BOTONES DE FILTRO ═══ -->
-<div class="filtros-container fade-up">
-  <button class="btn-filtro active" data-filter="todos">
-    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-    Todos los Productos
-  </button>
-  <button class="btn-filtro" data-filter="oximetria">
-    <svg viewBox="0 0 24 24"><path d="M3 12h3l2.5 7L13 5l2.5 7H21"/></svg>
-    Oximetría (SpO2)
-  </button>
-  <button class="btn-filtro" data-filter="ecg">
-    <svg viewBox="0 0 24 24"><path d="M2 12h4l2-5 4 10 3-7 2 4h5"/></svg>
-    Electrocardiografía
-  </button>
-  <button class="btn-filtro" data-filter="pni">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2"/><path d="M9 3h6"/></svg>
-    Presión No Invasiva (PNI)
-  </button>
-  <button class="btn-filtro" data-filter="temperatura">
-    <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2 2 0 1 0-4 0v11.26a4 4 0 1 0 4 0Z"/></svg>
-    Temperatura
-  </button>
-  <button class="btn-filtro" data-filter="electrobisturi">
-    <svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-12h-7l0-8Z"/></svg>
-    Electrocirugía
-  </button>
-</div>
-
-    <!-- ══════════════ OXIMETRÍA (SpO2) ══════════════ -->
-    <div class="categoria-title" data-cat="oximetria">Oximetría (Sensores SpO2)</div>
-    <div class="services-grid">
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto - Ficha Redel" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Broche Adulto - Ficha Redel</div>
-        <div class="service-desc">Cable largo directo. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN LEEX IM8 / IM70 / M3 / DRAGER VISTA.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Leex / Drager</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20Redel%20Compatible%20con%20Mindray%2FEdan%2FDrager" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo21.png" alt="Sensor SpO2 Ped/Neo Ficha Redel" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Ficha Redel</div>
-        <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN - LEEX IM8 / IM70 / M3 / DRAGER VISTA.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Leex / Drager</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ficha%20Redel" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo22.png" alt="Sensor SpO2 Broche Adulto Ficha DB9" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Broche Adulto Ficha DB9</div>
-        <div class="service-desc">Cable corto para conectar a prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Universal</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo23.png" alt="Sensor SpO2 Ped/Neo Ajustable Ficha DB9" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Ajustable Ficha DB9</div>
-        <div class="service-desc">Cable corto para prolongador. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Universal</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ajustable%20Ficha%20DB9" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo24.png" alt="Sensor SpO2 Broche Adulto - Línea Nueva Mindray" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Broche Adulto - Línea Nueva</div>
-        <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray (Nueva Línea)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Mindray%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo25.png" alt="Sensor SpO2 Ped/Neo Ajustable - Línea Nueva Mindray" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo - Línea Nueva</div>
-        <div class="service-desc">Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray (Nueva Línea)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Mindray%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo26.png" alt="Sensor SpO2 Broche Pediátrico DB9 Corto" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Pediátrico DB9 Corto</div>
-        <div class="service-desc">Para interconectar con prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Multimarca Corto</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Pediatrico%20DB9%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo27.png" alt="Sensor SpO2 Broche Adulto Tipo FEAS" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Broche Adulto Tipo FEAS</div>
-        <div class="service-desc">Cable largo, conexión directa. Específico para compatibilidad con sistemas e instrumental médico FEAS.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo28.png" alt="Sensor SpO2 Ped/Neo Ajustable Tipo FEAS" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Ajustable Tipo FEAS</div>
-        <div class="service-desc">Cable largo, conexión directa. Diseñado para control neonatal y pediátrico en sistemas de la línea FEAS.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo29.png" alt="Sensor SpO2 Adulto General Electric" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto General Electric</div>
-        <div class="service-desc">Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Equipado con tecnología integrada Ohmeda.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric / Ohmeda</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo30.png" alt="Sensor SpO2 Ped/Neo General Electric" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo General Electric</div>
-        <div class="service-desc">Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Con soporte y tecnología Ohmeda.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric / Ohmeda</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo31.png" alt="Sensor SpO2 Adulto Drager Infinity" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Drager Infinity</div>
-        <div class="service-desc">Sensor de oximetría directo de alta fidelidad para sistemas DRAGER INFINITY.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo32.png" alt="Sensor SpO2 Ped/Neo Ajustable Drager Infinity" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Drager Infinity</div>
-        <div class="service-desc">Manguito ajustable de cable largo para monitorización pediátrica/neonatal en DRAGER INFINITY.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo33.png" alt="Sensor SpO2 Broche Adulto Philips / Goldway" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Philips / Goldway</div>
-        <div class="service-desc">Sensor robusto tipo broche compatible con monitores PHILIPS MP20 y líneas GOLDWAY.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Philips / Goldway</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Philips%20Goldway" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo34.png" alt="Sensor SpO2 Ped/Neo Ajustable Philips / Goldway" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Philips / Goldway</div>
-        <div class="service-desc">Modelo suave ajustable para pacientes pediátricos en entornos PHILIPS MP20 / GOLDWAY.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Philips / Goldway</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Philips%20Goldway" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo35.png" alt="Sensor SpO2 Adulto Tipo Hewlett Packard" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Hewlett Packard</div>
-        <div class="service-desc">Compatible con HEWLETT PACKARD / PHILIPS MP20. Específico para versiones con ficha redonda de 12 pines.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">HP / Philips (12 Pines)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20HP%2012%20Pines" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo36.png" alt="Sensor SpO2 Ped/Neo Ajustable Hewlett Packard" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Hewlett Packard</div>
-        <div class="service-desc">Compatible con HEWLETT PACKARD / PHILIPS que tengan asignada la ficha redonda de 12 pines.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">HP / Philips (12 Pines)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20HP%2012%20Pines" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo37.png" alt="Sensor SpO2 Ped/Neo Ajustable Masimo" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Corto Masimo</div>
-        <div class="service-desc">Terminal DB9 corta para interconectar con cables de extensión y prolongadores MASIMO.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo (DB9 Corto)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Masimo%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo38.png" alt="Sensor SpO2 Adulto Masimo" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Corto Masimo</div>
-        <div class="service-desc">Ficha DB9 corta para acoplar directo a prolongadores de oximetría con tecnología MASIMO.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo (DB9 Corto)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Masimo%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo39.png" alt="Sensor SpO2 Adulto Contec Original" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Contec Original</div>
-        <div class="service-desc">Compatible con monitores multiparamétricos CONTEC series CMS 6000 / 7000 / 8000 / 9000 Original.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec Classic</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Original" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo40.png" alt="Sensor SpO2 Broche Adulto Contec (Línea Nueva)" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Contec (Línea Nueva)</div>
-        <div class="service-desc">Cable largo reforzado. Diseñado específicamente para monitores CONTEC NEW de última generación.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (Línea Nueva)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo41.png" alt="Sensor SpO2 Ped/Neo Contec DB9 Corto" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Ped/Neo Contec Corto</div>
-        <div class="service-desc">Terminal DB9 corta para vinculación con cables prolongadores en equipos CONTEC.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (DB9 Corto)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Contec%20Corto" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo42.png" alt="Sensor SpO2 Broche Adulto Cardiotécnica" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Cardiotécnica</div>
-        <div class="service-desc">Ficha Redel premium de acople directo. Plena compatibilidad con monitor Cardiotécnica MA512.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Cardiotécnica</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Cardiotecnica" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo43.png" alt="Sensor SpO2 Broche Adulto Comen" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Comen</div>
-        <div class="service-desc">Equipado con ficha redonda de 12 pines. Compatible con monitores multiparámetro COMEN C50 / C80.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Comen (12 Pines)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Comen" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo44.png" alt="Sensor SpO2 Broche Adulto Bistos" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Bistos</div>
-        <div class="service-desc">Ficha DB9 con cable largo directo. Compatible con toda la línea de monitores BISTOS BT740 / BT770.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Bistos</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Bistos" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo45.png" alt="Sensor SpO2 Adulto Dongjiang" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Dongjiang</div>
-        <div class="service-desc">Cable largo de alta resistencia, terminación en ficha Redel. Compatible con monitor DONGJIANG PM200A.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Dongjiang</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Dongjiang" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo46.png" alt="Sensor SpO2 Adulto Soft Nonin" loading="lazy">
-        </div>
-        <div class="service-title">Sensor SpO2 Adulto Soft Tipo Nonin</div>
-        <div class="service-desc">Ficha DB9 corta para acoplar firmemente a cables prolongadores dedicados de oximetría NONIN.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Nonin (Soft)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Soft%20Tipo%20Nonin" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo47.png" alt="Sensor SpO2 Adulto/Neonatal Descartable YKD (Nellcor)" loading="lazy">
-        </div>
-        <div class="service-title">Sensores SpO2 Descartables YKD (Nellcor)</div>
-        <div class="service-desc">Pack por 10 unidades. Máxima higiene y adherencia médica. Compatible con equipos de tecnología NELLCOR.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Nellcor (Descartable)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Nellcor" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="oximetria">
-        <div class="producto-img-box">
-          <img src="img/spo48.png" alt="Sensor SpO2 Adulto/Neonatal Descartable YKD (Masimo)" loading="lazy">
-        </div>
-        <div class="service-title">Sensores SpO2 Descartables YKD (Masimo)</div>
-        <div class="service-desc">Pack por 10 unidades. Ficha DB9 para conexión segura sobre prolongadores MASIMO LNCS.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Masimo LNCS (Descartable)</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Masimo" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-    </div><!-- fin .services-grid oximetria -->
-
-<!-- ══════════════ ELECTROCARDIOGRAFÍA (ECG) ══════════════ -->
-<div class="categoria-title" data-cat="ecg">Electrocardiografía (Cables Paciente)</div>
-<div class="services-grid">
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg.png" alt="Cable Paciente ECG 3 o 5 Deriv - Ficha AAMI" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 3 y 5 Deriv (AAMI)</div>
-    <div class="service-desc">Excelente blindaje contra ruidos de línea. Compatible con: Mindray PM/MEC, Edan IM8, Contec, Cardiotécnica, Drager Vista 120.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">AAMI Estandar multiparamétrico</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Ficha%20AAMI" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg1.png" alt="Cable Paciente ECG 3 y 5 Deriv (Mindray/Philips)" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 3 y 5 Deriv (Línea Nueva)</div>
-    <div class="service-desc">Conexión dedicada estable. Compatible con: Mindray UMEC / IMEC / Beneview, Edan X Series, Philips, HP.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Philips / HP</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Mindray%20Philips%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg2.png" alt="Cable Paciente ECG 5 Deriv - Contec Línea Nueva" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv (Contec New)</div>
-    <div class="service-desc">Distribución blindada optimizada estructuralmente para los monitores Contec de última línea.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Contec (Línea Nueva)</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Contec%20New" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg3.png" alt="Cable Paciente ECG 5 Deriv - Bistos BT740/BT770" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv Bistos</div>
-    <div class="service-desc">Repuesto directo clínico original para monitorización avanzada en unidades Bistos BT740 / BT770.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Bistos</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Bistos" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg4.png" alt="Cable Paciente ECG 5 Deriv - Monitores Comen C50/C80" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv Comen</div>
-    <div class="service-desc">Cable blindado específico para captación y supresión de ruidos en monitores Comen C50 / C80.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Comen</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Comen" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg5.png" alt="Cable Paciente ECG 3 Deriv - Tipo FEAS" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 3 Deriv Tipo FEAS</div>
-    <div class="service-desc">Tríptico clásico de derivaciones de alta fidelidad, compatible plenamente con instrumental FEAS.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg6.png" alt="Cable Paciente ECG 5 Deriv - Tipo FEAS" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv Tipo FEAS</div>
-    <div class="service-desc">Configuración integral de 5 vías reforzadas para un trazado completo de derivaciones en sistemas FEAS.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Tipo%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg7.png" alt="Cable Paciente ECG 3 Deriv - GE B450/B650/B850" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 3 Deriv General Electric</div>
-    <div class="service-desc">Monitoreo y filtrado preciso de señal en equipos complejos de alta gama General Electric B450 / B650 / B850.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg8.png" alt="Cable Paciente ECG 5 Deriv - GE B450/B650/B850" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv General Electric</div>
-    <div class="service-desc">Arquitectura multicanal blindada para registros estables de 5 vías en General Electric B450 / B650 / B850.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg9.png" alt="Cable Troncal Multimed - Tipo Drager Infinity" loading="lazy"></div>
-    <div class="service-title">Cable Troncal Multimed Drager Infinity</div>
-    <div class="service-desc">Tronco principal modular premium de interconexión multiseñal diseñado para Drager Infinity.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity (Troncal)</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Troncal%20Multimed%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg10.png" alt="Cable Paciente ECG 5 Deriv Tipo Drager Infinity" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG 5 Deriv Drager Infinity</div>
-    <div class="service-desc">Latiguillo terminal directo de paciente acoplable de forma segura a la línea Drager Infinity.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg11.png" alt="Cable Paciente ECG Decapolar DB15" loading="lazy"></div>
-    <div class="service-title">Cable Paciente ECG Decapolar DB15</div>
-    <div class="service-desc">Ideal para Ergometría y Holter. Plena compatibilidad con sistemas: Cardiotécnica, Contec, Edan, Schiller, etc.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Ergometría / Holter Multimarca</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Decapolar%20DB15" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg12.png" alt="Cable Paciente ECG Decapolar Tipo Cardioprint" loading="lazy"></div>
-    <div class="service-title">Cable Paciente Decapolar Cardioprint</div>
-    <div class="service-desc">Repuesto diagnóstico de alta densidad, adaptado bajo especificaciones de electrocardiógrafos Cardioprint.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Cardioprint</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Cardioprint" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg13.png" alt="Cable Paciente ECG Decapolar Tipo Fukuda C110" loading="lazy"></div>
-    <div class="service-title">Cable Paciente Decapolar Fukuda C110</div>
-    <div class="service-desc">Terminales con blindaje estructural especial adaptado a electrocardiógrafos de diagnóstico Fukuda C110.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Fukuda C110</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg14.png" alt="Cable Paciente ECG Decapolar" loading="lazy"></div>
-    <div class="service-title">Cable Paciente Decapolar Ergometría</div>
-    <div class="service-desc">Ficha DB15 para Ergometría.</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">DB15</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg15.png" alt="Juego Pinzas ECG Adulto x4" loading="lazy"></div>
-    <div class="service-title">Juego Pinzas ECG Adulto x4</div>
-    <div class="service-desc">Resorte Metálico con tornillo de ajuste</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">ECG</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Juego%20de%20Pinzas%20ECG" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg16.png" alt="Juego Electrodos Precordiales Adulto x6" loading="lazy"></div>
-    <div class="service-title">Juego Electrodos Precordiales Adulto x6</div>
-    <div class="service-desc"></div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">ECG</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20electrodos%20pre%20cordiales" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg17.png" alt="Juego Pinzas ECG Pediatricas" loading="lazy"></div>
-    <div class="service-title">Juego Pinzas ECG Pediátricas x6</div>
-    <div class="service-desc">Resorte Metálico con tornillo de ajuste</div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">ECG</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-  <div class="service-card fade-up" data-cat="ecg">
-    <div class="producto-img-box"><img src="img/ecg18.png" alt="Juego Cables Holter" loading="lazy"></div>
-    <div class="service-title">Juego Cables Holter x7</div>
-    <div class="service-desc"></div>
-    <span class="service-tag" style="margin-bottom: var(--sp-2);">Holter</span>
-    <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">Consultar Stock</a>
-  </div>
-
-</div><!-- fin .services-grid -->
-    <!-- ══════════════ PRESIÓN NO INVASIVA (PNI) ══════════════ -->
-    <div class="categoria-title" data-cat="pni">Presión No Invasiva (PNI)</div>
-    <div class="services-grid">
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni.png" alt="Brazal PNI Adulto 1 Vía (27-35cm) – Con Conector Metálico" loading="lazy">
-        </div>
-        <div class="service-title">Brazal PNI Adulto 1 Vía (27-35cm)</div>
-        <div class="service-desc">Manguito de presión no invasiva adulto con conector metálico estándar. Material de alta resistencia y fácil limpieza.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Conector Metálico</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Adulto%201%20Via%20(27-35cm)" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni1.png" alt="Brazal Obeso XL 1 Vía (33-47cm)" loading="lazy">
-        </div>
-        <div class="service-title">Brazal Obeso XL 1 Vía (33-47cm)</div>
-        <div class="service-desc">Manguito PNI dimensionado para pacientes obesos, libre de látex y diseñado para uso clínico intensivo en monitorización.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Tamaño XL</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20Obeso%20XL%201%20Via" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni2.png" alt="Brazal Obeso XXL 1 Vía (42-54cm)" loading="lazy">
-        </div>
-        <div class="service-title">Brazal Obeso XXL 1 Vía (42-54cm)</div>
-        <div class="service-desc">Manguito de presión no invasiva para rango extendido de obesidad, garantizando lecturas estables y seguras.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Tamaño XXL</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20Obeso%20XXL%201%20Via" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni3.png" alt="Brazal PNI Pediátrico / Infante / Neonatal" loading="lazy">
-        </div>
-        <div class="service-title">Brazal PNI Pediátrico / Infante / Neo</div>
-        <div class="service-desc">Manguitos PNI adaptados para las diferentes etapas pediátricas y neonatales, asegurando la presión exacta.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Línea Ped/Neo</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Pediatrico%20/%20Infante%20/%20Neonatal" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni4.png" alt="Brazal PNI Adulto (27-35cm) 2 Vías – Compatible con GE B450" loading="lazy">
-        </div>
-        <div class="service-title">Brazal PNI Adulto 2 Vías (GE B450)</div>
-        <div class="service-desc">Manguito de presión doble vía (27-35cm) diseñado bajo especificaciones directas para monitores General Electric B450.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">GE B450</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Adulto%202%20Vias%20GE%20B450" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="pni">
-        <div class="producto-img-box">
-          <img src="img/pni5.png" alt="Tubo PNI 2,5mts (Doble Acople Hembra Estándar)" loading="lazy">
-        </div>
-        <div class="service-title">Tubo PNI 2,5mts (Doble Acople Hembra)</div>
-        <div class="service-desc">Manguera de extensión flexible. Compatible con Mindray PM/MEC, Edan IM8, Contec, Cardiotécnica y Drager Vista 120.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Contec</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Tubo%20PNI%202.5mts%20Doble%20Acople%20Hembra" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-    </div><!-- fin .services-grid pni -->
-
-    <!-- ══════════════ TEMPERATURA ══════════════ -->
-    <div class="categoria-title" data-cat="temperatura">Temperatura (Sensores Clínicos)</div>
-    <div class="services-grid">
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp1.png" alt="Sensor Temperatura Piel" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Piel</div>
-        <div class="service-desc">Sensor cutáneo de superficie. Compatible con Mindray PM9000/MEC, Edan IM8, Contec, Choice y Cardiotécnica.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Contec</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Ficha%20Redel" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp2.png" alt="Sensor Temperatura Rectal" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Rectal</div>
-        <div class="service-desc">Sensor esofágico/rectal blindado de gran estabilidad. Compatible con Mindray PM9000/MEC, Edan IM8 y Contec.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray / Edan / Contec</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Rectal%20Ficha%20Redel" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp3.png" alt="Sensor Temperatura Piel" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Piel</div>
-        <div class="service-desc">Termistor cutáneo de alta sensibilidad rápida. Compatible con Mindray UMEC/iMEC/Beneview, Philips y Edan X Series.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray UMEC / Philips / Edan X</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp4.png" alt="Sensor Temperatura Rectal" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Rectal</div>
-        <div class="service-desc">Sensor intracavitario esofágico/rectal preciso. Compatible con Mindray UMEC/MEC/Beneview, Philips y Edan X Series.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Mindray UMEC / Philips / Edan X</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Rectal%20Linea%20Nueva" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp5.png" alt="Sensor Temperatura Piel – Drager Infinity" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Piel (Drager Infinity)</div>
-        <div class="service-desc">Sensor de temperatura de piel con calibración térmica específica de fábrica para la línea Drager Infinity.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Drager Infinity</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Drager%20Infinity" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp6.png" alt="Sensor Temperatura Piel – FEAS" loading="lazy">
-        </div>
-        <div class="service-title">Sensor Temperatura Piel (FEAS)</div>
-        <div class="service-desc">Componente de medición de temperatura de superficie compatible al 100% con los monitores de marca FEAS.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">FEAS</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20FEAS" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="temperatura">
-        <div class="producto-img-box">
-          <img src="img/temp7.png" alt="Cable Temperatura Piel – GE B450/B650/B850" loading="lazy">
-        </div>
-        <div class="service-title">Cable Temperatura Piel (General Electric)</div>
-        <div class="service-desc">Cable troncal intermediario de temperatura de piel para la familia de monitores General Electric B450/B650/B850.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">General Electric</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Temperatura%20Piel%20General%20Electric" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
+  <nav class="mobile-menu" id="mmenu" aria-label="Menú"><a href="index.html">Inicio</a><a href="equipos.html">Equipamiento</a><a href="tienda.html" aria-current="page">Insumos</a><a href="servicios.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<div class="wrap crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span>Insumos</div>
+
+<section class="hero-light">
+  <div class="wrap">
+    <div>
+      <h1>Accesorios e insumos</h1>
+      <p>Sensores, cables y accesorios compatibles con las principales marcas de monitores.</p>
+      <div class="actions"><a class="btn btn-primary" href="#catalogo">Ver catálogo</a><a class="btn btn-outline" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20accesorios." target="_blank" rel="noopener">Consultar disponibilidad</a></div>
     </div>
-
-    <!-- ══════════════ ELECTROCIRUGÍA ══════════════ -->
-    <div class="categoria-title" data-cat="electrobisturi">Electrocirugía (Cables de Electrobisturí)</div>
-    <div class="services-grid">
-
-      <div class="service-card fade-up" data-cat="electrobisturi">
-        <div class="producto-img-box">
-          <img src="img/plug2.png" alt="Cable Electrobisturí – Ficha Plug" loading="lazy">
-        </div>
-        <div class="service-title">Cable Electrobisturí (Ficha Plug)</div>
-        <div class="service-desc">Cable reforzado para conexión de placa paciente reutilizable, equipado con un conector estándar tipo Plug.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Ficha Plug</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Electrobisturi%20Ficha%20Plug" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-      <div class="service-card fade-up" data-cat="electrobisturi">
-        <div class="producto-img-box">
-          <img src="img/plug1.png" alt="Cable Electrobisturí – Ficha Valleylab" loading="lazy">
-        </div>
-        <div class="service-title">Cable Electrobisturí (Tipo Valleylab)</div>
-        <div class="service-desc">Cable de alta seguridad dieléctrica y aislamiento reforzado, compatible con generadores quirúrgicos Valleylab.</div>
-        <span class="service-tag" style="margin-bottom: var(--sp-2);">Tipo Valleylab</span>
-        <a href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Electrobisturi%20Tipo%20Valleylab" class="btn-primary" target="_blank" rel="noopener" style="justify-content: center; width: 100%;">
-          Consultar Stock
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="cta">
-  <div class="cta-inner">
-    <div class="section-label">¿Busca un componente específico?</div>
-    <h2 class="section-title">Importamos y gestionamos repuestos a medida</h2>
-    <p class="cta-sub">Si el accesorio o consumible que necesita no figura en el catálogo, nuestro equipo de ingeniería lo localiza y verifica su compatibilidad con su equipo.</p>
-    <div class="cta-actions multi">
-      <a href="https://wa.me/5493764374545?text=Hola%2C%20busco%20un%20accesorio%20o%20repuesto%20espec%C3%ADfico." class="btn-white beam" target="_blank" rel="noopener">
-        Solicitar repuesto especial
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
+    <div class="art" aria-hidden="true">
+      <div><img src="img/spo2.png" alt=""></div>
+      <div><img src="img/ecg.png" alt=""></div>
+      <div><img src="img/pni.png" alt=""></div>
+      <div><img src="img/temp1.png" alt=""></div>
     </div>
   </div>
 </section>
+<section class="block" id="catalogo">
+  <div class="wrap">
+    <div class="head-row"><h2>Catálogo</h2></div>
+    <div class="pills" role="group" aria-label="Filtrar por categoría"><button class="pill" type="button" data-f="todos" aria-pressed="true">Todos<small>63</small></button><button class="pill" type="button" data-f="oximetria" aria-pressed="false">Oximetría (SpO2)<small>29</small></button><button class="pill" type="button" data-f="ecg" aria-pressed="false">Electrocardiografía<small>19</small></button><button class="pill" type="button" data-f="pni" aria-pressed="false">Presión no invasiva<small>6</small></button><button class="pill" type="button" data-f="temperatura" aria-pressed="false">Temperatura<small>7</small></button><button class="pill" type="button" data-f="electrobisturi" aria-pressed="false">Electrocirugía<small>2</small></button></div>
+    <div class="group" data-g="oximetria"><h2 class="group-title">Oximetría (SpO2)</h2><div class="grid4"><article class="item"><div class="ph"><img src="img/spo2.png" alt="Sensor SpO2 Broche Adulto - Ficha Redel" loading="lazy"></div><h3>Sensor SpO2 Broche Adulto - Ficha Redel</h3><div class="tag">Mindray / Edan / Leex / Drager</div><p>Cable largo directo. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN LEEX IM8 / IM70 / M3 / DRAGER VISTA.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20Redel%20Compatible%20con%20Mindray%2FEdan%2FDrager" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo21.png" alt="Sensor SpO2 Ped/Neo Ficha Redel" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Ficha Redel</h3><div class="tag">Mindray / Edan / Leex / Drager</div><p>Cable largo, conexión directa. Compatible con: MINDRAY PM9000 / MEC / VS800. EDAN - LEEX IM8 / IM70 / M3 / DRAGER VISTA.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ficha%20Redel" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo22.png" alt="Sensor SpO2 Broche Adulto Ficha DB9" loading="lazy"></div><h3>Sensor SpO2 Broche Adulto Ficha DB9</h3><div class="tag">Multimarca Universal</div><p>Cable corto para conectar a prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Ficha%20DB9" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo23.png" alt="Sensor SpO2 Ped/Neo Ajustable Ficha DB9" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Ajustable Ficha DB9</h3><div class="tag">Multimarca Universal</div><p>Cable corto para prolongador. Compatible con: MINDRAY, EDAN LEEX, FEAS, BCI, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN, PHILIPS, DRAGER.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Ajustable%20Ficha%20DB9" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo24.png" alt="Sensor SpO2 Broche Adulto - Línea Nueva" loading="lazy"></div><h3>Sensor SpO2 Broche Adulto - Línea Nueva</h3><div class="tag">Mindray (Nueva Línea)</div><p>Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Broche%20Adulto%20Mindray%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo25.png" alt="Sensor SpO2 Ped/Neo - Línea Nueva" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo - Línea Nueva</h3><div class="tag">Mindray (Nueva Línea)</div><p>Cable largo, conexión directa. Compatible con: MINDRAY BENEVIEW / UMEC / IMEC / BENEVISION.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Mindray%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo26.png" alt="Sensor SpO2 Pediátrico DB9 Corto" loading="lazy"></div><h3>Sensor SpO2 Pediátrico DB9 Corto</h3><div class="tag">Multimarca Corto</div><p>Para interconectar con prolongadores. Compatible con: MINDRAY, EDAN LEEX, FEAS, NELLCOR, CHOICE CARDIOTECNICA, BISTOS, COMEN.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Pediatrico%20DB9%20Corto" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo27.png" alt="Sensor SpO2 Broche Adulto Tipo FEAS" loading="lazy"></div><h3>Sensor SpO2 Broche Adulto Tipo FEAS</h3><div class="tag">FEAS</div><p>Cable largo, conexión directa. Específico para compatibilidad con sistemas e instrumental médico FEAS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Tipo%20FEAS" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo28.png" alt="Sensor SpO2 Ped/Neo Ajustable Tipo FEAS" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Ajustable Tipo FEAS</h3><div class="tag">FEAS</div><p>Cable largo, conexión directa. Diseñado para control neonatal y pediátrico en sistemas de la línea FEAS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Tipo%20FEAS" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo29.png" alt="Sensor SpO2 Adulto General Electric" loading="lazy"></div><h3>Sensor SpO2 Adulto General Electric</h3><div class="tag">General Electric / Ohmeda</div><p>Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Equipado con tecnología integrada Ohmeda.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20General%20Electric" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo30.png" alt="Sensor SpO2 Ped/Neo General Electric" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo General Electric</h3><div class="tag">General Electric / Ohmeda</div><p>Compatible con: GENERAL ELECTRIC B125 / B450 / B650 / B850. Con soporte y tecnología Ohmeda.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20General%20Electric" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo31.png" alt="Sensor SpO2 Adulto Drager Infinity" loading="lazy"></div><h3>Sensor SpO2 Adulto Drager Infinity</h3><div class="tag">Drager Infinity</div><p>Sensor de oximetría directo de alta fidelidad para sistemas DRAGER INFINITY.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Drager%20Infinity" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo32.png" alt="Sensor SpO2 Ped/Neo Drager Infinity" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Drager Infinity</h3><div class="tag">Drager Infinity</div><p>Manguito ajustable de cable largo para monitorización pediátrica/neonatal en DRAGER INFINITY.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Drager%20Infinity" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo33.png" alt="Sensor SpO2 Adulto Philips / Goldway" loading="lazy"></div><h3>Sensor SpO2 Adulto Philips / Goldway</h3><div class="tag">Philips / Goldway</div><p>Sensor robusto tipo broche compatible con monitores PHILIPS MP20 y líneas GOLDWAY.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Philips%20Goldway" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo34.png" alt="Sensor SpO2 Ped/Neo Philips / Goldway" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Philips / Goldway</h3><div class="tag">Philips / Goldway</div><p>Modelo suave ajustable para pacientes pediátricos en entornos PHILIPS MP20 / GOLDWAY.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Philips%20Goldway" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo35.png" alt="Sensor SpO2 Adulto Hewlett Packard" loading="lazy"></div><h3>Sensor SpO2 Adulto Hewlett Packard</h3><div class="tag">HP / Philips (12 Pines)</div><p>Compatible con HEWLETT PACKARD / PHILIPS MP20. Específico para versiones con ficha redonda de 12 pines.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20HP%2012%20Pines" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo36.png" alt="Sensor SpO2 Ped/Neo Hewlett Packard" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Hewlett Packard</h3><div class="tag">HP / Philips (12 Pines)</div><p>Compatible con HEWLETT PACKARD / PHILIPS que tengan asignada la ficha redonda de 12 pines.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20HP%2012%20Pines" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo37.png" alt="Sensor SpO2 Ped/Neo Corto Masimo" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Corto Masimo</h3><div class="tag">Masimo (DB9 Corto)</div><p>Terminal DB9 corta para interconectar con cables de extensión y prolongadores MASIMO.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Masimo%20Corto" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo38.png" alt="Sensor SpO2 Adulto Corto Masimo" loading="lazy"></div><h3>Sensor SpO2 Adulto Corto Masimo</h3><div class="tag">Masimo (DB9 Corto)</div><p>Ficha DB9 corta para acoplar directo a prolongadores de oximetría con tecnología MASIMO.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Masimo%20Corto" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo39.png" alt="Sensor SpO2 Adulto Contec Original" loading="lazy"></div><h3>Sensor SpO2 Adulto Contec Original</h3><div class="tag">Contec Classic</div><p>Compatible con monitores multiparamétricos CONTEC series CMS 6000 / 7000 / 8000 / 9000 Original.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Original" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo40.png" alt="Sensor SpO2 Adulto Contec (Línea Nueva)" loading="lazy"></div><h3>Sensor SpO2 Adulto Contec (Línea Nueva)</h3><div class="tag">Contec (Línea Nueva)</div><p>Cable largo reforzado. Diseñado específicamente para monitores CONTEC NEW de última generación.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Contec%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo41.png" alt="Sensor SpO2 Ped/Neo Contec Corto" loading="lazy"></div><h3>Sensor SpO2 Ped/Neo Contec Corto</h3><div class="tag">Contec (DB9 Corto)</div><p>Terminal DB9 corta para vinculación con cables prolongadores en equipos CONTEC.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Ped%2FNeo%20Contec%20Corto" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo42.png" alt="Sensor SpO2 Adulto Cardiotécnica" loading="lazy"></div><h3>Sensor SpO2 Adulto Cardiotécnica</h3><div class="tag">Cardiotécnica</div><p>Ficha Redel premium de acople directo. Plena compatibilidad con monitor Cardiotécnica MA512.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Cardiotecnica" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo43.png" alt="Sensor SpO2 Adulto Comen" loading="lazy"></div><h3>Sensor SpO2 Adulto Comen</h3><div class="tag">Comen (12 Pines)</div><p>Equipado con ficha redonda de 12 pines. Compatible con monitores multiparámetro COMEN C50 / C80.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Comen" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo44.png" alt="Sensor SpO2 Adulto Bistos" loading="lazy"></div><h3>Sensor SpO2 Adulto Bistos</h3><div class="tag">Bistos</div><p>Ficha DB9 con cable largo directo. Compatible con toda la línea de monitores BISTOS BT740 / BT770.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Bistos" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo45.png" alt="Sensor SpO2 Adulto Dongjiang" loading="lazy"></div><h3>Sensor SpO2 Adulto Dongjiang</h3><div class="tag">Dongjiang</div><p>Cable largo de alta resistencia, terminación en ficha Redel. Compatible con monitor DONGJIANG PM200A.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Adulto%20Dongjiang" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo46.png" alt="Sensor SpO2 Adulto Soft Tipo Nonin" loading="lazy"></div><h3>Sensor SpO2 Adulto Soft Tipo Nonin</h3><div class="tag">Nonin (Soft)</div><p>Ficha DB9 corta para acoplar firmemente a cables prolongadores dedicados de oximetría NONIN.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20SpO2%20Soft%20Tipo%20Nonin" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo47.png" alt="Sensores SpO2 Descartables YKD (Nellcor)" loading="lazy"></div><h3>Sensores SpO2 Descartables YKD (Nellcor)</h3><div class="tag">Nellcor (Descartable)</div><p>Pack por 10 unidades. Máxima higiene y adherencia médica. Compatible con equipos de tecnología NELLCOR.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Nellcor" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/spo48.png" alt="Sensores SpO2 Descartables YKD (Masimo)" loading="lazy"></div><h3>Sensores SpO2 Descartables YKD (Masimo)</h3><div class="tag">Masimo LNCS (Descartable)</div><p>Pack por 10 unidades. Ficha DB9 para conexión segura sobre prolongadores MASIMO LNCS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Pack%2010x%20Sensores%20Descartables%20Masimo" target="_blank" rel="noopener">Consultar disponibilidad →</a></article></div></div><div class="group" data-g="ecg"><h2 class="group-title">Electrocardiografía</h2><div class="grid4"><article class="item"><div class="ph"><img src="img/ecg.png" alt="Cable Paciente ECG 3 y 5 Deriv (AAMI)" loading="lazy"></div><h3>Cable Paciente ECG 3 y 5 Deriv (AAMI)</h3><div class="tag">AAMI Estandar multiparamétrico</div><p>Excelente blindaje contra ruidos de línea. Compatible con: Mindray PM/MEC, Edan IM8, Contec, Cardiotécnica, Drager Vista 120.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Ficha%20AAMI" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg1.png" alt="Cable Paciente ECG 3 y 5 Deriv (Línea Nueva)" loading="lazy"></div><h3>Cable Paciente ECG 3 y 5 Deriv (Línea Nueva)</h3><div class="tag">Mindray / Edan / Philips / HP</div><p>Conexión dedicada estable. Compatible con: Mindray UMEC / IMEC / Beneview, Edan X Series, Philips, HP.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Mindray%20Philips%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg2.png" alt="Cable Paciente ECG 5 Deriv (Contec New)" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv (Contec New)</h3><div class="tag">Contec (Línea Nueva)</div><p>Distribución blindada optimizada estructuralmente para los monitores Contec de última línea.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Contec%20New" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg3.png" alt="Cable Paciente ECG 5 Deriv Bistos" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv Bistos</h3><div class="tag">Bistos</div><p>Repuesto directo clínico original para monitorización avanzada en unidades Bistos BT740 / BT770.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Bistos" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg4.png" alt="Cable Paciente ECG 5 Deriv Comen" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv Comen</h3><div class="tag">Comen</div><p>Cable blindado específico para captación y supresión de ruidos en monitores Comen C50 / C80.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Comen" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg5.png" alt="Cable Paciente ECG 3 Deriv Tipo FEAS" loading="lazy"></div><h3>Cable Paciente ECG 3 Deriv Tipo FEAS</h3><div class="tag">FEAS</div><p>Tríptico clásico de derivaciones de alta fidelidad, compatible plenamente con instrumental FEAS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20Tipo%20FEAS" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg6.png" alt="Cable Paciente ECG 5 Deriv Tipo FEAS" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv Tipo FEAS</h3><div class="tag">FEAS</div><p>Configuración integral de 5 vías reforzadas para un trazado completo de derivaciones en sistemas FEAS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Tipo%20FEAS" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg7.png" alt="Cable Paciente ECG 3 Deriv General Electric" loading="lazy"></div><h3>Cable Paciente ECG 3 Deriv General Electric</h3><div class="tag">General Electric</div><p>Monitoreo y filtrado preciso de señal en equipos complejos de alta gama General Electric B450 / B650 / B850.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%203%20Deriv%20General%20Electric" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg8.png" alt="Cable Paciente ECG 5 Deriv General Electric" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv General Electric</h3><div class="tag">General Electric</div><p>Arquitectura multicanal blindada para registros estables de 5 vías en General Electric B450 / B650 / B850.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20General%20Electric" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg9.png" alt="Cable Troncal Multimed Drager Infinity" loading="lazy"></div><h3>Cable Troncal Multimed Drager Infinity</h3><div class="tag">Drager Infinity (Troncal)</div><p>Tronco principal modular premium de interconexión multiseñal diseñado para Drager Infinity.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Troncal%20Multimed%20Drager%20Infinity" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg10.png" alt="Cable Paciente ECG 5 Deriv Drager Infinity" loading="lazy"></div><h3>Cable Paciente ECG 5 Deriv Drager Infinity</h3><div class="tag">Drager Infinity</div><p>Latiguillo terminal directo de paciente acoplable de forma segura a la línea Drager Infinity.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%205%20Deriv%20Drager%20Infinity" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg11.png" alt="Cable Paciente ECG Decapolar DB15" loading="lazy"></div><h3>Cable Paciente ECG Decapolar DB15</h3><div class="tag">Ergometría / Holter Multimarca</div><p>Ideal para Ergometría y Holter. Plena compatibilidad con sistemas: Cardiotécnica, Contec, Edan, Schiller, etc.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20ECG%20Decapolar%20DB15" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg12.png" alt="Cable Paciente Decapolar Cardioprint" loading="lazy"></div><h3>Cable Paciente Decapolar Cardioprint</h3><div class="tag">Cardioprint</div><p>Repuesto diagnóstico de alta densidad, adaptado bajo especificaciones de electrocardiógrafos Cardioprint.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Cardioprint" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg13.png" alt="Cable Paciente Decapolar Fukuda C110" loading="lazy"></div><h3>Cable Paciente Decapolar Fukuda C110</h3><div class="tag">Fukuda C110</div><p>Terminales con blindaje estructural especial adaptado a electrocardiógrafos de diagnóstico Fukuda C110.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg14.png" alt="Cable Paciente Decapolar Ergometría" loading="lazy"></div><h3>Cable Paciente Decapolar Ergometría</h3><div class="tag">DB15</div><p>Ficha DB15 para Ergometría.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg15.png" alt="Juego Pinzas ECG Adulto x4" loading="lazy"></div><h3>Juego Pinzas ECG Adulto x4</h3><div class="tag">ECG</div><p>Resorte Metálico con tornillo de ajuste</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Juego%20de%20Pinzas%20ECG" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg16.png" alt="Juego Electrodos Precordiales Adulto x6" loading="lazy"></div><h3>Juego Electrodos Precordiales Adulto x6</h3><div class="tag">ECG</div><p></p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20electrodos%20pre%20cordiales" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg17.png" alt="Juego Pinzas ECG Pediátricas x6" loading="lazy"></div><h3>Juego Pinzas ECG Pediátricas x6</h3><div class="tag">ECG</div><p>Resorte Metálico con tornillo de ajuste</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/ecg18.png" alt="Juego Cables Holter x7" loading="lazy"></div><h3>Juego Cables Holter x7</h3><div class="tag">Holter</div><p></p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Paciente%20Decapolar%20Fukuda%20C110" target="_blank" rel="noopener">Consultar disponibilidad →</a></article></div></div><div class="group" data-g="pni"><h2 class="group-title">Presión no invasiva</h2><div class="grid4"><article class="item"><div class="ph"><img src="img/pni.png" alt="Brazal PNI Adulto 1 Vía (27-35cm)" loading="lazy"></div><h3>Brazal PNI Adulto 1 Vía (27-35cm)</h3><div class="tag">Conector Metálico</div><p>Manguito de presión no invasiva adulto con conector metálico estándar. Material de alta resistencia y fácil limpieza.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Adulto%201%20Via%20(27-35cm)" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/pni1.png" alt="Brazal Obeso XL 1 Vía (33-47cm)" loading="lazy"></div><h3>Brazal Obeso XL 1 Vía (33-47cm)</h3><div class="tag">Tamaño XL</div><p>Manguito PNI dimensionado para pacientes obesos, libre de látex y diseñado para uso clínico intensivo en monitorización.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20Obeso%20XL%201%20Via" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/pni2.png" alt="Brazal Obeso XXL 1 Vía (42-54cm)" loading="lazy"></div><h3>Brazal Obeso XXL 1 Vía (42-54cm)</h3><div class="tag">Tamaño XXL</div><p>Manguito de presión no invasiva para rango extendido de obesidad, garantizando lecturas estables y seguras.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20Obeso%20XXL%201%20Via" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/pni3.png" alt="Brazal PNI Pediátrico / Infante / Neo" loading="lazy"></div><h3>Brazal PNI Pediátrico / Infante / Neo</h3><div class="tag">Línea Ped/Neo</div><p>Manguitos PNI adaptados para las diferentes etapas pediátricas y neonatales, asegurando la presión exacta.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Pediatrico%20/%20Infante%20/%20Neonatal" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/pni4.png" alt="Brazal PNI Adulto 2 Vías (GE B450)" loading="lazy"></div><h3>Brazal PNI Adulto 2 Vías (GE B450)</h3><div class="tag">GE B450</div><p>Manguito de presión doble vía (27-35cm) diseñado bajo especificaciones directas para monitores General Electric B450.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Brazal%20PNI%20Adulto%202%20Vias%20GE%20B450" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/pni5.png" alt="Tubo PNI 2,5mts (Doble Acople Hembra)" loading="lazy"></div><h3>Tubo PNI 2,5mts (Doble Acople Hembra)</h3><div class="tag">Mindray / Edan / Contec</div><p>Manguera de extensión flexible. Compatible con Mindray PM/MEC, Edan IM8, Contec, Cardiotécnica y Drager Vista 120.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Tubo%20PNI%202.5mts%20Doble%20Acople%20Hembra" target="_blank" rel="noopener">Consultar disponibilidad →</a></article></div></div><div class="group" data-g="temperatura"><h2 class="group-title">Temperatura</h2><div class="grid4"><article class="item"><div class="ph"><img src="img/temp1.png" alt="Sensor Temperatura Piel" loading="lazy"></div><h3>Sensor Temperatura Piel</h3><div class="tag">Mindray / Edan / Contec</div><p>Sensor cutáneo de superficie. Compatible con Mindray PM9000/MEC, Edan IM8, Contec, Choice y Cardiotécnica.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Ficha%20Redel" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp2.png" alt="Sensor Temperatura Rectal" loading="lazy"></div><h3>Sensor Temperatura Rectal</h3><div class="tag">Mindray / Edan / Contec</div><p>Sensor esofágico/rectal blindado de gran estabilidad. Compatible con Mindray PM9000/MEC, Edan IM8 y Contec.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Rectal%20Ficha%20Redel" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp3.png" alt="Sensor Temperatura Piel" loading="lazy"></div><h3>Sensor Temperatura Piel</h3><div class="tag">Mindray UMEC / Philips / Edan X</div><p>Termistor cutáneo de alta sensibilidad rápida. Compatible con Mindray UMEC/iMEC/Beneview, Philips y Edan X Series.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp4.png" alt="Sensor Temperatura Rectal" loading="lazy"></div><h3>Sensor Temperatura Rectal</h3><div class="tag">Mindray UMEC / Philips / Edan X</div><p>Sensor intracavitario esofágico/rectal preciso. Compatible con Mindray UMEC/MEC/Beneview, Philips y Edan X Series.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Rectal%20Linea%20Nueva" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp5.png" alt="Sensor Temperatura Piel (Drager Infinity)" loading="lazy"></div><h3>Sensor Temperatura Piel (Drager Infinity)</h3><div class="tag">Drager Infinity</div><p>Sensor de temperatura de piel con calibración térmica específica de fábrica para la línea Drager Infinity.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20Drager%20Infinity" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp6.png" alt="Sensor Temperatura Piel (FEAS)" loading="lazy"></div><h3>Sensor Temperatura Piel (FEAS)</h3><div class="tag">FEAS</div><p>Componente de medición de temperatura de superficie compatible al 100% con los monitores de marca FEAS.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Sensor%20Temperatura%20Piel%20FEAS" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/temp7.png" alt="Cable Temperatura Piel (General Electric)" loading="lazy"></div><h3>Cable Temperatura Piel (General Electric)</h3><div class="tag">General Electric</div><p>Cable troncal intermediario de temperatura de piel para la familia de monitores General Electric B450/B650/B850.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Temperatura%20Piel%20General%20Electric" target="_blank" rel="noopener">Consultar disponibilidad →</a></article></div></div><div class="group" data-g="electrobisturi"><h2 class="group-title">Electrocirugía</h2><div class="grid4"><article class="item"><div class="ph"><img src="img/plug2.png" alt="Cable Electrobisturí (Ficha Plug)" loading="lazy"></div><h3>Cable Electrobisturí (Ficha Plug)</h3><div class="tag">Ficha Plug</div><p>Cable reforzado para conexión de placa paciente reutilizable, equipado con un conector estándar tipo Plug.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Electrobisturi%20Ficha%20Plug" target="_blank" rel="noopener">Consultar disponibilidad →</a></article><article class="item"><div class="ph"><img src="img/plug1.png" alt="Cable Electrobisturí (Tipo Valleylab)" loading="lazy"></div><h3>Cable Electrobisturí (Tipo Valleylab)</h3><div class="tag">Tipo Valleylab</div><p>Cable de alta seguridad dieléctrica y aislamiento reforzado, compatible con generadores quirúrgicos Valleylab.</p><a class="ask" href="https://wa.me/5493764374545?text=Hola%20MediSync!%20Quiero%20consultar%20por%20el%20Cable%20Electrobisturi%20Tipo%20Valleylab" target="_blank" rel="noopener">Consultar disponibilidad →</a></article></div></div>
+    <p class="note">¿No encuentra el modelo que necesita? <a href="https://wa.me/5493764374545?text=Hola%2C%20busco%20un%20accesorio%20que%20no%20est%C3%A1%20en%20el%20cat%C3%A1logo." target="_blank" rel="noopener">Consúltenos</a> y verificamos la compatibilidad con su equipo.</p>
+  </div>
+</section>
+<section class="block tinted cta"><div class="wrap"><h2>¿Busca un repuesto específico?</h2><p>Si el accesorio o consumible que necesita no figura en el catálogo, nuestro equipo de ingeniería lo localiza y verifica su compatibilidad.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/5493764374545?text=Hola%2C%20busco%20un%20repuesto%20espec%C3%ADfico." target="_blank" rel="noopener">Solicitar repuesto</a><a class="btn btn-outline" href="contacto.html">Ir al formulario</a></div></div></section>
 
-<script src="componentes.js"></script>
-<script src="cult-effects.js" defer></script>
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo-white.png" alt="MediSync Ingeniería Clínica">
+      <p>Equipamiento médico, accesorios e insumos, y servicio técnico de ingeniería clínica para las instituciones de salud de Misiones y el NEA.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/medi-sync-arg" target="_blank" rel="noopener" aria-label="MediSync en LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/medi.sync" target="_blank" rel="noopener" aria-label="MediSync en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3>Soluciones</h3>
+      <ul>
+        <li><a href="equipos.html">Equipamiento médico</a></li>
+        <li><a href="equipos.html#ecografos">Ecógrafos Mindray y Esaote</a></li>
+        <li><a href="tienda.html">Accesorios e insumos</a></li>
+        <li><a href="servicios.html">Servicio técnico</a></li>
+        <li><a href="servicios.html#planes">Planes de mantenimiento</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="https://wa.me/5493764374545" target="_blank" rel="noopener">+54 9 376 437-4545</a></li>
+        <li>+54 9 376 463-9426</li>
+        <li>medisync.ar@gmail.com</li>
+        <li>Posadas, Misiones, Argentina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 MediSync Ingeniería Clínica</span>
+    <span>Cobertura en Misiones y el NEA</span>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/5493764374545?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20MediSync." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.66 9.93L4 44l10.3-2.62A19.9 19.9 0 0024 44c11 0 20-9 20-20S35 4 24 4zm0 36.4a16.3 16.3 0 01-8.3-2.27l-.6-.35-6.1 1.56 1.62-5.9-.38-.6A16.4 16.4 0 1124 40.4zm9-12.26c-.5-.25-2.9-1.43-3.35-1.59-.44-.16-.76-.24-1.08.25-.32.5-1.26 1.59-1.54 1.92-.28.32-.57.36-1.06.12a13.3 13.3 0 01-3.9-2.41 14.6 14.6 0 01-2.7-3.36c-.28-.5 0-.76.21-1.01.2-.22.5-.57.74-.86.25-.28.33-.5.5-.83.16-.32.08-.61-.04-.86-.12-.25-1.08-2.62-1.48-3.58-.39-.94-.79-.81-1.08-.83l-.92-.01c-.32 0-.85.12-1.3.61s-1.7 1.65-1.7 4.02 1.74 4.66 1.98 4.99 3.42 5.22 8.28 7.32c1.09.47 1.94.75 2.6.96 1.1.35 2.1.3 2.88.18.88-.13 2.7-1.1 3.09-2.17.38-1.06.38-1.97.26-2.16-.12-.19-.44-.31-.92-.55z"/></svg></a>
 <script>
-  // Filtro de productos por categoría (data-cat) — funciona con la estructura corregida arriba
-  document.addEventListener('DOMContentLoaded', function () {
-    var botones = document.querySelectorAll('.btn-filtro');
-    var categorias = document.querySelectorAll('.categoria-title');
-    var subcategorias = document.querySelectorAll('.subcategoria-title');
-    var tarjetas = document.querySelectorAll('.service-card');
-
-    botones.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var filtro = btn.getAttribute('data-filter');
-
-        botones.forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-
-        tarjetas.forEach(function (card) {
-          var coincide = filtro === 'todos' || card.getAttribute('data-cat') === filtro;
-          card.classList.toggle('oculto', !coincide);
-        });
-
-        categorias.forEach(function (cat) {
-          var coincide = filtro === 'todos' || cat.getAttribute('data-cat') === filtro;
-          cat.classList.toggle('oculto', !coincide);
-        });
-
-        subcategorias.forEach(function (sub) {
-          var coincide = filtro === 'todos' || sub.getAttribute('data-cat') === filtro;
-          sub.classList.toggle('oculto', !coincide);
-        });
-      });
-    });
-  });
+(function () {
+  /* Cada página nueva arranca arriba (al volver con "Atrás" se respeta la posición) */
+  function top() {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!location.hash && (!n || n.type !== 'back_forward')) window.scrollTo(0, 0);
+  }
+  top(); window.addEventListener('load', function () { top(); setTimeout(top, 80); });
+  var b = document.querySelector('.menu-btn'), m = document.getElementById('mmenu');
+  b.addEventListener('click', function () { var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+})();
+</script>
+<script>
+(function () {
+  var pills = document.querySelectorAll('.pill'), groups = document.querySelectorAll('.group');
+  pills.forEach(function (p) { p.addEventListener('click', function () {
+    var f = p.dataset.f;
+    pills.forEach(function (x) { x.setAttribute('aria-pressed', String(x === p)); });
+    groups.forEach(function (g) { g.hidden = !(f === 'todos' || g.dataset.g === f); });
+  }); });
+})();
 </script>
 </body>
 </html>
