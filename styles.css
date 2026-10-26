@@ -344,7 +344,8 @@ footer ul { gap: 6px; }
 }
 
 /* Logos de clientes más grandes */
-.logos { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 40px 48px; }
-.logos img { height: 96px; max-height: none; opacity: 1; }
-@media (max-width: 860px) { .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; } .logos img { height: 80px; } }
-@media (max-width: 480px) { .logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; } .logos img { height: 72px; } }
+.logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 48px; }
+.logos img { flex: 0 0 calc((100% - 6 * 48px) / 7); width: auto; min-width: 0; height: 96px; max-height: none; opacity: 1; }
+@media (max-width: 1100px) { .logos img { flex-basis: calc((100% - 3 * 48px) / 4); } }
+@media (max-width: 860px) { .logos { gap: 32px; } .logos img { flex-basis: calc((100% - 2 * 32px) / 3); height: 80px; } }
+@media (max-width: 480px) { .logos { gap: 28px 24px; } .logos img { flex-basis: calc((100% - 24px) / 2); height: 72px; } }
