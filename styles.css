@@ -388,3 +388,10 @@ footer ul { gap: 6px; }
 .split ul.pv { gap: 14px; margin-bottom: 28px; }
 .split ul.pv li { color: var(--muted); line-height: 1.5; }
 .split ul.pv strong { color: var(--ink); font-weight: 600; }
+
+/* Héroes en celular: velo vertical para que el texto blanco se lea sobre fondos claros */
+@media (max-width: 700px) {
+  .hero::after { background: linear-gradient(180deg, rgba(8,28,44,.50) 0%, rgba(8,28,44,.78) 40%, rgba(8,28,44,.90) 100%); }
+  .hero h1, .hero p { text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+  .hero p { color: rgba(255,255,255,.92); }
+}
