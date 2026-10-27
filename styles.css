@@ -383,3 +383,8 @@ footer ul { gap: 6px; }
   .wk-p, .wk-n { top: auto; bottom: 20px; transform: none; }
   .wk-p { left: calc(50% - 60px); } .wk-n { right: calc(50% - 60px); }
 }
+
+/* Lista de soporte postventa */
+.split ul.pv { gap: 14px; margin-bottom: 28px; }
+.split ul.pv li { color: var(--muted); line-height: 1.5; }
+.split ul.pv strong { color: var(--ink); font-weight: 600; }
